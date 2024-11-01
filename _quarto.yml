@@ -1,8 +1,11 @@
 project:
   type: website
-
+  
 website:
+  favicon: images/p45dc-logo.png
+  twitter-card: true
   title: "POST45 DATA COLLECTIVE"
+  
   navbar:
     right:
       - our-data.qmd
