@@ -23,8 +23,6 @@ jobs:
           packages:
             any::knitr
             any::rmarkdown
-            # any::downlit
-            # any::xml2
             any::DT
 
       - name: Render and Publish
