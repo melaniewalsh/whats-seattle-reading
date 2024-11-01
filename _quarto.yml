@@ -14,7 +14,7 @@ website:
       - about.qmd
       - news.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/Post45-Data-Collective/website
       # - icon: twitter
       #   href: https://twitter.com
 format:
