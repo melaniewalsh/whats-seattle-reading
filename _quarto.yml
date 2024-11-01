@@ -1,0 +1,27 @@
+project:
+  type: website
+
+website:
+  title: "POST45 DATA COLLECTIVE"
+  navbar:
+    right:
+      - our-data.qmd
+      - submissions.qmd
+      - people.qmd
+      - about.qmd
+      - news.qmd
+      - icon: github
+        href: https://github.com/
+      # - icon: twitter
+      #   href: https://twitter.com
+format:
+  html:
+    theme: 
+     - flatly
+     - custom.scss
+    linkcolor: "#FFBA00"
+    css:
+     - styles.css
+
+
+

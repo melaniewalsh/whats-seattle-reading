@@ -1,0 +1,17 @@
+---
+title: "Our Data"
+# image: profile.jpg
+listing:
+  id: datasets
+  contents: posts
+  type: default
+  exclude:
+    categories: ["news"]
+  sort: "date desc"
+  categories: unnumbered 
+  sort-ui: true
+  filter-ui: true
+---
+
+::: {#datasets}
+:::

@@ -1,0 +1,15 @@
+---
+title: "News"
+listing:
+  id: news
+  contents: news
+  type: default
+  sort: "date desc"
+  categories: unnumbered 
+  sort-ui: false
+  filter-ui: true
+
+---
+
+::: {#news}
+:::
