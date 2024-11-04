@@ -2,7 +2,7 @@ project:
   type: website
   
 website:
-  favicon: images/p45dc-logo.png
+  favicon: images/p45dc-logo.jpg
   twitter-card: true
   title: "POST45 DATA COLLECTIVE"
   
