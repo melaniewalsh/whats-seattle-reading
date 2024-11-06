@@ -1,0 +1,17 @@
+---
+title: "Data Development Project Grants, 2021"
+date: "2021-05-01"
+abstract: "The Post45 Data Collective is accepting applications for the Data Development Project."
+page-layout: full
+categories: [news, grants]
+format-links: [ipynb, pdf, docx]
+code-tools: false
+---
+
+The Post45 Data Collective is accepting applications for the Data Development Project. This project is designed to help faculty, staff, graduate students, or contingent researchers in the finishing stages of data collection. Successful applicants will receive up to 60 hours of funded Research Assistance in order to complete their data collection and cleaning, and prepare their data for publication with the Post45 Data Collective.
+
+We are especially committed to funding projects that focus on topics that have been historically under-represented in computational humanities.
+
+To apply, please submit a CV, a project abstract of up to 500 words, a list of tasks to be completed and approximate number of hours requested, to Laura McGrath (mcgrath@temple.edu) by May 28.
+
+Questions? Contact Laura (mcgrath@temple.edu) or Dan (daniel.sinykin@emory.edu).

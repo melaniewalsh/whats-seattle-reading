@@ -1,0 +1,35 @@
+---
+title: "Data Analyst (Summer 2023)"
+date: "2023-5-01"
+abstract: "The Post45 Data Collective is looking to hire a data analyst this summer. "
+page-layout: full
+categories: [news, team]
+format-links: [ipynb, pdf, docx]
+code-tools: false
+---
+
+*   Position: Data Analyst
+*   Remote: Yes
+*   Location: Anywhere in the U.S.
+*   Compensation: $50/hour
+*   Duration: 20 hours/week for 8 weeks (Summer 2023)
+
+The Post45 Data Collective is looking to hire a data analyst this summer. The analyst’s primary task will be to expand our published datasets with additional metadata, especially concerning unique book identifiers such as ISBN and OCLC numbers. Other tasks might include outreach to research libraries and development of data-driven pedagogical materials.
+
+Qualifications:
+
+*   Programming skills in Python or R
+*   Data analytics experience (with Pandas, Dplyr, etc.)
+*   Experience working with cultural data, ideally book data
+*   Ability to work independently and collaboratively
+
+A plus if you have:
+
+*   College teaching experience
+*   Library science knowledge or background
+*   Experience with Jupyter notebooks
+*   Familiarity with ISBN, OCLC, etc.
+
+The work for this position will be conducted remotely and will take place during eight consecutive weeks this summer. There is flexibility regarding which eight weeks.
+
+To apply, send a cover letter and C.V. to Dan Sinykin ([\[email protected\]](/cdn-cgi/l/email-protection#cca8ada2a5a9a0e2bfa5a2b5a7a5a28ca9a1a3beb5e2a9a8b9)) and Melanie Walsh ([\[email protected\]](/cdn-cgi/l/email-protection)) before Friday, May 5 2023.

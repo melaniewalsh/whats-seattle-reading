@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: ../docs
+  
+website:
+  favicon: images/p45dc-fav-icon.jpg
+  twitter-card: true
+  title: "POST45 DATA COLLECTIVE"
+  
+  navbar:
+    right:
+      - our-data.qmd
+      - submissions.qmd
+      - people.qmd
+      - about.qmd
+      - news.qmd
+      - icon: github
+        href: https://github.com/Post45-Data-Collective/website
+      # - icon: twitter
+      #   href: https://twitter.com
+format:
+  html:
+    theme: 
+     - flatly
+     - custom.scss
+    linkcolor: "#FFBA00"
+    css:
+     - styles.css
+
+
+
