@@ -78,7 +78,7 @@ The first dataset includes full, given, middle, family, pen names, gender, and c
 #| message: false
 
 # Load the function
-source("../../createDataTable.R")
+source("../../scripts/createDataTable.R")
 
 data_path = "../../datasets/iowa_writers_workshop/iowa_writers_workshop-people.csv"
 
@@ -157,7 +157,7 @@ The second dataset includes thesis and matriculation records for Iowa graduates 
 #| message: false
 
 # Load the function
-source("../../createDataTable.R")
+source("../../scripts/createDataTable.R")
 
 data_path = "../../datasets/iowa_writers_workshop/iowa_writers_workshop-graduations.csv"
 
@@ -227,7 +227,7 @@ The third dataset includes works by notable Iowa Writers’ Workshop authors tha
 #| message: false
 
 # Load the function
-source("../../createDataTable.R")
+source("../../scripts/createDataTable.R")
 
 data_path = "../../datasets/iowa_writers_workshop/iowa_writers_workshop-hathitrust_metadata.csv"
 

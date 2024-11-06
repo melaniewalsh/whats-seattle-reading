@@ -54,7 +54,7 @@ This dataset contains bibliographic records of (in theory) all translations of N
 #| message: false
 
 # Load the function
-source("../../createDataTable.R")
+source("../../scripts/createDataTable.R")
 
 data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nordic_noir_translation_database/nordic-noir-translation-database.csv"
 
