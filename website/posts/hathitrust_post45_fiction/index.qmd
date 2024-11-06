@@ -59,7 +59,7 @@ The dataset also contains ISBSNs, OCLC numbers, and other related OCLC informati
 # Load the function
 # source("../../scripts/createDataTable.R")
 
-# data_path = "../../datasets/hathitrust_fiction/hathitrust_post45fiction_metadata.csv"
+# data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/hathitrust_fiction/hathitrust_post45fiction_metadata.csv"
 
 # createDataTable(
 #   data_path = data_path,

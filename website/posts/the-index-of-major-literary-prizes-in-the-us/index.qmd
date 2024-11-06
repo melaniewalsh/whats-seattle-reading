@@ -60,7 +60,7 @@ This dataset includes information about the winners and judges of literary prize
 source("../../scripts/createDataTable.R")
 
 createDataTable(
-  data_path = "../../datasets/major_literary_prizes/major_literary_prizes-winners_judges.csv",
+  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/major_literary_prizes/major_literary_prizes-winners_judges.csv",
 
   displayed_columns = c("full_name", "gender",
    "mfa_degree", "role", "prize_year", "prize_name", "prize_amount", "prize_institution", "prize_type", "prize_genre", "author_wikidata", "author_viaf", "author_lccn", "elite_institution", "graduate_degree", "stegner", "title_of_winning_book"),
@@ -169,7 +169,7 @@ The HathiTrust identifiers included here can be used to extract words per page f
 source("../../scripts/createDataTable.R")
 
 createDataTable(
-  data_path = "../../datasets/major_literary_prizes/major_literary_prizes-hathitrust_metadata.csv",
+  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/major_literary_prizes/major_literary_prizes-hathitrust_metadata.csv",
 
   displayed_columns = c("shorttitle",  "oclc_holdings",  "inferreddate",  'author',  'gender',  "hathi_id",  "hathi_rights",  "oclc_eholdings", "author_authorized_heading", "author_lccn", "author_viaf",  "author_wikidata_qid",  "imprintdate",   "oclc",  "oclc_owi",  "person_id"),
 

@@ -73,7 +73,7 @@ At a later stage, persistent identifiers, such as VIAF, LCCN, and Wikidata ident
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "../../datasets/nyt_hardcover_fiction_bestsellers/nyt_hardcover_fiction_bestsellers-lists.csv"
+data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/nyt_hardcover_fiction_bestsellers/nyt_hardcover_fiction_bestsellers-lists.csv"
 
 createDataTable(
   data_path = data_path,
@@ -151,7 +151,7 @@ The second dataset provides title-level data for every unique title that appeare
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "../../datasets/nyt_hardcover_fiction_bestsellers/nyt_hardcover_fiction_bestsellers-titles.csv"
+data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/nyt_hardcover_fiction_bestsellers/nyt_hardcover_fiction_bestsellers-titles.csv"
 
 createDataTable(
   data_path = data_path,
@@ -208,7 +208,7 @@ This dataset also includes various persistent identifiers and information from O
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "../../datasets/nyt_hardcover_fiction_bestsellers/nyt_hardcover_fiction_bestsellers-hathitrust_metadata.csv"
+data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/nyt_hardcover_fiction_bestsellers/nyt_hardcover_fiction_bestsellers-hathitrust_metadata.csv"
 
 createDataTable(
   data_path = data_path,

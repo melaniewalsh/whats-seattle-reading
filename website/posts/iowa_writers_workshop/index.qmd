@@ -80,7 +80,7 @@ The first dataset includes full, given, middle, family, pen names, gender, and c
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "../../datasets/iowa_writers_workshop/iowa_writers_workshop-people.csv"
+data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/iowa_writers_workshop/iowa_writers_workshop-people.csv"
 
 createDataTable(
   data_path = data_path,
@@ -159,7 +159,7 @@ The second dataset includes thesis and matriculation records for Iowa graduates 
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "../../datasets/iowa_writers_workshop/iowa_writers_workshop-graduations.csv"
+data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/iowa_writers_workshop/iowa_writers_workshop-graduations.csv"
 
 createDataTable(
   data_path = data_path,
@@ -229,7 +229,7 @@ The third dataset includes works by notable Iowa Writers’ Workshop authors tha
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "../../datasets/iowa_writers_workshop/iowa_writers_workshop-hathitrust_metadata.csv"
+data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/iowa_writers_workshop/iowa_writers_workshop-hathitrust_metadata.csv"
 
 createDataTable(
   data_path = data_path,
