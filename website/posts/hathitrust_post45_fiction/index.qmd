@@ -13,10 +13,6 @@ format:
     toc-location: left
     toc-depth: 3
     toc-expand: 3
-  # pdf:
-  #   toc: true
-  #   number-sections: true
-  #   colorlinks: true
 date: "2021-04-21"
 page-layout: full
 categories: [metadata, fiction, dataset]
@@ -36,7 +32,7 @@ citation:
 google-scholar: true 
 header-includes:
   - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
-alias:
+aliases:
   - hathitrust_post45_fiction/
   - hathitrust-post45-fiction/
 ---
