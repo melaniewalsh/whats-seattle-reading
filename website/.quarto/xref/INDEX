@@ -1,0 +1,69 @@
+{
+  "posts/post-with-code/index.qmd": {
+    "index.html": "825a91fa"
+  },
+  "posts/welcome/index.qmd": {
+    "index.html": "90fa39af"
+  },
+  "about.qmd": {
+    "about.html": "682ebebe"
+  },
+  "index.qmd": {
+    "index.html": "ad4c29a7"
+  },
+  "posts/major-literary-prizes/index.qmd": {
+    "index.html": "ee9b4c17",
+    "index.tex": "a0c07eef"
+  },
+  "news.qmd": {
+    "news.html": "1c4f0b39"
+  },
+  "people.qmd": {
+    "people.html": "9f099fb6"
+  },
+  "submissions.qmd": {
+    "submissions.html": "b9d2f607"
+  },
+  "posts/hathitrust-post45-fiction/index.qmd": {
+    "index.html": "be946d87"
+  },
+  "our-data.qmd": {
+    "our-data.html": "f54f2084"
+  },
+  "posts/nyt_hardcover_fiction_bestsellers/index.qmd": {
+    "index.html": "5b9aea46"
+  },
+  "posts/hathitrust_post45_fiction/index.qmd": {
+    "index.html": "a7cca244"
+  },
+  "posts/iowa_writers_workshop/index.qmd": {
+    "index.html": "5bc5340d"
+  },
+  "major-literary-prizes/index.qmd": {
+    "index.html": "960f3484"
+  },
+  "posts/the-nordic-noir-in-translation-database-2000-2020/index.qmd": {
+    "index.html": "dba3fdc1"
+  },
+  "posts/nea-creative-writing-fellowships/index.qmd": {
+    "index.html": "a5889531"
+  },
+  "posts/nea-creative-writing-fellowships/NEA Project_ Post45 Data Collective Data Essay (August 2024).md": {
+    "NEA Project_ Post45 Data Collective Data Essay (August 2024).html": "f4dc989c"
+  },
+  "news/data-analyst-summer-2023.qmd": {
+    "data-analyst-summer-2023.html": "91466634"
+  },
+  "news/ddp-recap.qmd": {
+    "ddp-recap.html": "ce726c71"
+  },
+  "news/awash-in-data.qmd": {
+    "awash-in-data.html": "57d0222a"
+  },
+  "news/ddp-rfp-2021.qmd": {
+    "ddp-rfp-2021.html": "277fdc8d"
+  },
+  "posts/the-index-of-major-literary-prizes-in-the-us/index.qmd": {
+    "index.html": "bd540091"
+  }
+}
