@@ -95,7 +95,7 @@ The dataset also contains ISBSNs, OCLC numbers, and other related OCLC informati
 
 ```{ojs}
 //|echo: false
-import {viewof dataSummaryView, Tabulator, viewof selectedColumns,viewof dataSet, tableContainer, table, viewof twobuttons, viewof selectedPark, viewof park_chart, viewof datasetHeader, tableStyles, createDataTable, mutable dataUrl, fetchData, generateTabulatorTableFromCSV} from "38273b330917a7fe"
+import {viewof dataSummaryView, Tabulator, viewof selectedColumns, viewof dataSet, tableContainer, fetchData, generateTabulatorTableFromCSV, progress, progressbar} from "8bb63a6cde9addff"
 ```
 
 
@@ -105,6 +105,7 @@ import {viewof dataSummaryView, Tabulator, viewof selectedColumns,viewof dataSet
 raw_data = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/hathitrust_fiction/hathitrust_post45fiction_metadata.csv")
 ```
 
+
 ```{ojs}
 //|echo: false
 //|output: false
@@ -112,9 +113,11 @@ raw_data = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/d
 // Example usage
 generateTabulatorTableFromCSV(
   "#table-container4",
+  
   "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/hathitrust_fiction/hathitrust_post45fiction_metadata.csv",
   {
     displayedColumns: ["shorttitle","inferreddate",  "author","recordid", "hathi_rights",  "genres", "id", "docid", "juvenileprob", "nonficprob", "author_authorized_heading", "author_lccn", "author_viaf", "author_wikidata_qid"],
+
     columnPopups: [
   "Shortened title of the work",  // shorttitle
   "Inferred date of the work",    // inferreddate
@@ -154,8 +157,16 @@ Download Table Data (including filtered options)
   <button id="download-xlsx"><i class="fas fa-download"></i></i> Download Excel</button>
 </div>
 
+<div id="progress-container" style="width: 100%; display: block;">
+  <progress id="progress-bar" style="width: 100%;" max="100" value="0"></progress>
+  <div id="progress-text" style="text-align: center; margin-top: 5px;"></div>
+</div>
+
+
 <div id="table-container4" style="height: 500px">
 </div>
+
+
 
 ::: {.callout-tip icon=false}
 ## Creative Commons License

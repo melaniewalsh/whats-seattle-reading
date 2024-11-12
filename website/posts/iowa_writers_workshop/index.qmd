@@ -38,6 +38,9 @@ google-scholar: true
 header-includes:
   - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
 bibliography: references.bib
+aliases:
+  - /hathitrust_post45_fiction/
+  - /hathitrust-post45-fiction/
 ---
 
 ![Dey House, home of the Iowa Writers' Workshop. [Source.](https://writersworkshop.uiowa.edu/about/contact-us)](https://writersworkshop.uiowa.edu/sites/writersworkshop.uiowa.edu/files/2024-03/2016_07_08-Various%20UI%20Buildings%20in%20Daylight-20160708-HT-03%20%281%29.jpg){fig-align="center"}
