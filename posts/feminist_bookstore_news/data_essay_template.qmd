@@ -1,33 +1,25 @@
 ---
-# EDITORIAL TEAM: add data essay details here
-title: "Insert Title Here* 1976-2000"
+title: "Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000"
 author:
-  - name: Author
-  # orcid: 0000-0001-8960-1846
-  # url: https://academicwebsite.com/
-  # email: josiah@psychoceramics.org
-  #- name: More Authors
-  #- name: More Authors
-abstract: "Abstract that will also show up in 'Our Datasets"
-# Add keywords/categories — should always include "dataset"
-categories: [prizes, education, gender, MFA, dataset]
-# Provide link to an image that will show up in "Our Datasets" aggregation
-image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg"
-# Insert DOI for this data essay
-doi: "10.18737/CNJV1733p4520221212"
-# date of publication
-date: "2022-12-05"
-# Citation details for this data essay
+  - name: Julie R. Enszer
+  # url: https://julierenszer.com/
+  #- name: Sam Grasland
+  #- name: Cassidy Hunt
+  #- name: Michaela Hayes
+abstract: "Descriptive Database of Articles in *Feminist Bookstore News* includes the metadata for all articless in Feminist Bookstore News from 1976-2020"
+categories: [print, feminist, bookstore, publishing, dataset]
+image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg" FAKE IMAGE
+doi: "10.18737/CNJV1733p4520221212" FAKE DOI 
+date: "2024-11-08"
 citation:
   type: article-journal
   container-title: "Post45 Data Collective"
-  doi: "10.18737/CNJV1733p4520221212"
-  url: https://example.com/summarizing-output
+  doi: "10.18737/CNJV1733p4520221212" # FAKE DOI
+  url: https://example.com/summarizing-output # FAKE URL
   editor:
   - Dan Sinykin
   - Melanie Walsh
-# if author/editor is including a .bib bibliography (such as one created from Zotero) for cited sources, uncomment and provide the correct reference here
-#bibliography: references.bib
+
 
 # NO NEED TO EDIT BELOW THIS LINE
 title-block-style: default
@@ -45,7 +37,7 @@ google-scholar: true
 header-includes:
   - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
 # aliases:
-# - /the-index-of-major-literary-prizes-in-the-us/
+# - /feminist-bookstore-news/
 ---
 
 <!-- EDITORIAL TEAM: Create a new directory in posts/ with appropriate title for data essay (which will become the URL slug, e.g. /nea-creative-writing-fellowships becomes https://post45-data-collective.github.io/website/posts/nea-creative-writing-fellowships/).
@@ -56,7 +48,8 @@ Then fill in the rest of the information above and below. -->
 
 
  <!-- Include image for data essay -->
-![](https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg)
+ # Fake Image
+![](https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg) 
 
 <!-- Include brief introduction to/description of data essay  -->
 
