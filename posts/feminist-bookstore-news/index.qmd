@@ -2,10 +2,10 @@
 title: "Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000"
 author:
   - name: Julie R. Enszer
-  # url: https://julierenszer.com/
-  #- name: Sam Grasland
-  #- name: Cassidy Hunt
-  #- name: Michaela Hayes
+  - url: https://julierenszer.com/
+  - name: Sam Grasland
+  - name: Cassidy Hunt
+  - name: Michaela Hayes
 abstract: "Descriptive Database of Articles in *Feminist Bookstore News* includes the metadata for all articless in Feminist Bookstore News from 1976-2020"
 categories: [print, feminist, bookstore, publishing, dataset]
 image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg" FAKE IMAGE
