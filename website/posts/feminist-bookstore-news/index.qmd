@@ -1,5 +1,5 @@
 ---
-title: "Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000"
+title: "Descriptive Database of Articles in *Feminist Bookstore News* (1976-2000)"
 author:
   - name: Julie R. Enszer
   - url: https://julierenszer.com/
