@@ -112,7 +112,7 @@ This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0
 </p>
 :::
 
-# Significance & Context
+## Significance & Context
 
 Printing and publishing were crucial elements of women’s and gay liberation. In the case of women’s liberation, independent newspapers, magazines, journals, printing press operations, and publishing houses were so significant that women involved in these activities came to call themselves the “women in print movement,” organizing conferences and other activities to support their work. This explosion of printing and publishing work from 1969 through 2000 by feminists, with lesbian-feminists playing important leadership roles in the movement, resulted in a wide range of books, periodicals, and other printed material available for study. Print culture is a vibrant node to explore women’s liberation and gay and lesbian liberation. For example, Martin Meeker highlights how print and publishing helped gay men and lesbians find one another.[^1] Since Trysh Travis’s “The Women in Print Movement” and its “analysis of how gender and power shaped ‘the little world of the book,’” multiple scholars have explicated feminist book history.[^2] Jaime Harker situates its southern roots; Kristen Hogan maps feminist bookstores as an important site of antiracist thinking and activism in feminist and lesbian communities, while Junko R. Onosaka considers the roles these bookstores played in making the stories of women’s lives and experiences more visible and available to readers.[^3] Kathy Liddle develops the concept of “cultural interaction spaces” to describe feminist bookstores as spaces where women developed “identities as feminists and/or lesbians.”[^4] I have written extensively about independent publishers in the movement and, more recently, about the significance of bibliography for figures like Barbara Grier and the transnational movements of texts through networks in the movement.[^5] Still, other scholars use the print material from the movement to elaborate further the issues and concerns of lesbians; Cait McKinney, for example, explores the “circle of lesbian indexers” who stepped up to make “critical choices about the tools” used and “the classifications schemes they assigned to ‘lesbian experience.’”[^6] June Thomas’s new book *A Place Of Our Own* provides a personal account of the impact of the women in print movement and lesbian-feminist activism during the era.[^7] These works complement recent engagements by Richard Jean So examining the race of authors in post-World War II fiction and Dan Sinykin in documenting the impact of corporate conglomerates on American fiction.[^8] So, in particular, advocates for the significance of large datasets and their potential for humanities research with social justice outcomes. 
 
@@ -136,7 +136,7 @@ The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000�
 
 There is not another dataset that documents the range and diversity of activities of the women in print movement; this “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” offers a way to engage the histories of the women in print movement more robustly by making the over 10,000 pages of content easier to search, providing a view of the types of articles published that is easier to understand, and offering initial searchability for key words to explore content further in the full corpus.
 
-# Collection and Creation
+## Collection and Creation
 
 The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” was hand-compiled and collated from digital copies of *FBN*. Reveal Digital digitized issues of *FBN* from volume seven through twenty-two the feminist component of the Independent Voices Project. [These issues now are available freely through JSTOR](https://www.jstor.org/site/reveal-digital/independent-voices/feministbookstorenews-27953489/?so=old). The digital collection of *FBN*, however, was incomplete. Before compiling this data, volunteers at *Sinister Wisdom* created a complete digital collection of *FBN* scanning issues and ephemera through the San Francisco Public Library. All issues of *FBN* are now digitized and freely available at the [Lesbian Poetry Archives](http://lesbianpoetryarchive.org/fbn). *FBN* also published and distributed nationally five, full-color, glossy Feminist Bookstores’ Catalogs. Digital copies of these catalogs are available at the [Lesbian Poetry Archive](http://www.lesbianpoetryarchive.org/FBNcatalogs). [Additional ephemera–inserts to the newsletters, flyers, and other material–have been digitized](https://www.lesbianpoetryarchive.org/FBNExtras) and labeled as ‘extras’. During the 2000s, Carol Seajay initiated and edited *Books To Watch Out For*. More information and archives of those issues are available here: [http://www.lesbianpoetryarchive.org/BTWOF](http://www.lesbianpoetryarchive.org/BTWOF). *Books To Watch Out For* is not included in this bibliographic project.
 
@@ -169,7 +169,7 @@ Salome “Sam” Grasland and her co-worker Nayeli Jaime at [The Information Lab
 
 The labor to compile the “Descriptive Database” was done completely by queer volunteers at *Sinister Wisdom*. Many people working on the project recognize *FBN* and the communities that it networked as vital to lesbian history and heritage. Julie notes, I believe that labor undertaken to preserve and analyze lesbian history should be compensated, and I also recognize that compensation is often not possible under the current conditions of capitalism in which we live.   
 
-# Description
+## Description
 
 The “Descriptive Database of Articles in *Feminist Bookstores News* 1976-2000” is a flat-file with each row describing one article in an issue of *FBN*. There are over 5,900 rows of data. There are fourteen columns in the dataset.
 
@@ -230,7 +230,7 @@ The question of how to categorize articles was a subject of discussion among the
 
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
-# Ethical Considerations
+## Ethical Considerations
 
 Carol Seajay created *FBN* in the feminist context of the women in print movement which was part of the broader women’s liberation movement in the United States; *FBN* was dedicated to building a network of feminist booksellers and promoting the print, publishing, and book work of feminists. This database was compiled by volunteers through *Sinister Wisdom*, a lesbian-feminist periodical. While all involved in the project take a broad, capacious, and ecumenical view of feminism and believe passionately in this data to illuminate feminist as well as other, non-feminist and feminist-adjacent work, it would not be ethical to use this data in a way that would harm feminist writers, authors, activists, publishers, printers, or book projects. The expectation is that the data will be used with mindfulness about its feminist origins and intentions.
 
@@ -238,13 +238,13 @@ The dataset does not contain confidential information. It does contain informati
 
 No institutional review board process is associated with this project.
 
-# Versioning
+## Versioning
 
 The research team at *Sinister Wisdom* is now working on another dataset enumerating every book mentioned in *FBN*. It is likely that through that research process errors or additional missing data may be discovered, compelling an update of this database. If an updated version is released, the target date would be at the end of calendar year 2025\.
 
 An additional report from *Sinister Wisdom* explores the project and its process. It is available at [www.sinisterwisdom.org/FBN](http://www.sinisterwisdom.org/FBN). 
 
-# Bibliography
+## Bibliography
 
 Baco, Joshua Ortiz, Benjamin Charles Germain Lee, Jim Casey, and Sarah H. Salter. “Toward an Experimental Bibliography of Hemispheric Reconstruction Newspapers,” *Criticism,* Summer/Fall 2022, vol 64, nos 3-4, pp. 453-470.  
 Enszer, Julie R. “Barbara Grier’s Enumerative Bibliographies: Iterating Communal Lesbian Identities,” *Criticism: A Quarterly for Literature and the Arts*, Summer/Fall 2022, Vol. 64, Nos. 3–4, pp. 397–412.  
@@ -267,13 +267,13 @@ So, Richard Jean, *Redlining Culture: A Data History of Racial Inequality and Po
 Thomas, June. *A Place of Our Own: Six Spaces that Shaped Queer Women’s Culture*. New York: Seal Press, 2024\.  
 Travis, Trysh. “The Women in Print Movement: History and Implications,” *Book History* 11 (2008): 276\.
 
-# Licensing
+## Licensing
 
 The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” is licensed under Creative Commons, CC-BY-NC-SA.
 
 ![A sign with a person and dollar symbolDescription automatically generated][image1]
 
-# Volunteer List / Acknowledgements
+## Volunteer List / Acknowledgements
 
 Thank you to two anonymous reviewers of this project for their invaluable feedback, and thank you to Dan Sinykin and Melanie Walsh for their feedback, editorial acumen, and support of this project. 
 
