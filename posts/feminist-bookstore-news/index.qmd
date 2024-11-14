@@ -8,14 +8,14 @@ author:
   - name: Michaela Hayes
 abstract: "Descriptive Database of Articles in *Feminist Bookstore News* includes the metadata for all articless in Feminist Bookstore News from 1976-2020"
 categories: [print, feminist, bookstore, publishing, dataset]
-image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg" FAKE IMAGE
+image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg"
 doi: "10.18737/CNJV1733p4520221212" FAKE DOI 
 date: "2024-11-08"
 citation:
   type: article-journal
   container-title: "Post45 Data Collective"
-  doi: "10.18737/CNJV1733p4520221212" # FAKE DOI
-  url: https://example.com/summarizing-output # FAKE URL
+  doi: "10.18737/CNJV1733p4520221212"
+  url: https://example.com/summarizing-output
   editor:
   - Dan Sinykin
   - Melanie Walsh
