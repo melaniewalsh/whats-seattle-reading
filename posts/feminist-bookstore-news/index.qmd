@@ -57,8 +57,6 @@ The â€œDescriptive Database of Articles in *Feminist Bookstore News* 1976-2000â€
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
-<!-- # 1. *Feminist Bookstore News*
-
 # Data Table
 
 <!-- FOR EDITORIAL TEAM:
