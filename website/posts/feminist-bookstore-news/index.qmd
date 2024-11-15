@@ -2,15 +2,16 @@
 title: "Descriptive Database of Articles in *Feminist Bookstore News* (1976-2000)"
 author:
   - name: Julie R. Enszer
-  - url: https://julierenszer.com/
+    url: https://julierenszer.com/
   - name: Sam Grasland
   - name: Cassidy Hunt
   - name: Michaela Hayes
-abstract: "Descriptive Database of Articles in *Feminist Bookstore News* includes the metadata for all articless in Feminist Bookstore News from 1976-2020"
+abstract: "This dataset includes metadata for for all articles in *Feminist Bookstore News* from 1976-2020."
 categories: [print, feminist, bookstore, publishing, dataset]
-image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg"
+image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg"
 doi: "10.18737/CNJV1733p4520221212" #FAKE DOI 
-date: "2024-11-08"
+date: "2024-11-18"
+license: CC BY NC SA
 citation:
   type: article-journal
   container-title: "Post45 Data Collective"
@@ -19,9 +20,6 @@ citation:
   editor:
   - Dan Sinykin
   - Melanie Walsh
-
-
-
 title-block-style: default
 format-links: [ipynb, pdf, docx]
 code-tools: false
@@ -48,12 +46,11 @@ Then fill in the rest of the information above and below. -->
 
 
  <!-- Include image for data essay -->
- # Fake Image
-![](https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg) 
+![Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/)](https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg){width=50%} 
 
 <!-- Include brief introduction to/description of data essay  -->
 
-The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” is a descriptive bibliography of articles in *FBN* for researchers to search the thousands of articles published to explore the wide range of material considered in the magazine
+The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” is a descriptive bibliography of articles in *FBN* for researchers to search the thousands of articles published to explore the wide range of material considered in the magazine.
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
@@ -72,6 +69,9 @@ Areas that need to be edited are marked with MAKE EDITS HERE -->
 #| warning: false
 #| message: false
 
+# data <- read.csv("https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/Descriptive%20Database%20of%20Articles%20REV.csv")
+# print(names(data))
+
 # Load the function
 source("../../scripts/createDataTable.R")
 
@@ -80,12 +80,14 @@ createDataTable(
   data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/Descriptive%20Database%20of%20Articles%20REV.csv",
 
   # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("Vol", "No",
-   "Article Title", "Author", "Category", "Year", "Month", "Total Pages", "Unique Identifier", "Notes"),
+  displayed_columns = c("Vol", "No", "Article.Title", 
+  "Author", "Category", "Year", "Month", "Notes", "Volunteer", "Total.Pages", "Unique.Identifier"),
 
    # MAKE EDITS HERE: Customize any column widths 
   # If none, comment out
-   # column_widths = c("gender" = "100px", "role" = "75px", "mfa_degree" = "100px", "prize_name" = "100px"),
+   column_widths = c("Vol" = "50px", "No" = "50px", "Author" = "100px", "Category" = "120px", "Year" = "100px"
+    #"prize_name" = "100px"
+    ),
 
    # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
    # If none, comment out
@@ -94,7 +96,12 @@ createDataTable(
    # MAKE EDITS HERE: Select any columns that should be filterable as a category
   # If none, comment out
 
-  category_columns = c("Vol", "Author", "Category", "Year", "Month",),
+  category_columns = c( "Category", "No",
+    #"Author",
+   #"Year", 
+    "Vol"
+   #"Month"
+   ),
 
     # Select column to sort by, and order
   sort_columns = c("Vol"),
@@ -173,29 +180,29 @@ The labor to compile the “Descriptive Database” was done completely by queer
 
 The “Descriptive Database of Articles in *Feminist Bookstores News* 1976-2000” is a flat-file with each row describing one article in an issue of *FBN*. There are over 5,900 rows of data. There are fourteen columns in the dataset.
 
-**The columns are:**
+The columns are:
 
-1. Vol: *FBN* volume number  
-2. No: *FBN* issue number  
-3. Volume.No: *FBN* volume and issue number combined (represented as x.y and useful for sorting)   
-4. Issue Length: Number of pages in the issue  
-5. Year: Year the issue was published  
-6. Month: Month the issue was published (Early issues are not dated as clearly as later issues. For some early issues, this column surmises the month, often from a mail cancellation.)  
-7. Article Title: Article title (There is great variability among titles, subtitles, and title conventions over the lifetime of the periodical. There is no imposed standardization on this field.)  
-8. Page Start: the page number on which the item first appears  
-9. Page End: the page number on which the item last appears. (Beginning in the early 1980s, *FBN* used a cardstock cover. These covers (front cover, inside front, inside back, and back cover) are unpaginated. The dataset uses c1, c2, c3, and c4 respectively in this field and the previous one to indicate these pages.)  
-10. Author: Author of the article (when attributed. Carol Seajay is the presumptive author of many unattributed articles. There is inconsistency in the file of the application of her name to the author category, for instance, some records indicate unknown \[Seajay\] and others indicate unknown \[Fbn\]; all may have been written by Carol Seajay. In some records, a presumptive author is indicated in brackets after unknown.)  
-11. Category: See below for more information on descriptions of each category.  
-12. Graphics? Yes/No if graphics were present in the article  
-13. Notes: This column is broad and capacious. Volunteers used it to summarize the article, write down the different subheadings in an article, point out interesting things in the article, or explain what graphics appear in this article.  
-14. Volunteer: Volunteer Name (A complete list of all volunteers who compiled data for the dataset is included at the end of this essay.)  
-15. Unique Identifier: This column was appended in the final creation of the file for citation purposes.
+- Vol: *FBN* volume number  
+- No: *FBN* issue number  
+- Volume.No: *FBN* volume and issue number combined (represented as x.y and useful for sorting)   
+- Issue Length: Number of pages in the issue  
+- Year: Year the issue was published  
+- Month: Month the issue was published (Early issues are not dated as clearly as later issues. For some early issues, this column surmises the month, often from a mail cancellation.)  
+- Article Title: Article title (There is great variability among titles, subtitles, and title conventions over the lifetime of the periodical. There is no imposed standardization on this field.)  
+- Page Start: the page number on which the item first appears  
+-  Page End: the page number on which the item last appears. (Beginning in the early 1980s, *FBN* used a cardstock cover. These covers (front cover, inside front, inside back, and back cover) are unpaginated. The dataset uses c1, c2, c3, and c4 respectively in this field and the previous one to indicate these pages.)  
+- Author: Author of the article (when attributed. Carol Seajay is the presumptive author of many unattributed articles. There is inconsistency in the file of the application of her name to the author category, for instance, some records indicate unknown \[Seajay\] and others indicate unknown \[Fbn\]; all may have been written by Carol Seajay. In some records, a presumptive author is indicated in brackets after unknown.)  
+- Category: See below for more information on descriptions of each category.  
+- Graphics? Yes/No if graphics were present in the article  
+- Notes: This column is broad and capacious. Volunteers used it to summarize the article, write down the different subheadings in an article, point out interesting things in the article, or explain what graphics appear in this article.  
+-  Volunteer: Volunteer Name (A complete list of all volunteers who compiled data for the dataset is included at the end of this essay.)  
+- Unique Identifier: This column was appended in the final creation of the file for citation purposes.
 
 A database necessarily imposes a structure onto materials that evolved over twenty-four years. In compiling the database, the team tried to capture the material in ways that respect the expressions and evolutions of the periodical. In collectively compiling the data, the volunteer team erred more on the side of expression than standardization.
 
 The question of how to categorize articles was a subject of discussion among the research team. These notes were written initially by volunteer Li-Anne Wright.
 
-**What each category means**
+What each category means:
 
 * Booklist/Medialist  
   * A list of books on a theme. These may have a few paragraphs of preamble but mostly focus on giving a list of books.  
@@ -266,12 +273,6 @@ Rodger Streitmatter, *Unspeakable: The Rise of the Gay and Lesbian Press in Amer
 So, Richard Jean, *Redlining Culture: A Data History of Racial Inequality and Postwar Fiction*, New York: Columbia University Press, 2020\.  
 Thomas, June. *A Place of Our Own: Six Spaces that Shaped Queer Women’s Culture*. New York: Seal Press, 2024\.  
 Travis, Trysh. “The Women in Print Movement: History and Implications,” *Book History* 11 (2008): 276\.
-
-## Licensing
-
-The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” is licensed under Creative Commons, CC-BY-NC-SA.
-
-![A sign with a person and dollar symbolDescription automatically generated][image1]
 
 ## Volunteer List / Acknowledgements
 
