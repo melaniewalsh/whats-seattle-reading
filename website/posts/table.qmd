@@ -16,96 +16,253 @@ Use this [Tabular Data Viewer 中](https://twitter.com/hashtag/TabularDataViewer
 Also, try our [Data Table](https://github.com/RandomFractals/vscode-data-table/releases) 🈸 notebook 📓 cell ⌗ output renderer extension with [VSCode Notebooks](https://marketplace.visualstudio.com/search?target=VSCode&category=Notebooks&sortBy=Installs) 📚.
 
 ```{ojs}
-viewof dataSet = Inputs.select(dataSets, {
-  label: html`<b>dataset</b>`
-})
+// viewof dataSet = Inputs.select(dataSets, {
+//   label: html`<b>dataset</b>`
+// })
 
-viewof dataUrl = Inputs.text({
-  label: html`<b>dataUrl</b>`,
-  placeholder: 'type data url and click fetch',
-  value: `${dataUrlParam ? dataUrlParam : 'https://raw.githubusercontent.com/vega/vega-datasets/master/data/' + dataSet}`,
-  submit: 'fetchData'
-})
+// viewof dataUrl = Inputs.text(
+//   label: html`<b>dataUrl</b>`,
+//   placeholder: 'type data url and click fetch',
+//   value: `${dataUrlParam ? dataUrlParam : 'https://raw.githubusercontent.com/vega/vega-datasets/master/data/' + dataSet}`,
+//   submit: 'fetchData'
+// })
 
-shareLink = md `*share a link to your [data](https://observablehq.com/@randomfractals/tabular-data-viewer?dataUrl=${dataUrl})*`
+dataPath = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/hathitrust_fiction/hathitrust_post45fiction_metadata.csv"
 
-viewof dataSummaryView = SummaryTable(data)
+data = fetchData(dataPath)
+
+defaultDisplayedColumns = [
+    "shorttitle",
+    "inferreddate",
+    "author",
+    "recordid",
+    "hathi_rights",
+    "genres",
+    "id",
+    "docid",
+    "juvenileprob",
+    "nonficprob",
+    "author_authorized_heading",
+    "author_lccn",
+    "author_viaf",
+    "author_wikidata_qid"
+  ];
+
+categoryColumns = ["hathi_rights",  "genres","geographics"];
+
+// Reorder the available columns to match defaultDisplayedColumns, appending any extra columns at the end
+orderedColumns = [
+  ...defaultDisplayedColumns,
+  ...Object.keys(data[0] || {}).filter(col => !defaultDisplayedColumns.includes(col))
+];
 ```
+
+::: {.callout-note icon="false" collapse="true"}
+
+## View Summary of Columns
+```{ojs}
+//|echo: false
+// Create a checkbox input with ordered columns
+
+// Generate Summary Data based on selected columns
+summary_data = {
+  const selected = new Set(selectedColumns);
+  return data.map(row => {
+    let newRow = {};
+    for (let key in row) {
+      if (selected.has(key)) {
+        newRow[key] = row[key];
+      }
+    }
+    return newRow;
+  });
+}
+
+viewof dataSummaryView = SummaryTable(summary_data);
+```
+:::
+
+## Select Columns
+
+```{ojs}
+viewof selectedColumns = Inputs.checkbox(orderedColumns, {
+  label: "Select Columns",
+  value: defaultDisplayedColumns, // Default selected columns
+});
+```
+
+
+```{ojs}
+function generateTabulatorTableForObservable(
+  containerId,
+  data,
+  {
+    displayedColumns = null,
+    columnWidths = {},
+    currencyColumns = [],
+    categoryColumns = [],
+    numericColumns = [],
+    rangeValues = {},
+    sortColumns = [],
+    sortOrders = [],
+    columnPopups = [],
+    height = 645,
+    paginationSize = 1000,
+  } = {}
+) {
+  if (!data || data.length === 0) {
+    console.error("No data provided to generate the table.");
+    return null;
+  }
+
+  if (!displayedColumns) {
+    displayedColumns = Object.keys(data[0]);
+  }
+
+  const tabulatorColumns = displayedColumns.map((column) => ({
+    title: column,
+    field: column,
+    maxInitialWidth: 150,
+    resizable: true,
+    headerFilter: numericColumns.includes(column)
+      ? "input"
+      : categoryColumns.includes(column)
+      ? "list"
+      : "input",
+    headerFilterParams: categoryColumns.includes(column)
+      ? { valuesLookup: true, clearable: true }
+      : {},
+    formatter: currencyColumns.includes(column) ? "money" : undefined,
+    formatterParams: currencyColumns.includes(column)
+      ? { symbol: "$", precision: 0 }
+      : undefined,
+  }));
+
+  const table = new Tabulator(containerId, {
+    height: height,
+    data: data,
+    columns: tabulatorColumns,
+     columnDefaults: {
+    headerMenu: columnHeaderMenu
+  },
+//    movableColumns: true,
+    layout: "fitDataStretch",
+    pagination: true,
+    paginationSize: paginationSize,
+    paginationSizeSelector: [10, 100, 1000, 10000],
+    paginationCounter: "rows",
+    persistenceMode: false,
+    initialSort: sortColumns.map((col, idx) => ({
+      column: col,
+      dir: sortOrders[idx] || "asc",
+    })),
+  });
+
+  return table;
+}
+```
+
+```{ojs}
+// Add fullscreen event listener
+      document.addEventListener("fullscreenchange", () => {
+        if (document.fullscreenElement) {
+          // Fullscreen mode: adjust table height
+          table.setHeight(window.innerHeight - 50); // Adjust for padding/margins
+        } else {
+          // Exit fullscreen: reset table height
+          table.setHeight(645);
+        }
+      });
+
+      // Add download buttons
+      document
+        .querySelectorAll("#button-container button")
+        .forEach((button) => {
+          button.addEventListener("click", () => {
+            const type = button.getAttribute("id").replace("download-", "");
+            const downloadFilename = `${filename}.${type}`;
+
+            if (type === "xlsx") {
+              table.download("xlsx", downloadFilename, { sheetName: "Sheet1" });
+            } else if (type === "pdf") {
+              table.download("pdf", downloadFilename, {
+                orientation: "portrait",
+                title: "Table Data"
+              });
+            } else if (type === "html") {
+              table.download("html", downloadFilename, { style: true });
+            } else {
+              table.download(type, downloadFilename);
+            }
+          });
+        });
+
+      // Update raw data download button dynamically
+      // Raw data download using `download` function
+      const rawDownloadButton = document.getElementById("download-raw");
+      rawDownloadButton.addEventListener("click", () => {
+        download(dataPath, `${filename}.csv`);
+      });
+
+      // Copy URL button
+      document.getElementById("copy-url").addEventListener("click", () => {
+        const tempInput = document.createElement("input");
+        tempInput.value = dataPath;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+        alert("URL copied to clipboard: " + dataPath);
+      });
+```
+
+```{ojs}
+// Observable Inputs
+// Create Tabulator Table
+html`<div id="table-container" style="height: 600px"></div>`
+
+generateTabulatorTableForObservable("#table-container", data, {
+  displayedColumns: selectedColumns,
+
+    columnPopups: [
+  "Shortened title of the work",  // shorttitle
+  "Inferred date of the work",    // inferreddate
+  "Author of the work",           // author
+  "Unique record ID",             // recordid
+  "Rights code from HathiTrust",  // hathi_rights
+  "Genres associated with the work",  // genres
+  "Unique identifier for the title in the titles dataset (may contain duplicates for reprinted works)", // id
+  "Unique volume ID from HathiTrust", // docid (htid)
+  "Probability that the work is for a juvenile audience", // juvenileprob
+  "Probability that the work is nonfiction", // nonficprob
+  "Author’s authorized Name Authority Cooperative (NACO) heading", // author_authorized_heading
+  "Author’s LCCN from id.loc.gov", // author_lccn
+  "Author’s viaf.org cluster number", // author_viaf
+  "Author’s Wikidata Q number"      // author_wikidata_qid
+],
+    // columnWidths: { "gender": "50px", "role": "75px", "mfa_degree": "100px", "prize_name": "100px" },
+    currencyColumns: ["prize_amount"],
+    categoryColumns: ["hathi_rights",  "genres","geographics"],
+    // sortColumns: ["prize_year"],
+    // sortOrders: ["desc"]
+  paginationSize: 1000,
+});
+```
+
+<div id='button-container2'>
+  <button id="download-raw"><i class="fas fa-download"></i></i> Download Full Data</button>
+  <button id="copy-url"><i class="fas fa-copy"></i> Copy Full Data URL</button>
+</div>
+
+<div id='button-container'>
+  <button id="download-csv"><i class="fas fa-download"></i></i> Download CSV</button>
+  <button id="download-json"><i class="fas fa-download"></i></i> Download JSON</button>
+  <button id="download-xlsx"><i class="fas fa-download"></i></i> Download Excel</button>
+</div>
 
 ## Tabular Data View
 
 ```{ojs}
-viewof tableOptions = Inputs.form([
-  Inputs.button('Download', {reduce: () => table.download('csv', 'data.csv')}),
-])
-
-tableContainer = html `<div id="table-container" style="height: 600px">
-</div>`
-
-table = new Tabulator('#table-container', {
-  height: 645,
-  autoColumns: true,
-  columnDefaults: {
-    headerMenu: columnHeaderMenu
-  },
-  clipboard: true, // eanble clipboard copy and paste
-  clipboardPasteAction: 'replace',
-  layout: tableLayout,
-  layoutColumnsOnNewData: true,
-  movableColumns: movableColumns,
-  movableRows: movableRows,
-  selectable: selectableRows,
-  rowContextMenu: rowContextMenu,
-  pagination: pagination,
-  paginationSize: paginationSize,
-  paginationSizeSelector: pageSizes,
-  renderVerticalBuffer: 300, // set virtual DOM buffer to 300px
-  debugInvalidOptions: true, // tabulator warnings
-  debugEventsExternal: ['tableBuilding', 'dataLoaded', 'tableBuilt'], // log specified tabulator events
- 	data: data,
-  persistenceMode: 'local',
-  persistenceID: dataUrl,
-  persistentLayout: true,
-  persistence: {
-    sort: true,
-    filter: true,
-    group: true,
-    columns: true,
-  }
-});
-```
-
-### Table UX Tips
-- Hold **CTRL** or **Shift** key when clicking on column headers to **Sort** table data by multiple columns.
-- See [Clipboard](http://tabulator.info/docs/5.0/clipboard) options for the clipboard copy and paste data options.
-- Use row context menu to **Delete** or **Freeze** a row.
-
-## Table Toggles
-
-```{ojs}
-viewof tableLayout = Inputs.select(tableLayouts, {value: 'fitDataStretch', label: 'Table Layout'})
-
-viewof pagination = Inputs.toggle({label: 'Pagination', value: true})
-
-viewof paginationSize = Inputs.select(pageSizes, {value: 100000, label: 'Page Size'})
-
-viewof movableColumns = Inputs.toggle({label: 'Movable Columns', value: true})
-
-viewof movableRows = Inputs.toggle({label: 'Movable Rows', value: true})
-
-viewof selectableRows = Inputs.toggle({label: 'Selectable Rows', value: true})
-
-// from: http://tabulator.info/docs/5.0/layout
-tableLayouts = [
-  'fitData',
-  'fitDataFill',
-  'fitDataStretch',
-  'fitDataTable',
-  'fitColumns'
-]
-
-pageSizes = [20, 100, 1000, 10000, 100000, 1000000, 10000000]
-
 columnHeaderMenu = [
   {
     label: 'Hide Column',
@@ -128,40 +285,21 @@ columnHeaderMenu = [
 ];
 
 
-// row context menu. see: http://tabulator.info/docs/5.0/menu
-rowContextMenu = [
-  {
-    label: "<i class='fas fa-trash'></i> Delete Row",
-    action: function(e, row) {row.delete()}
-  },
-  {
-    label: "Freeze Row",
-    action: function (e, row) { row.freeze(); }
-  }
-]
 ```
+
+### Table UX Tips
+- Hold **CTRL** or **Shift** key when clicking on column headers to **Sort** table data by multiple columns.
+- See [Clipboard](http://tabulator.info/docs/5.0/clipboard) options for the clipboard copy and paste data options.
+- Use row context menu to **Delete** or **Freeze** a row.
+
 
 ## Data
 
 ```{ojs}
-data = fetchData(dataUrl)
+// data = fetchData(dataUrl)
 
 dataUrlParam = new URLSearchParams(html`<a href>`.search).get('dataUrl')
 
-dataSets = [
-  'airports.csv', 'co2-concentration.csv', 'disasters.csv', 'flights-3m.csv', 'flights-airport.csv',
-  'gapminder-health-income.csv', 'github.csv', 'iowa-electricity.csv', 'la-riots.csv', 'lookup_groups.csv',
-  'lookup_people.csv', 'population_engineers_hurricanes.csv', 'seattle-temps.csv', 'seattle-weather.csv',
-  'sf-temps.csv', 'sp500.csv', 'stocks.csv', 'us-employment.csv', 'weather.csv', 'windvectors.csv', 'zipcodes.csv',
-  'barley.json', 'birdstrikes.json', 'budget.json', 'budgets.json', 'burtin.json', 'cars.json', 'climate.json',
-  'countries.json', 'crimea.json', 'driving.json', 'flare-dependencies.json', 'flare.json',
-  'flights-2k.json', 'flights-5k.json', 'flights-10k.json', 'flights-20k.json',
-  'flights-200k.json', 'flights-200k.arrow',
-  'gapminder.json', 'income.json', 'iris.json', 'jobs.json', 'londonCentroids.json',
-  'monarchs.json', 'movies.json', 'normal-2d.json', 'points.json',
-  'udistrict.json', 'unemployment-across-industries.json', 'us-state-capitals.json',
-  'weball26.json', 'wheat.json'
-]
 
 async function fetchData(dataUrl) {
   let data = [];
@@ -193,6 +331,17 @@ async function loadArrowData(dataUrl){
   }
   return rows;
 }
+
+async function download(dataurl, fileName) {
+  const response = await fetch(dataurl);
+  const blob = await response.blob();
+
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = fileName;
+  link.click();
+  URL.revokeObjectURL(link.href); // Clean up
+}
 ```
 
 ## Table Styles
@@ -218,7 +367,8 @@ tabulator.min.css`
 ## Imports
 
 ```{ojs}
-import {SummaryTable} from "@observablehq/summary-table"
+// import Juan's summary table
+import { SummaryTable } from "fcb971390dae8f6d"
 
 Tabulator = require('https://unpkg.com/tabulator-tables@5.3.1');
 
