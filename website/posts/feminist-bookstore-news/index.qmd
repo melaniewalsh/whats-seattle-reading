@@ -8,7 +8,7 @@ author:
   - name: Michaela Hayes
 abstract: "This dataset includes metadata for for all articles in *Feminist Bookstore News* from 1976-2020."
 categories: [print, feminist, bookstore, publishing, dataset]
-image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg"
+image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg
 doi: "10.18737/CNJV1733p4520221212" #FAKE DOI 
 date: "2024-11-18"
 license: CC BY-NC-SA
@@ -46,7 +46,12 @@ Then fill in the rest of the information above and below. -->
 
 
  <!-- Include image for data essay -->
-![Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/)](https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg){width=50%} 
+
+::: {#fig-fbn}
+[![](https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg){width=50% fig-align="left"}](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/) 
+
+Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/)
+:::
 
 <!-- Include brief introduction to/description of data essay  -->
 

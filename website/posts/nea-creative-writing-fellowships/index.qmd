@@ -89,6 +89,35 @@ This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0
 </p>
 :::
 
+# Data Visualization and Exploration
+
+```{ojs}
+//|echo: false
+//|output: false
+// https://observablehq.com/d/75d37bad8cc92862
+import {viewof groupByColumn, viewof topX, fetchData, viewof neaGrantYearRange, filtered_data, line_chart, bar_chart} from "75d37bad8cc92862"
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+table_data = fetchData(
+  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/Post45_NEAData_Final.csv"
+)
+```
+
+```{ojs}
+//|echo: false
+viewof groupByColumn
+viewof topX
+
+bar_chart
+line_chart
+viewof neaGrantYearRange
+
+```
+
 # Significance and Context
 
 The National Endowment for the Arts (NEA) has been the main channel for the public sponsorship of American writers since its formation in 1965. In the years since then, the NEA has awarded more than 3700 Creative Writing Fellowships to fund writers in the United States.

@@ -1,6 +1,7 @@
 ---
 title: 'Tabular Data Viewer'
 author: Taras Novak (@RandomFractals)
+categories: [ignore]
 format:
   html:
     code-copy: true

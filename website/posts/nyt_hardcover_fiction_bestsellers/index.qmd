@@ -1,5 +1,5 @@
 ---
-title: "<i>New York Times</i> Hardcover Fiction Bestsellers (1931–2020)"
+title: "*New York Times* Hardcover Fiction Bestsellers (1931–2020)"
 author:
   - name: Jordan Pruett
     url: https://www.linkedin.com/in/jordan-pruett-a30502ba/
@@ -13,7 +13,7 @@ format:
     toc-expand: 3
 date: "2022-02-01"
 doi: "10.18737/CNJV1733p4520220211"
-abstract: "The <i>New York Times</i> Hardcover Fiction Bestsellers includes datasets about bestselling books from 1931 and 2020."
+abstract: "The *New York Times* Hardcover Fiction Bestsellers includes datasets about bestselling books from 1931 and 2020."
 page-layout: full
 categories: [bestsellers, fiction, dataset]
 image: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/New_York_Times_logo_variation.jpg/1280px-New_York_Times_logo_variation.jpg"
