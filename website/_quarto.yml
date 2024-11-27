@@ -27,5 +27,8 @@ format:
     css:
      - styles.css
 
+resources:
+  - CNAME
+
 
 

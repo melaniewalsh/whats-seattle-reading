@@ -105,17 +105,42 @@ import {viewof groupByColumn, viewof topX, fetchData, viewof neaGrantYearRange, 
 table_data = fetchData(
   "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/Post45_NEAData_Final.csv"
 )
+
+
+// Select specific columns
+filtered_data = table_data.map(d => ({
+  full_name_firstlast: d.full_name_firstlast,
+  given_name_middle: d.given_name_middle,
+  family_name: d.family_name,
+  gender: d.gender,
+  race_ethnicity: d.race_ethnicity,
+  //birth_year: d.birth_year,
+  country: d.country,
+  us_state: d.us_state,
+  hometown: d.hometown,
+  ba: d.ba,
+  //ba2: d.ba2,
+  ma: d.ma,
+  ma2: d.ma2,
+  phd: d.phd,
+  mfa: d.mfa,
+  //mfa2: d.mfa2
+}));
 ```
 
+## Explore NEA Fellowships by Category
 ```{ojs}
 //|echo: false
 viewof groupByColumn
 viewof topX
-
 bar_chart
+```
+
+## Explore NEA Fellowships by Year
+```{ojs}
+//|echo: false
 line_chart
 viewof neaGrantYearRange
-
 ```
 
 # Significance and Context
@@ -155,8 +180,8 @@ This dataset was made possible by generous grants from the Canadian Social Scien
 -   **phd**: the institution from which the writer received their doctoral degree (including PhD, DFA, or JD); a blank field signifies that the writer did not attain a doctoral degree or the research team was unable to identify any such information; see further details below\
 -   **mfa**: the institution from which the writer received their MFA degree or MA degree in the field of creative writing; while Stanford University’s Wallace Stegner Fellowship is not a degree-granting program, writers who received a Stegner Fellowship will be listed here (or in the mfa2 field) as “Stanford”; a blank field signifies that the writer did not attain a MFA degree, MA in creative writing, or Stegner Fellowship, or that the research team was unable to identify any such information; see further details below\
 -   **mfa2**: if the writer attained a second MFA or MA in creative writing, or received a Stegner Fellowship after their first MFA or MA in creative writing, that institution is listed here; a blank field signifies that the research team was unable to identity any such information\
--   **post45_iowa_person_id**: values are either a number that corresponds to a person listed in the Post45 “Iowa Writers’ Workshop” dataset or blank, which means that no affiliation with the Iowa Writers’ Workshop was identified\
--   **post45_prizes_person_id**: values are either a number that corresponds to a person listed in the Post45 “Index of Major Literary Prizes in the US” dataset or blank, which means that no entry for that particular person was identified\
+<!-- -   **post45_iowa_person_id**: values are either a number that corresponds to a person listed in the Post45 “Iowa Writers’ Workshop” dataset or blank, which means that no affiliation with the Iowa Writers’ Workshop was identified\
+-   **post45_prizes_person_id**: values are either a number that corresponds to a person listed in the Post45 “Index of Major Literary Prizes in the US” dataset or blank, which means that no entry for that particular person was identified\ -->
 -   **post45_hathi_entry**: values are either “Yes,” which indicates that one or more entries for the writer were identified in the Post45 “HathiTrust Fiction” dataset, or blank, which indicates that no such entry was identified
 
 # Ethical Considerations
