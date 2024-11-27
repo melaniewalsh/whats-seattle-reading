@@ -36,8 +36,8 @@ header-includes:
 bibliography: references.bib
 appendix-stlye: none
 license: CC BY
-# aliases:
-#   - /nyt-fiction-bestsellers-data/
+aliases:
+  - /the-nordic-noir-in-translation-database-2000-2020/
 ---
 
 ![](https://upload.wikimedia.org/wikipedia/commons/d/d7/NordicPassportUnion.png){fig-align="center" width="50%"}

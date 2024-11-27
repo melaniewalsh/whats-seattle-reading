@@ -30,7 +30,7 @@ citation:
   type: article-journal
   container-title: "Post45 Data Collective"
   doi: "10.18737/CNJV1733p4520210415"
-  url: https://example.com/summarizing-output
+  url: https://data.post45.org/iowa-writers-workshop-data/
   editor:
   - Dan Sinykin
   - Melanie Walsh
