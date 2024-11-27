@@ -7,6 +7,9 @@ format:
     toc-location: left
     toc-depth: 3
     toc-expand: 3
+aliases:
+  - /submissions/
+  - /submissions-2/
 
 ---
 

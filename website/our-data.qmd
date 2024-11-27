@@ -11,6 +11,8 @@ listing:
   categories: unnumbered 
   sort-ui: true
   filter-ui: true
+aliases:
+  - /our-data/
 ---
 
 ::: {#datasets}
