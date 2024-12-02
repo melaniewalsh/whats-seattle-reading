@@ -18,7 +18,7 @@ format:
 date: "2022-12-05"
 page-layout: full
 categories: [prizes, education, gender, MFA, dataset]
-image: "https://i0.wp.com/www.nationalbook.org/wp-content/uploads/2017/01/NBF1115117awards007-e1539703568937.jpg?fit=1500%2C1000&ssl=1"
+image: "https://i0.wp.com/www.nationalbook.org/wp-content/uploads/2017/01/NBF1115117awards007-e1539703568937.jpg"
 format-links: [ipynb, pdf, docx]
 code-tools: false
 bibliography: references.bib
@@ -37,7 +37,7 @@ aliases:
 - the-index-of-major-literary-prizes-in-the-us/
 ---
 
-![Credit: [National Book Foundation](https://www.nationalbook.org/the-72nd-national-book-awards-will-be-an-exclusively-digital-ceremony/)](https://i0.wp.com/www.nationalbook.org/wp-content/uploads/2017/01/NBF1115117awards007-e1539703568937.jpg?fit=1500%2C1000&ssl=1)
+![Credit: [National Book Foundation](https://www.nationalbook.org/the-72nd-national-book-awards-will-be-an-exclusively-digital-ceremony/)](https://i0.wp.com/www.nationalbook.org/wp-content/uploads/2017/01/NBF1115117awards007-e1539703568937.jpg)
 
 The Index of Major Literary Prizes in the US includes two related datasets:  
 
