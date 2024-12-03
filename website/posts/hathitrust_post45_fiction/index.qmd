@@ -25,7 +25,7 @@ citation:
   type: article-journal
   container-title: "Post45 Data Collective"
   # doi: "10.18737/CNJV1733p4520221212"
-  url: https://example.com/summarizing-output
+  url: data.post45.org/hathitrust-post45-fiction/
   editor:
   - Dan Sinykin
   - Melanie Walsh
@@ -113,7 +113,7 @@ raw_data = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/d
 // Example usage
 generateTabulatorTableFromCSV(
   "#table-container4",
-  
+
   "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/hathitrust_fiction/hathitrust_post45fiction_metadata.csv",
   {
     displayedColumns: ["shorttitle","inferreddate",  "author","recordid", "hathi_rights",  "genres", "id", "docid", "juvenileprob", "nonficprob", "author_authorized_heading", "author_lccn", "author_viaf", "author_wikidata_qid"],
