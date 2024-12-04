@@ -28,11 +28,11 @@ We further enable the scholarly community and general public to explore and re-u
 
 **Documentation & Data Essays**  
 
-Lastly, we provide robust documentation for all our datasets by requiring authors to submit ["data essays,"](submissions.qmd) which address the social and historical context of the data, how the data was collected, clean, and categorized, as well as possible ethical concerns or misuses of the data. 
+Lastly, we provide robust documentation for all our datasets by requiring authors to submit ["data essays,"](submissions.qmd) which address the social and historical context of the data, how the data was collected, cleaned, and categorized, as well as possible ethical concerns or misuses of the data. 
 
 # Support
 
-The Post45 Data Collective has received support from the National Endowment for the Humanities (2024-2026) and Emory’s Program to Enhance Research and Scholarship (PERS) (2023).
+The Post45 Data Collective is supported by Emory's Center for Digital Scholarship. We have also received support from the National Endowment for the Humanities (2024-2026) and, in 2023, from Emory’s Program to Enhance Research and Scholarship (PERS).
 
 
 # History of the Project
@@ -48,7 +48,7 @@ In the summer of 2021, we launched the “[Data Development Project](https://dat
 
 # Public Writing & Media
 
- In October 2022 and November 2023, the Post45 Data Collective partnered with *Public Books* to publish two series of essays, “[Hacking the Culture Industries](https://www.publicbooks.org/tag/hacking-the-culture-industries/),” which both drew on and was inspired by data from the collection. 
+ In October 2022 and November 2023, the Post45 Data Collective partnered with *Public Books* to publish two series of essays, “[Hacking the Culture Industries](https://www.publicbooks.org/tag/hacking-the-culture-industries/),” which both drew on and were inspired by data from the collection. 
  
  Post45 Data Collective datasets have also been featured prominently in venues including the [*Los Angeles Review of Books*](https://lareviewofbooks.org/article/fuck-the-poetry-police-on-the-index-of-major-literary-prizes-in-the-united-states/), [*Poets & Writers Magazine*](https://www.pw.org/content/literary_prizes_under_scrutiny), and [WNYC’s On the Media](https://www.wnycstudios.org/podcasts/otm/episodes/who-cares-about-literary-prizes-on-the-media). 
  

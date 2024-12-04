@@ -30,7 +30,7 @@ toc: false
 
 <div class="hero-content">
   <h1>POST45 DATA <br> COLLECTIVE</h1>
-  <p>The Post45 Data Collective peer reviews and houses literary and cultural data from 1945 to the present on an open-access website designed, hosted, and maintained by Emory University’s Center for Digital Scholarship.</p>
+  <p>The Post45 Data Collective peer reviews and houses literary and cultural data from 1945 to the present on an open-access website.</p>
 </div>
 
 :::
