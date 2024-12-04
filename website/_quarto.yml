@@ -6,10 +6,11 @@ website:
   favicon: images/p45dc-fav-icon.jpg
   twitter-card: true
   title: "POST45 DATA COLLECTIVE"
+  site-url: "https://data.post45.org"
   page-footer:
     background: "#455B64"
   # right: <p style="color:white">Copyright &copy; 2024</p>
-    center:   <p style="color:white">    Supported by [![](https://www.neh.gov/sites/default/files/styles/background_hero_ultra_large_2600/public/2024-10/NEH%20Seal%20with%20Full%20Name%20-%20Inversed%20Color.png){fig-alt="National Endowment for the Humanities" width=75px}](https://www.neh.gov) [![](  https://www.jhrehab.org/wp-content/uploads/2023/10/Data-Center-ecds-logo.png?w=640){fig-alt="Emory Center for Digital Scholarship" width=75px}](https://digitalscholarship.emory.edu/)       Website made with [![](https://raw.githubusercontent.com/github/explore/80f119e965a9a3df7b74c3f7b63a502e3d0ded36/topics/quarto/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)</p>
+    center:   <p style="color:white">Supported by [![](https://www.neh.gov/sites/default/files/styles/background_hero_ultra_large_2600/public/2024-10/NEH%20Seal%20with%20Full%20Name%20-%20Inversed%20Color.png){fig-alt="National Endowment for the Humanities" width=75px}](https://www.neh.gov) [![](  https://www.jhrehab.org/wp-content/uploads/2023/10/Data-Center-ecds-logo.png?w=640){fig-alt="Emory Center for Digital Scholarship" width=75px}](https://digitalscholarship.emory.edu/) Built with [![](https://raw.githubusercontent.com/github/explore/80f119e965a9a3df7b74c3f7b63a502e3d0ded36/topics/quarto/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)</p>
     #right: 
      # <p style="color:white">Website made with [![](https://raw.githubusercontent.com/github/explore/80f119e965a9a3df7b74c3f7b63a502e3d0ded36/topics/quarto/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)</p>
   

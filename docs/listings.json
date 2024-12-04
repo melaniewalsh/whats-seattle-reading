@@ -1,15 +1,5 @@
 [
   {
-    "listing": "/our-data.html",
-    "items": [
-      "/posts/the-index-of-major-literary-prizes-in-the-us/index.html",
-      "/posts/the-nordic-noir-in-translation-database-2000-2020/index.html",
-      "/posts/nyt_hardcover_fiction_bestsellers/index.html",
-      "/posts/iowa_writers_workshop/index.html",
-      "/posts/hathitrust_post45_fiction/index.html"
-    ]
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/posts/the-index-of-major-literary-prizes-in-the-us/index.html",
@@ -26,6 +16,16 @@
       "/news/ddp-recap.html",
       "/news/ddp-rfp-2021.html",
       "/news/awash-in-data.html"
+    ]
+  },
+  {
+    "listing": "/our-data.html",
+    "items": [
+      "/posts/the-index-of-major-literary-prizes-in-the-us/index.html",
+      "/posts/the-nordic-noir-in-translation-database-2000-2020/index.html",
+      "/posts/nyt_hardcover_fiction_bestsellers/index.html",
+      "/posts/iowa_writers_workshop/index.html",
+      "/posts/hathitrust_post45_fiction/index.html"
     ]
   }
 ]
