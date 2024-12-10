@@ -29,7 +29,8 @@ format:
   html:
     theme: 
      - flatly
-     - custom.scss
+    #  - styles.css
+    #  - custom.scss
     linkcolor: "#dea202"
     css:
      - styles.css
