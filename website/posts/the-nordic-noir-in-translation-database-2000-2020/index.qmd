@@ -4,9 +4,12 @@ author:
   - name: Karl Berglund
     # url: https://www.linkedin.com/in/jordan-pruett-a30502ba/
     # email: josiah@psychoceramics.org
-  - name: Jesper Gulddal
-  - name: Stewart King
+    orcid: 0000-0001-7280-1112
     corresponding: true
+  - name: Jesper Gulddal
+    orcid: 0000-0002-0888-8919
+  - name: Stewart King
+    orcid: 0000-0002-4663-1700
 format: 
   html:
     toc: true
@@ -14,7 +17,7 @@ format:
     toc-location: left
     toc-depth: 3
     toc-expand: 3
-date: "2022-02-01"
+date: "2024-02-01"
 doi: "10.18737/CNJV1733p4520240201"
 abstract: "This dataset contains bibliographic records of all translations of Nordic crime fiction for adults, written in any of the five main Nordic languages (Danish, Finnish, Icelandic, Norwegian and Swedish) and published in translation during the period 2000–2020."
 page-layout: full
