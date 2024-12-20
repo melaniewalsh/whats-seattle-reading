@@ -1,14 +1,14 @@
 ---
-title: "Descriptive Database of Articles in *Feminist Bookstore News* (1976-2000)"
+title: "Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)"
 author:
   - name: Julie R. Enszer
     url: https://julierenszer.com/
   - name: Sam Grasland
   - name: Cassidy Hunt
   - name: Michaela Hayes
-abstract: "This dataset includes metadata for for all articles in *Feminist Bookstore News* from 1976-2020."
+abstract: "This dataset includes metadata for for all articles in *_Feminist Bookstore News_* from 1976-2020."
 categories: [print, feminist, bookstore, publishing, dataset]
-image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg
+image: https://litmuspress.org/wp-content/uploads/2022/03/_FBN_-covers_Page_01.jpg
 doi: "10.18737/CNJV1733p4520221212" #FAKE DOI 
 date: "2024-11-18"
 license: CC BY-NC-SA
@@ -16,7 +16,7 @@ citation:
   type: article-journal
   container-title: "Post45 Data Collective"
   doi: "10.18737/CNJV1733p4520221212"
-  url: https://example.com/summarizing-output
+  url: data.post45.org/feminist-bookstore-news/
   editor:
   - Dan Sinykin
   - Melanie Walsh
@@ -34,8 +34,8 @@ page-layout: full
 google-scholar: true 
 header-includes:
   - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
-# aliases:
-# - /feminist-bookstore-news/
+aliases:
+  - /feminist-bookstore-news/
 ---
 
 <!-- EDITORIAL TEAM: Create a new directory in posts/ with appropriate title for data essay (which will become the URL slug, e.g. /nea-creative-writing-fellowships becomes https://post45-data-collective.github.io/website/posts/nea-creative-writing-fellowships/).
@@ -47,15 +47,15 @@ Then fill in the rest of the information above and below. -->
 
  <!-- Include image for data essay -->
 
-::: {#fig-fbn}
-[![](https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg){width=50% fig-align="left"}](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/) 
+::: {#fig-_FBN_}
+[![](https://litmuspress.org/wp-content/uploads/2022/03/_FBN_-covers_Page_01.jpg){width=50% fig-align="left"}](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/) 
 
 Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-apollo-press/)
 :::
 
 <!-- Include brief introduction to/description of data essay  -->
 
-The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” is a descriptive bibliography of articles in *FBN* for researchers to search the thousands of articles published to explore the wide range of material considered in the magazine.
+The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
@@ -85,7 +85,7 @@ createDataTable(
   data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/FINAL%20Descriptive%20Database%20of%20Articles%20Rev.csv",
 
   # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("Vol", "No", "Vol.No", "Article.Title", 
+  displayed_columns = c("Vol", "No", "Volume.No", "Article.Title", 
   "Author", "Category", "Year", "Month", "Notes", "Volunteer", "Total.Pages", "Unique.Identifier"),
 
    # MAKE EDITS HERE: Customize any column widths 
@@ -125,78 +125,93 @@ This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0
 :::
 
 ## Significance & Context
-
-Printing and publishing were crucial elements of women’s and gay liberation. In the case of women’s liberation, independent newspapers, magazines, journals, printing press operations, and publishing houses were so significant that women involved in these activities came to call themselves the “women in print movement,” organizing conferences and other activities to support their work. This explosion of printing and publishing work from 1969 through 2000 by feminists, with lesbian-feminists playing important leadership roles in the movement, resulted in a wide range of books, periodicals, and other printed material available for study. Print culture is a vibrant node to explore women’s liberation and gay and lesbian liberation. For example, Martin Meeker highlights how print and publishing helped gay men and lesbians find one another. Since Trysh Travis’s “The Women in Print Movement” and its “analysis of how gender and power shaped ‘the little world of the book,’” multiple scholars have explicated feminist book history. Jaime Harker situates its southern roots; Kristen Hogan maps feminist bookstores as an important site of antiracist thinking and activism in feminist and lesbian communities, while Junko R. Onosaka considers the roles these bookstores played in making the stories of women’s lives and experiences more visible and available to readers. Kathy Liddle develops the concept of “cultural interaction spaces” to describe feminist bookstores as spaces where women developed “identities as feminists and/or lesbians.” I have written extensively about independent publishers in the movement and, more recently, about the significance of bibliography for figures like Barbara Grier and the transnational movements of texts through networks in the movement. Still, other scholars use the print material from the movement to elaborate further the issues and concerns of lesbians; Cait McKinney, for example, explores the “circle of lesbian indexers” who stepped up to make “critical choices about the tools” used and “the classifications schemes they assigned to ‘lesbian experience.’” June Thomas’s new book A Place Of Our Own provides a personal account of the impact of the women in print movement and lesbian-feminist activism during the era. These works complement recent engagements by Richard Jean So examining the race of authors in post-World War II fiction and Dan Sinykin in documenting the impact of corporate conglomerates on American fiction. So, in particular, advocates for the significance of large datasets and their potential for humanities research with social justice outcomes. 
-
-While all these attentions are vital, assessments of the scope and impact of the women in print movement have not been fully explored, and, as these organizations recede into memory, describing, quantifying, and analyzing the work of the women in print movement becomes more important for the historical record. What effects did the women in print movement have on mainstream publishing in the United States and in other English-language markets around the world? Activists in the women in print movement developed, organized, and sustained many institutions, such as local feminist bookstores, women’s coffeehouses, print shops, distribution companies, publishing ventures, and more. 
-
-The “Descriptive Database of Articles in Feminist Bookstore News 1976-2000” is a descriptive bibliography of articles in FBN for researchers to search the thousands of articles published to explore the wide range of material considered in the magazine. A second enumerative bibliography is planned with every book mentioned in Feminist Bookstore News during its lifespan; this dataset is anticipated in 2025. Together, these datasets respond to Kate Ozment’s call for feminist book history that “knits a narrative of book history through librarianship, book collecting, and textual editing alongside the traditional space of bibliography.”
  
-Feminist Bookstore News (FBN), a US-based publication, was the publisher of record for the women in print movement. A hand-printed, stapled-in-the-corner newsletter, FBN grew to be the preeminent book trade magazine for feminist bookstores including feminist and lesbian publishers, vendors selling to feminist bookstores, and interested feminist readers. In addition, a range of mainstream and specialty bookstores as well as corporate, independent press, and other social movement publishers read FBN avidly. Carol Seajay operated FBN from 1976 until 2000, publishing 134 issues; these issues ranged from eight pages to over 150 pages per issue. At the end of the run of the periodical, two issues were fully electronic, 22.5 and 23.1. 
+__Feminist Bookstore News__ (_FBN_), a US-based publication, was the publisher of record for the "women in print" movement. A hand-printed, stapled-in-the-corner newsletter, _FBN_ grew to be the preeminent book trade magazine for feminist bookstores including feminist and lesbian publishers, vendors selling to feminist bookstores, and interested feminist readers. In addition, a range of mainstream and specialty bookstores as well as corporate, independent press, and other social movement publishers read _FBN_ avidly. Carol Seajay operated _FBN_ from 1976 until 2000, publishing 134 issues. These issues ranged from eight pages to over 150 pages per issue. At the end of the run of the periodical, two issues were fully electronic, 22.5 and 23.1. 
 
-FBN is a rich archive for research about publishing, the women in print movement, and more. This database offers a way for researchers to find and locate materials more efficiently among the over 10,000 pages published by FBN. This data has already proven generative at Sinister Wisdom in the hands of volunteers, interns, and people interested in lesbian literature and histories. Researchers might examine this data to explore questions like:
-What was the economic and cultural scope of feminist bookstores during the 1980s and 1990s?
-What were key contributions of social change publishing in the independent publishing scene between 1976 and 2000?
-How did feminist bookstores spark a network of feminist merchants who built small, sustainable businesses around bookstores and other feminist cultural events such as music festivals?
-What effects did desktop publishing have on independent publishing? What were crucial moments of desktop publishing’s entry into independent publishing?
-How did other technologies (internet, web, mobile phones, etc.) effect independent publishing?
-How did the visual language of feminism evolve during this period of increased computerization?
-How did mainstream publishing respond to the feminist publishing movement?
-What conditions facilitated publishing gay and lesbian literary work in commercial publishing?
-What cultural, governmental, and/or political conditions influenced publishing during these decades? How did publishing influence cultural, governmental, and/or political conditions?
+The “Descriptive Database of Articles in _Feminist Bookstore News_ 1976-2000” is a descriptive bibliography of articles in _FBN_ for researchers to search and explore the thousands of articles published and the wide range of material considered in the magazine. A second enumerative bibliography is planned with every book mentioned in _Feminist Bookstore News_ during its lifespan; this second dataset is anticipated in 2025. Together, these datasets respond to Kate Ozment’s call for feminist book history that “knits a narrative of book history through librarianship, book collecting, and textual editing alongside the traditional space of bibliography.”
 
-There is not another dataset that documents the range and diversity of activities of the women in print movement; this “Descriptive Database of Articles in Feminist Bookstore News 1976-2000” offers a way to engage the histories of the women in print movement more robustly by making the over 10,000 pages of content easier to search, providing a view of the types of articles published that is easier to understand, and offering initial searchability for key words to explore content further in the full corpus.
+### *Background & Scholarship*
+
+Printing and publishing were crucial elements of women’s and gay liberation. In the case of women’s liberation, independent newspapers, magazines, journals, printing press operations, and publishing houses were so significant that women involved in these activities came to call themselves the “women in print movement,” organizing conferences and other activities to support their work. This explosion of printing and publishing work from 1969 through 2000 by feminists, with lesbian-feminists playing important leadership roles in the movement, resulted in a wide range of books, periodicals, and other printed material available for study. 
+
+Print culture is thus a vibrant node to explore women’s liberation and gay and lesbian liberation. For example, Martin Meeker highlights how print and publishing helped gay men and lesbians find one another. Since Trysh Travis’s “The Women in Print Movement” and its “analysis of how gender and power shaped ‘the little world of the book,’” multiple scholars have explicated feminist book history. Jaime Harker situates its southern roots; Kristen Hogan maps feminist bookstores as an important site of antiracist thinking and activism in feminist and lesbian communities, while Junko R. Onosaka considers the roles these bookstores played in making the stories of women’s lives and experiences more visible and available to readers. Kathy Liddle develops the concept of “cultural interaction spaces” to describe feminist bookstores as spaces where women developed “identities as feminists and/or lesbians.” I have written extensively about independent publishers in the movement and, more recently, about the significance of bibliography for figures like Barbara Grier and the transnational movements of texts through networks in the movement. 
+
+Still other scholars use the print material from the movement to elaborate further the issues and concerns of lesbians. Cait McKinney, for example, explores the “circle of lesbian indexers” who stepped up to make “critical choices about the tools” used and “the classifications schemes they assigned to ‘lesbian experience.’” June Thomas’s new book _A Place Of Our Own_ provides a personal account of the impact of the women in print movement and lesbian-feminist activism during the era. These works complement recent engagements by Richard Jean So examining the race of authors in post-World War II fiction and by Dan Sinykin in documenting the impact of corporate conglomerates on American fiction — so, in particular, advocates for the significance of large datasets and their potential for humanities research with social justice outcomes. 
+
+While all these attentions are vital, assessments of the scope and impact of the women in print movement have not been fully explored. As these organizations recede into memory, describing, quantifying, and analyzing the work of the women in print movement becomes more important for the historical record. 
+<!-- What effects did the women in print movement have on mainstream publishing in the United States and in other English-language markets around the world? Activists in the women in print movement developed, organized, and sustained many institutions, such as local feminist bookstores, women’s coffeehouses, print shops, distribution companies, publishing ventures, and more.  -->
+
+### *How Researchers Might Use This Dataset*
+_FBN_ is a rich archive for research about publishing, the women in print movement, and more. This database offers a way for researchers to find and locate materials more efficiently among the over 10,000 pages published by _FBN_.
+
+This data has already proven generative at the journal [_Sinister Wisdom_](https://www.sinisterwisdom.org/journal) in the hands of volunteers, interns, and people interested in lesbian literature and histories. 
+
+Researchers might examine this data to explore questions like:
+
+* What was the economic and cultural scope of feminist bookstores during the 1980s and 1990s?  
+* What were key contributions of social change publishing in the independent publishing scene between 1976 and 2000?  
+* How did feminist bookstores spark a network of feminist merchants who built small, sustainable businesses around bookstores and other feminist cultural events such as music festivals?  
+* What effects did desktop publishing have on independent publishing? What were crucial moments of desktop publishing’s entry into independent publishing?  
+* How did other technologies (internet, web, mobile phones, etc.) effect independent publishing?  
+* How did the visual language of feminism evolve during this period of increased computerization?  
+* How did mainstream publishing respond to the feminist publishing movement?  
+* What conditions facilitated publishing gay and lesbian literary work in commercial publishing?  
+* What cultural, governmental, and/or political conditions influenced publishing during these decades? How did publishing influence cultural, governmental, and/or political conditions?  
+
+There is not another dataset that documents the range and diversity of activities of the women in print movement. The “Descriptive Database of Articles in _Feminist Bookstore News_ (1976-2000)” offers a way to engage the histories of the women in print movement more robustly by making the over 10,000 pages of content easier to search, providing a view of the types of articles published that is easier to understand, and offering initial searchability for keywords to explore content further in the full corpus.
 
 ## Collection and Creation
 
-The “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” was hand-compiled and collated from digital copies of *FBN*. Reveal Digital digitized issues of *FBN* from volume seven through twenty-two the feminist component of the Independent Voices Project. [These issues now are available freely through JSTOR](https://www.jstor.org/site/reveal-digital/independent-voices/feministbookstorenews-27953489/?so=old). The digital collection of *FBN*, however, was incomplete. Before compiling this data, volunteers at *Sinister Wisdom* created a complete digital collection of *FBN* scanning issues and ephemera through the San Francisco Public Library. All issues of *FBN* are now digitized and freely available at the [Lesbian Poetry Archives](http://lesbianpoetryarchive.org/fbn). *FBN* also published and distributed nationally five, full-color, glossy Feminist Bookstores’ Catalogs. Digital copies of these catalogs are available at the [Lesbian Poetry Archive](http://www.lesbianpoetryarchive.org/FBNcatalogs). [Additional ephemera–inserts to the newsletters, flyers, and other material–have been digitized](https://www.lesbianpoetryarchive.org/FBNExtras) and labeled as ‘extras’. During the 2000s, Carol Seajay initiated and edited *Books To Watch Out For*. More information and archives of those issues are available here: [http://www.lesbianpoetryarchive.org/BTWOF](http://www.lesbianpoetryarchive.org/BTWOF). *Books To Watch Out For* is not included in this bibliographic project.
+The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” was hand-compiled and collated from digital copies of *_FBN_*. Reveal Digital digitized issues of *_FBN_* from volume seven through twenty-two, part of the feminist component of the [Independent Voices project](https://www.jstor.org/site/reveal-digital/independent-voices/?searchkey=1734733341369&so=item_title_str_asc). These issues now [are available freely through JSTOR](https://www.jstor.org/site/reveal-digital/independent-voices/feministbookstorenews-27953489/?so=old). 
 
-Work on this database began with a brief note in a *Sinister Wisdom* email announcing our spring 2023 issue on its publication date, April 15, 2023\. A postscript to the email said:
+The digital collection of *_FBN_*, however, was incomplete. Before compiling this data, volunteers at *Sinister Wisdom* created a complete digital collection of *_FBN_* by scanning issues and ephemera through the San Francisco Public Library. All issues of *_FBN_* are now digitized and freely available at the [Lesbian Poetry Archives](http://lesbianpoetryarchive.org/_FBN_). *_FBN_* also published and distributed nationally five, full-color, glossy Feminist Bookstores’ Catalogs. Digital copies of these catalogs are available at the [Lesbian Poetry Archive](http://www.lesbianpoetryarchive.org/_FBN_catalogs). Additional ephemera—inserts to the newsletters, flyers, and other material—[have been digitized](https://www.lesbianpoetryarchive.org/_FBN_Extras) and labeled as "extras." During the 2000s, Carol Seajay initiated and edited *Books To Watch Out For*. More information and archives of those issues are available here: [http://www.lesbianpoetryarchive.org/BTWOF](http://www.lesbianpoetryarchive.org/BTWOF). *Books To Watch Out For* is not included in this bibliographic project.
 
-Psst\! Julie and *Sinister Wisdom* are cooking up a new project and need some helping hands. Have a bit of time from May until August? A solid internet connection? Like feminist and lesbian books? Like organizing information? We have a project for you\!  
-Email Julie for more information and to express your interest. We will build a cohort of volunteers for a nifty project over the summer. Keep your eyes peeled for a zoom launch meeting and get on the special email list for more information.
+Work on this databset began with a brief note in a *Sinister Wisdom* email announcing our spring 2023 issue on its publication date, April 15, 2023\. A postscript to the email said:
 
-Over forty volunteers from *Sinister Wisdom* signed up to participate in the project. Chloe Berger, a graduate student in Spanish language and literature at the University of California-Berkeley, scanned the missing issues of *FBN*–and more—at the San Francisco Public Library (SFPL) and in consultation with Carol Seajay and her private collection.
+> Psst\! Julie and *Sinister Wisdom* are cooking up a new project and need some helping hands. Have a bit of time from May until August? A solid internet connection? Like feminist and lesbian books? Like organizing information? We have a project for you\!  
+> Email Julie for more information and to express your interest. We will build a cohort of volunteers for a nifty project over the summer. Keep your eyes peeled for a zoom launch meeting and get on the special email list for more information.
+
+Over forty volunteers from *Sinister Wisdom* signed up to participate in the project. Chloe Berger, a graduate student in Spanish language and literature at the University of California-Berkeley, scanned the missing issues of *_FBN_*–and more—at the San Francisco Public Library (SFPL) and in consultation with Carol Seajay and her private collection.
 
 By May 19th, the *Sinister Wisdom* Snapshot, our bi-weekly email of links, good reads, and lesbian/queer women’s happenings, posted this announcement:
 
-*Sinister Wisdom*’s summer project working on an archive of *Feminist Bookstore News* is underway\! If you have time this summer to volunteer on some database projects associated with it, please email Julie and mark your calendar for our kickoff meeting on Friday, 26 May 2023 at high noon ET. If you sign up for the project, you will receive a zoom link to the gathering.  
+> *Sinister Wisdom*’s summer project working on an archive of *_Feminist Bookstore News_* is underway\! If you have time this summer to volunteer on some database projects associated with it, please email Julie and mark your calendar for our kickoff meeting on Friday, 26 May 2023 at high noon ET. If you sign up for the project, you will receive a zoom link to the gathering.  
    
 Volunteers flocked to the project with great energy and enthusiasm. In total, close to fifty volunteers participated in the project; thirty-eight volunteers keyed data from specific issues.
 
-With a complete set of FBN scans, volunteers embarked on the work of creating a database of all the articles in *FBN.* A shared spreadsheet on Google Sheets offered a collaborative space to enter data. Initially, the spreadsheet contained columns for basic bibliographic data for each article in *FBN* plus a column for notes that volunteers could enter about the articles. As the project developed, more standard categories for each article emerged and that column was added. 
+With a complete set of _FBN_ scans, volunteers embarked on the work of creating a database of all the articles in *_FBN_.* A shared spreadsheet on Google Sheets offered a collaborative space to enter data. Initially, the spreadsheet contained columns for basic bibliographic data for each article in *_FBN_* plus a column for notes that volunteers could enter about the articles. As the project developed, more standard categories for each article emerged and that column was added. 
 
-Individual volunteers signed up for a specific issue of *FBN*, read it, and entered bibliographic information into the shared spreadsheet. *Sinister Wisdom* organized a series of Zoom meetings to explain the project and the process and then hosted Zoom work sessions during the summer of 2023\.
+Individual volunteers signed up for a specific issue of *_FBN_*, read it, and entered bibliographic information into the shared spreadsheet. *Sinister Wisdom* organized a series of Zoom meetings to explain the project and the process and then hosted Zoom work sessions during the summer of 2023\.
 
-By August 31, 2023, volunteers and interns completed data entry on sixty issues of *FBN*, about half the corpus. During the fall of 2023, we paused to assess the strengths and limitations of the existing data structure and refine it before completing the second half of the data entry for the descriptive bibliography of *FBN* in the spring. From December 2023 through March 2024, *Sinister Wisdom* volunteers and interns returned to the project and completed the database. 
+By August 31, 2023, volunteers and interns completed data entry on sixty issues of *_FBN_*, about half the corpus. During the fall of 2023, we paused to assess the strengths and limitations of the existing data structure and refine it before completing the second half of the data entry for the descriptive bibliography of *_FBN_* in the spring. From December 2023 through March 2024, *Sinister Wisdom* volunteers and interns returned to the project and completed the database. 
 
-Volunteers entered nearly all the data freeform. The primary reason for this freeform entry was that, while we tested the data entry on a smaller scale before opening to a broad community of volunteers even after that test, the team was unclear about what parameters to use to limit the data entry before final clean up. In addition, the team wanted to encourage volunteers to engage both with the individual issues of *FBN* and with the broader project through data entry that was open and invited each volunteer to engage and capture articles in ways that s/he determined. Ultimately, collectively the project team and the volunteers developed guidelines for some standardization in data entry, but the final database reflects differences among humans in reading, analysis, and entry.
+Volunteers entered nearly all the data freeform. The primary reason for this freeform entry was that, while we tested the data entry on a smaller scale before opening to a broad community of volunteers even after that test, the team was unclear about what parameters to use to limit the data entry before final clean up. In addition, the team wanted to encourage volunteers to engage both with the individual issues of *_FBN_* and with the broader project through data entry that was open and invited each volunteer to engage and capture articles in ways that s/he determined. Ultimately, collectively the project team and the volunteers developed guidelines for some standardization in data entry, but the final database reflects differences among humans in reading, analysis, and entry.
 
-When the database was completed, Salome “Sam” Grasland cleaned and standardized the data for final use and display. A few initial fields were removed because they lacked data (for example, initially the spreadsheet contained a column for ad size, but that data was not completed consistently). Sam cleaned the author name field, which had misspellings and applied Title Case to the column. If additional information was known about the author, but not their name, then that information was put into brackets \[\]. The spelling of all months was standardized and issues which previously had a slashed month, for example September/October, only the first month listed was retained. Issue numbers were standardized to always be 9.10, for example for combined issues. Sam cleaned the category field and grouped like categories together. The graphics column was changed to yes/no. Spellcheck was also run on the overall data and many errors in spelling were corrected, but throughout the data, capitalization is capacious and given that the project team included people both in the United States and the United Kingdom, there is not a standardization of English.
+When the database was completed, Salome “Sam” Grasland cleaned and standardized the data for final use and display. A few initial fields were removed because they lacked data (for example, initially the spreadsheet contained a column for ad size, but that data was not completed consistently). Sam cleaned the author name field, which sometimes had misspellings. If additional information was known about the author, but not their name, then that information was put into brackets \[\]. The spelling of all months was standardized and issues which previously had a slashed month, for example September/October, only the first month listed was retained. Issue numbers were standardized to always be 9.10, for example for combined issues. Sam cleaned the category field and grouped like categories together. The graphics column was changed to yes/no. Spellcheck was also run on the overall data and many errors in spelling were corrected. However, throughout the data, capitalization is capacious and, given that the project team included people both in the United States and the United Kingdom, there is not a standardization of English.
 
-In addition to the “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000,” Cassidy Hunt, a volunteer, generated a list of every issue published, with notes about numbering oddities and other bibliographic details. This list is included as an addition to the dataset in three formats: PDF, Word, and Excel files.
+In addition to the “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000),” Cassidy Hunt, a volunteer, generated a list of every issue published, with notes about numbering oddities and other bibliographic details. This list is included as an addition to the dataset in three formats: PDF, Word, and Excel files.
 
-Salome “Sam” Grasland and her co-worker Nayeli Jaime at [The Information Lab](https://www.theinformationlab.co.uk/) created a dashboard for the project. The dashboard searches the “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000” and presents results next to renderings of the PDF issue in which the articles appear. The dashboard is hosted on Tableau Public and offers a searchable interface for the “Descriptive Database.” [It is available here](https://public.tableau.com/app/profile/salome.grasland/viz/FeministBookstoreNewsDashboards/ArticleDashboard?publish=yes).
+Salome “Sam” Grasland and her co-worker Nayeli Jaime at [The Information Lab](https://www.theinformationlab.co.uk/) created a dashboard for the project. The dashboard searches the “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” and presents results next to renderings of the PDF issue in which the articles appear. The dashboard is hosted on Tableau Public and offers a searchable interface for the “Descriptive Database.” The dashboard [is available here](https://public.tableau.com/app/profile/salome.grasland/viz/FeministBookstoreNewsDashboards/ArticleDashboard?publish=yes).
 
-The labor to compile the “Descriptive Database” was done completely by queer volunteers at *Sinister Wisdom*. Many people working on the project recognize *FBN* and the communities that it networked as vital to lesbian history and heritage. Julie notes, I believe that labor undertaken to preserve and analyze lesbian history should be compensated, and I also recognize that compensation is often not possible under the current conditions of capitalism in which we live.   
+The labor to compile the “Descriptive Database” was done completely by queer volunteers at *Sinister Wisdom*. Many people working on the project recognize *_FBN_* and the communities that it networked as vital to lesbian history and heritage. I (Julie) believe that labor undertaken to preserve and analyze lesbian history should be compensated, and I also recognize that compensation is often not possible under the current conditions of capitalism in which we live.   
 
 ## Description
 
-The “Descriptive Database of Articles in *Feminist Bookstores News* 1976-2000” is a flat-file with each row describing one article in an issue of *FBN*. There are over 5,900 rows of data. There are fourteen columns in the dataset.
+The “Descriptive Database of Articles in *Feminist Bookstores News* (1976-2000)” is a flat-file with each row describing one article in an issue of *_FBN_*. There are over 5,900 rows of data. There are fourteen columns in the dataset.
 
 The columns are:
 
-- Vol: *FBN* volume number (Sequentially numbered 1-23.)  
-- No: *FBN* issue number (For most issues, these are numerals; combined issues, for instance the combined release of numbers 9 and 10, are represented as 9.10 in the dataset. There are seven occurrences of SP as an issue number, sp for special or supplemental issues. Volume 6 contains one SP which was a special insert into 6.2 that was mailed only to bookstores and not other subscribers. Beginning with volume 13 and extending through volume 18, SP issues are issues focused on sidelines. There are additional sidelines issues after volume 18, but they are numbered numerically and not with SP.)
+- Vol: *_FBN_* volume number (Sequentially numbered 1-23.)  
+- No: *_FBN_* issue number (For most issues, these are numerals; combined issues, for instance the combined release of numbers 9 and 10, are represented as 9.10 in the dataset. There are seven occurrences of SP as an issue number, sp for special or supplemental issues. Volume 6 contains one SP which was a special insert into 6.2 that was mailed only to bookstores and not other subscribers. Beginning with volume 13 and extending through volume 18, SP issues are issues focused on sidelines. There are additional sidelines issues after volume 18, but they are numbered numerically and not with SP.)
   
-- Volume.No: *FBN* volume and issue number combined (represented as x.y and useful for sorting)   
+- Volume.No: *_FBN_* volume and issue number combined (represented as x.y and useful for sorting)   
 - Total Pages: Number of pages in the issue that contain article content (pages in the archived .pdf. Pagination varies within the issues across the publication.)  
 - Year: Year the issue was published  
 - Month: Month the issue was published (Early issues are not dated as clearly as later issues. For some early issues, this column surmises the month, often from a mail cancellation.)  
 - Article Title: Article title (There is great variability among titles, subtitles, and title conventions over the lifetime of the periodical. There is no imposed standardization on this field.)  
 - Page Start: the page number on which the item first appears  
--  Page End: the page number on which the item last appears. (Beginning in the early 1980s, *FBN* used a cardstock cover. These covers (front cover, inside front, inside back, and back cover) are unpaginated. The dataset uses c1, c2, c3, and c4 respectively in this field and the previous one to indicate these pages.)  
-- Author: Author of the article (when attributed. Carol Seajay is the presumptive author of many unattributed articles. There is inconsistency in the file of the application of her name to the author category, for instance, some records indicate unknown \[Seajay\] and others indicate unknown \[Fbn\]; all may have been written by Carol Seajay. In some records, a presumptive author is indicated in brackets after unknown.)  
+-  Page End: the page number on which the item last appears. (Beginning in the early 1980s, *_FBN_* used a cardstock cover. These covers (front cover, inside front, inside back, and back cover) are unpaginated. The dataset uses c1, c2, c3, and c4 respectively in this field and the previous one to indicate these pages.)  
+- Author: Author of the article (when attributed. Carol Seajay is the presumptive author of many unattributed articles. There is inconsistency in the file of the application of her name to the author category, for instance, some records indicate unknown \[Seajay\] and others indicate unknown \[_FBN_\]; all may have been written by Carol Seajay. In some records, a presumptive author is indicated in brackets after unknown.)  
 - Category: See below for more information on descriptions of each category.  
 - Graphics? Yes/No if graphics were present in the article  
 - Notes: This column is broad and capacious. Volunteers used it to summarize the article, write down the different subheadings in an article, point out interesting things in the article, or explain what graphics appear in this article.  
@@ -213,12 +228,12 @@ What each category means:
   * A list of books on a theme. These may have a few paragraphs of preamble but mostly focus on giving a list of books.  
   * Examples: Women’s Alcohol and Drug Abuse Booklist, Bestsellers Lists, Kids’ Lit  
 * External Booklists and Awards  
-  * This category captures external lists such as the Lambda Awards. It differs from the previous category, “Booklist/Media list” in that the lists for this category are determined by institutions other than Feminist Bookstore News.  
+  * This category captures external lists such as the Lambda Awards. It differs from the previous category, “Booklist/Media list” in that the lists for this category are determined by institutions other than _Feminist Bookstore News_.  
 * Advertisements  
   * These could include calls for submissions, posters, blurbs publicizing future events, advertisements for books, etc.  
 * Letters  
-  * Letters written to *FBN*  
-  * In each *FBN* issue there is a section for letters. Make one row for all of the letters and index them together in that one row.  
+  * Letters written to *_FBN_*  
+  * In each *_FBN_* issue there is a section for letters. Make one row for all of the letters and index them together in that one row.  
 * News Feature  
   * These articles are longer (1.5+ full pages) and news (informative about some happening)  
 * Short News  
@@ -244,17 +259,17 @@ The categories list developed over time and reflects the project’s evolution a
 
 ## Ethical Considerations
 
-Carol Seajay created *FBN* in the feminist context of the women in print movement which was part of the broader women’s liberation movement in the United States; *FBN* was dedicated to building a network of feminist booksellers and promoting the print, publishing, and book work of feminists. This database was compiled by volunteers through *Sinister Wisdom*, a lesbian-feminist periodical. While all involved in the project take a broad, capacious, and ecumenical view of feminism and believe passionately in this data to illuminate feminist as well as other, non-feminist and feminist-adjacent work, it would not be ethical to use this data in a way that would harm feminist writers, authors, activists, publishers, printers, or book projects. The expectation is that the data will be used with mindfulness about its feminist origins and intentions.
+Carol Seajay created *_FBN_* in the feminist context of the women in print movement which was part of the broader women’s liberation movement in the United States; *_FBN_* was dedicated to building a network of feminist booksellers and promoting the print, publishing, and book work of feminists. This database was compiled by volunteers through *Sinister Wisdom*, a lesbian-feminist periodical. While all involved in the project take a broad, capacious, and ecumenical view of feminism and believe passionately in this data to illuminate feminist as well as other, non-feminist and feminist-adjacent work, it would not be ethical to use this data in a way that would harm feminist writers, authors, activists, publishers, printers, or book projects. The expectation is that the data will be used with mindfulness about its feminist origins and intentions.
 
-The dataset does not contain confidential information. It does contain information about the finances of *FBN*.
+The dataset does not contain confidential information. It does contain information about the finances of *_FBN_*.
 
 No institutional review board process is associated with this project.
 
 ## Versioning
 
-The research team at *Sinister Wisdom* is now working on another dataset enumerating every book mentioned in *FBN*. It is likely that through that research process errors or additional missing data may be discovered, compelling an update of this database. If an updated version is released, the target date would be at the end of calendar year 2025\.
+The research team at *Sinister Wisdom* is now working on another dataset enumerating every book mentioned in *_FBN_*. It is likely that through that research process errors or additional missing data may be discovered, compelling an update of this database. If an updated version is released, the target date would be at the end of calendar year 2025\.
 
-An additional report from *Sinister Wisdom* explores the project and its process. It is available at [www.sinisterwisdom.org/FBN](http://www.sinisterwisdom.org/FBN). 
+An additional report from *Sinister Wisdom* explores the project and its process. It is available at [www.sinisterwisdom.org/_FBN_](http://www.sinisterwisdom.org/_FBN_). 
 
 ## Bibliography
 
@@ -283,9 +298,9 @@ Travis, Trysh. “The Women in Print Movement: History and Implications,” *Boo
 
 Thank you to two anonymous reviewers of this project for their invaluable feedback, and thank you to Dan Sinykin and Melanie Walsh for their feedback, editorial acumen, and support of this project. 
 
-Every person who worked on this project indexing an issue of *FBN* was a vital and valuable part of the project. Immense gratitude to everyone who helped.
+Every person who worked on this project indexing an issue of *_FBN_* was a vital and valuable part of the project. Immense gratitude to everyone who helped.
 
-Here is the complete list of volunteers who participated in the creation of the “Descriptive Database of Articles in *Feminist Bookstore News* 1976-2000:” 
+Here is the complete list of volunteers who participated in the creation of the “Descriptive Database of Articles in *_Feminist Bookstore News_* 1976-2000:” 
 
 Alexa Mangione  
 Allison Quinlan  
@@ -349,6 +364,6 @@ Theo Baker
 
 [^10]:  Kate Ozment, “Rationale for a Feminist Bibliography,” *Textual Cultures* 13.1 (2020): 149–178, p. 172\.
 
-[^11]:  Kristen Hogan’s *The Feminist Bookstore Movement: Lesbian Antiracism and Feminist Accountability* (Durham: Duke University Press, 2016\) draws from the published *FBN* issues and explores their significance to feminist booksellers.
+[^11]:  Kristen Hogan’s *The Feminist Bookstore Movement: Lesbian Antiracism and Feminist Accountability* (Durham: Duke University Press, 2016\) draws from the published *_FBN_* issues and explores their significance to feminist booksellers.
 
 [image1]: <data:image/png;base64,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>
