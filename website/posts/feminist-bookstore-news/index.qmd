@@ -291,7 +291,7 @@ createDataTable(
   displayed_columns = c("volume", "number", "year_published", "number_of_pages", 
   "format", "on_jstor", "on_lpa", "notes"),
 
-   #MAKE EDITS HERE: Customize any column widths 
+   # MAKE EDITS HERE: Customize any column widths 
   # If none, comment out
    column_widths = c("volume" = "50px", "number" = "50px", "notes" = "140px", 
     ),
