@@ -57,6 +57,7 @@ Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-
 
 The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
 
+
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
 # Data Table
@@ -110,40 +111,6 @@ createDataTable(
 
     # Select column to sort by, and order
   sort_columns = c("Vol"),
-  sort_orders = c("asc")
-)
-
-The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
-
-
-createDataTable(
-  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/FINAL%20FBN.csv",
-
-  # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("VOLUME", "NUMBER", "YEAR PUBLISHED", "NUMBER OF PAGES", 
-  "FORMAT", "On JSTOR?", "On LPA?", "NOTES"),
-
-   # MAKE EDITS HERE: Customize any column widths 
-  # If none, comment out
-   column_widths = c("Volume" = "50px", "Number" = "50px", "Notes" = "140px", 
-    ),
-
-   # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
-   # If none, comment out
-  # currency_columns = c("prize_amount"),
-
-   # MAKE EDITS HERE: Select any columns that should be filterable as a category
-  # If none, comment out
-
-  category_columns = c("Number",
-    #"Author",
-   "Format", 
-    "Volume"
-   #"Month"
-   ),
-
-    # Select column to sort by, and order
-  sort_columns = c("Volume"),
   sort_orders = c("asc")
 )
 
@@ -293,6 +260,37 @@ What each category means:
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
 The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
+
+createDataTable(
+  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/FINAL%20FBN.csv",
+
+  # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+  displayed_columns = c("VOLUME", "NUMBER", "YEAR PUBLISHED", "NUMBER OF PAGES", 
+  "FORMAT", "On JSTOR?", "On LPA?", "NOTES"),
+
+   # MAKE EDITS HERE: Customize any column widths 
+  # If none, comment out
+   column_widths = c("Volume" = "50px", "Number" = "50px", "Notes" = "140px", 
+    ),
+
+   # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
+   # If none, comment out
+  # currency_columns = c("prize_amount"),
+
+   # MAKE EDITS HERE: Select any columns that should be filterable as a category
+  # If none, comment out
+
+  category_columns = c("Number",
+    #"Author",
+   "Format", 
+    "Volume"
+   #"Month"
+   ),
+
+    # Select column to sort by, and order
+  sort_columns = c("Volume"),
+  sort_orders = c("asc")
+)
 
 It contains the following columns:
 - Volume: *_FBN_* volume number (Sequentially numbered 1-23.)
