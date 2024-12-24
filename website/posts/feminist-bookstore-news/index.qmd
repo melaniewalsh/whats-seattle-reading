@@ -293,8 +293,7 @@ createDataTable(
 
    # MAKE EDITS HERE: Customize any column widths 
   # If none, comment out
-   column_widths = c("volume" = "50px", "number" = "50px", "notes" = "140px", 
-    ),
+   column_widths = c("volume" = "50px", "number" = "50px", "notes" = "140px"),
 
    # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
    # If none, comment out
