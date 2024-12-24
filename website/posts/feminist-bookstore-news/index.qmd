@@ -327,7 +327,7 @@ The “*_FBN_* Issue List” contains the following columns:
 - on_lpa: A N indicates that this issue is not on the Lesbian Poetry Archive (LPA); a Y indicates that it is.
 - notes: These highlight particular themes of issues of interest to readers.
 
-## Ethical Considerations
+# Ethical Considerations
 
 Carol Seajay created *_FBN_* in the feminist context of the women in print movement which was part of the broader women’s liberation movement in the United States; *_FBN_* was dedicated to building a network of feminist booksellers and promoting the print, publishing, and book work of feminists. This database was compiled by volunteers through *Sinister Wisdom*, a lesbian-feminist periodical. While all involved in the project take a broad, capacious, and ecumenical view of feminism and believe passionately in this data to illuminate feminist as well as other, non-feminist and feminist-adjacent work, it would not be ethical to use this data in a way that would harm feminist writers, authors, activists, publishers, printers, or book projects. The expectation is that the data will be used with mindfulness about its feminist origins and intentions.
 
@@ -335,13 +335,13 @@ The dataset does not contain confidential information. It does contain informati
 
 No institutional review board process is associated with this project.
 
-## Versioning
+# Versioning
 
 The research team at *Sinister Wisdom* is now working on another dataset enumerating every book mentioned in *_FBN_*. It is likely that through that research process errors or additional missing data may be discovered, compelling an update of this database. If an updated version is released, the target date would be at the end of calendar year 2025\.
 
 An additional report from *Sinister Wisdom* explores the project and its process. It is available at [www.sinisterwisdom.org/_FBN_](http://www.sinisterwisdom.org/_FBN_). 
 
-## Bibliography
+# Bibliography
 
 Baco, Joshua Ortiz, Benjamin Charles Germain Lee, Jim Casey, and Sarah H. Salter. “Toward an Experimental Bibliography of Hemispheric Reconstruction Newspapers,” *Criticism,* Summer/Fall 2022, vol 64, nos 3-4, pp. 453-470.  
 Enszer, Julie R. “Barbara Grier’s Enumerative Bibliographies: Iterating Communal Lesbian Identities,” *Criticism: A Quarterly for Literature and the Arts*, Summer/Fall 2022, Vol. 64, Nos. 3–4, pp. 397–412.  
