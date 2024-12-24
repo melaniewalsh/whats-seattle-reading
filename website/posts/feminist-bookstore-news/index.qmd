@@ -263,11 +263,23 @@ The categories list developed over time and reflects the project’s evolution a
 
 The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
 
+# Data Table
+
+<!-- FOR EDITORIAL TEAM:
+
+To create a data table, first add the dataset to the datasets/ directory in the GitHub repo. 
+
+Then, find the raw GitHub URL for that dataset and insert it below, customizing columns as needed.
+
+Areas that need to be edited are marked with MAKE EDITS HERE -->
 
 ```{r}
 #| echo: false
 #| warning: false
 #| message: false
+
+# data <- read.csv("https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-issue-list_2024-12-23.csv")
+# print(names(data))
 
 # Load the function
 source("../../scripts/createDataTable.R")
