@@ -1,5 +1,6 @@
 ---
 title: "The National Endowment for the Arts Creative Writing Fellowships (1965-2024)"
+image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/National_Endowment_for_the_Arts_%28NEA%29_Logo_2018_Square_on_Black.svg"
 author:
   - name: Alexander Manshel
 format: 
@@ -14,7 +15,6 @@ doi: "10.18737/096734"
 abstract: "This dataset contains a comprehensive list of the writers sponsored by NEA fellowships from the organization’s founding in 1965 to 2024, including information about those writers’ demographics, education, and geography."
 page-layout: full
 categories: [prizes, education, gender, race, MFA, dataset]
-image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/National_Endowment_for_the_Arts_%28NEA%29_Logo_2018_Square_on_Black.svg"
 format-links: [ipynb, pdf, docx]
 code-tools: false
 citation:
@@ -37,7 +37,7 @@ aliases:
 **Principal Investigator**: Alexander Manshel\
 **Research Assistants**: Alexandra Colby, Nived Dharmaraj, Emaline Gonzalez Thomas, Xujia Guan, Adam Hill, Nicole Huang, Richard Joseph, Matthew Molinaro, Jordan Pruett, Jaede Shillingford
 
-![](https://upload.wikimedia.org/wikipedia/commons/3/3b/National_Endowment_for_the_Arts_%28NEA%29_Logo_2018_Square_on_Black.svg){fig-align="center" width="50%" .preview-image}
+![](https://upload.wikimedia.org/wikipedia/commons/3/3b/National_Endowment_for_the_Arts_%28NEA%29_Logo_2018_Square_on_Black.svg){fig-align="center" width="50%"}
 
 This dataset contains a comprehensive list of the writers sponsored by National Endowment for the Arts fellowships from the organization’s founding in 1965 to 2024, including information about those writers’ demographics, education, and geography.
 

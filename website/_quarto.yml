@@ -4,6 +4,7 @@ project:
   
 website:
   favicon: images/p45dc-fav-icon.jpg
+  image: images/p45dc-fav-icon.jpg
   twitter-card: true
   open-graph: true
   google-analytics: "G-H9Z8DC0X8Q"
