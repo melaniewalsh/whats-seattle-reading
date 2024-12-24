@@ -259,7 +259,7 @@ What each category means:
 
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
-## *_FBN_* Issue List
+### *_FBN_* Issue List
 
 The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
 
