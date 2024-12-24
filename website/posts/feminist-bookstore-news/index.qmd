@@ -86,7 +86,7 @@ createDataTable(
   data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-descriptive_2024-12-23.csv",
 
   # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("vol", "no", "volume.no", "article_title", 
+  displayed_columns = c("vol", "no", "vol.no", "article_title", 
   "author", "category", "year", "month", "notes", "volunteer", "total_pages", "unique_id"),
 
    # MAKE EDITS HERE: Customize any column widths 
