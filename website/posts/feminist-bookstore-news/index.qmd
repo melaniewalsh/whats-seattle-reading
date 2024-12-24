@@ -1,5 +1,5 @@
 ---
-title: "Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)"
+title: "Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000) and *_FBN_* Issue List"
 author:
   - name: Julie R. Enszer
     url: https://julierenszer.com/
@@ -112,6 +112,8 @@ createDataTable(
   sort_columns = c("Vol"),
   sort_orders = c("asc")
 )
+
+The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
 
 
 createDataTable(
