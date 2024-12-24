@@ -259,7 +259,18 @@ What each category means:
 
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
+## *_FBN_* Issue List
+
 The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# Load the function
+source("../../scripts/createDataTable.R")
 
 createDataTable(
   data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-issue-list_2024-12-23.csv",
