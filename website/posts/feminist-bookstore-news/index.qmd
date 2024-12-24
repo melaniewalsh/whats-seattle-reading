@@ -10,7 +10,7 @@ abstract: "This dataset includes metadata for for all articles in *_Feminist Boo
 categories: [print, feminist, bookstore, publishing, dataset]
 image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg
 doi: "10.18737/CNJV1733p4520221212" #FAKE DOI 
-date: "2024-11-18"
+date: "2024-12-30"
 license: CC BY-NC-SA
 citation:
   type: article-journal
