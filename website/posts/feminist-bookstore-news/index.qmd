@@ -55,12 +55,14 @@ Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-
 
 <!-- Include brief introduction to/description of data essay  -->
 
-The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
 
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
-# Data Table
+# “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)”
+
+The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
+
 
 <!-- FOR EDITORIAL TEAM:
 
@@ -259,11 +261,9 @@ What each category means:
 
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
-### *_FBN_* Issue List
+# *_FBN_* Issue List
 
 The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
-
-# Data Table
 
 <!-- FOR EDITORIAL TEAM:
 
@@ -314,6 +314,8 @@ createDataTable(
   sort_orders = c("asc")
 )
 ```
+
+## Description
 
 The “*_FBN_* Issue List” contains the following columns:
 - volume: *_FBN_* volume number (Sequentially numbered 1-23.)
