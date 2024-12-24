@@ -314,10 +314,9 @@ createDataTable(
   sort_columns = c("volume"),
   sort_orders = c("asc")
 )
-
 ```
 
-It contains the following columns:
+The “*_FBN_* Issue List” contains the following columns:
 - volume: *_FBN_* volume number (Sequentially numbered 1-23.)
 - number: *_FBN_* issue number 
 - year_published: Year the issue was published
