@@ -118,8 +118,8 @@ createDataTable(
   data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/FINAL%20FBN.csv",
 
   # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("Volume", "Number", "Year Published", "Number of Pages", 
-  "Format", "On JSTOR?", "On LPA?", "NOTES"),
+  displayed_columns = c("VOLUME", "NUMBER", "YEAR PUBLISHED", "NUMBER OF PAGES", 
+  "FORMAT", "On JSTOR?", "On LPA?", "NOTES"),
 
    # MAKE EDITS HERE: Customize any column widths 
   # If none, comment out
