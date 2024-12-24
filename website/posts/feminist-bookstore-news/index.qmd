@@ -1,5 +1,5 @@
 ---
-title: "Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)"
+title: "Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000) and *_FBN_* Issue List"
 author:
   - name: Julie R. Enszer
     url: https://julierenszer.com/
@@ -10,7 +10,7 @@ abstract: "This dataset includes metadata for for all articles in *_Feminist Boo
 categories: [print, feminist, bookstore, publishing, dataset]
 image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg
 doi: "10.18737/CNJV1733p4520221212" #FAKE DOI 
-date: "2024-11-18"
+date: "2024-12-30"
 license: CC BY-NC-SA
 citation:
   type: article-journal
@@ -55,11 +55,14 @@ Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-
 
 <!-- Include brief introduction to/description of data essay  -->
 
-The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
+
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
-# Data Table
+# “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)”
+
+The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
+
 
 <!-- FOR EDITORIAL TEAM:
 
@@ -82,15 +85,15 @@ source("../../scripts/createDataTable.R")
 
 # MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
 createDataTable(
-  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/FINAL%20Descriptive%20Database%20of%20Articles%20Rev.csv",
+  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-descriptive_2024-12-23.csv",
 
   # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("Vol", "No", "Volume.No", "Article.Title", 
-  "Author", "Category", "Year", "Month", "Notes", "Volunteer", "Total.Pages", "Unique.Identifier"),
+  displayed_columns = c("vol", "no", "vol.no", "article_title", 
+  "author", "category", "year", "month", "notes", "volunteer", "total_pages", "unique_id"),
 
    # MAKE EDITS HERE: Customize any column widths 
   # If none, comment out
-   column_widths = c("Vol" = "50px", "No" = "50px", "Author" = "100px", "Category" = "120px", "Year" = "100px"
+   column_widths = c("vol" = "50px", "no" = "50px", "author" = "100px", "category" = "120px", "year" = "100px"
     #"prize_name" = "100px"
     ),
 
@@ -101,17 +104,18 @@ createDataTable(
    # MAKE EDITS HERE: Select any columns that should be filterable as a category
   # If none, comment out
 
-  category_columns = c( "Category", "No",
+  category_columns = c( "category", "no",
     #"Author",
    #"Year", 
-    "Vol"
+    "vol"
    #"Month"
    ),
 
     # Select column to sort by, and order
-  sort_columns = c("Vol"),
+  sort_columns = c("vol"),
   sort_orders = c("asc")
 )
+
 ```
 
 ::: {.callout-tip icon="false"}
@@ -201,22 +205,22 @@ The “Descriptive Database of Articles in *Feminist Bookstores News* (1976-2000
 
 The columns are:
 
-- Vol: *_FBN_* volume number (Sequentially numbered 1-23.)  
-- No: *_FBN_* issue number (For most issues, these are numerals; combined issues, for instance the combined release of numbers 9 and 10, are represented as 9.10 in the dataset. There are seven occurrences of SP as an issue number, sp for special or supplemental issues. Volume 6 contains one SP which was a special insert into 6.2 that was mailed only to bookstores and not other subscribers. Beginning with volume 13 and extending through volume 18, SP issues are issues focused on sidelines. There are additional sidelines issues after volume 18, but they are numbered numerically and not with SP.)
+- vol: *_FBN_* volume number (Sequentially numbered 1-23.)  
+- no: *_FBN_* issue number (For most issues, these are numerals; combined issues, for instance the combined release of numbers 9 and 10, are represented as 9.10 in the dataset. There are seven occurrences of SP as an issue number, sp for special or supplemental issues. Volume 6 contains one SP which was a special insert into 6.2 that was mailed only to bookstores and not other subscribers. Beginning with volume 13 and extending through volume 18, SP issues are issues focused on sidelines. There are additional sidelines issues after volume 18, but they are numbered numerically and not with SP.)
   
-- Volume.No: *_FBN_* volume and issue number combined (represented as x.y and useful for sorting)   
-- Total Pages: Number of pages in the issue that contain article content (pages in the archived .pdf. Pagination varies within the issues across the publication.)  
-- Year: Year the issue was published  
-- Month: Month the issue was published (Early issues are not dated as clearly as later issues. For some early issues, this column surmises the month, often from a mail cancellation.)  
-- Article Title: Article title (There is great variability among titles, subtitles, and title conventions over the lifetime of the periodical. There is no imposed standardization on this field.)  
-- Page Start: the page number on which the item first appears  
--  Page End: the page number on which the item last appears. (Beginning in the early 1980s, *_FBN_* used a cardstock cover. These covers (front cover, inside front, inside back, and back cover) are unpaginated. The dataset uses c1, c2, c3, and c4 respectively in this field and the previous one to indicate these pages.)  
-- Author: Author of the article (when attributed. Carol Seajay is the presumptive author of many unattributed articles. There is inconsistency in the file of the application of her name to the author category, for instance, some records indicate unknown \[Seajay\] and others indicate unknown \[_FBN_\]; all may have been written by Carol Seajay. In some records, a presumptive author is indicated in brackets after unknown.)  
-- Category: See below for more information on descriptions of each category.  
-- Graphics? Yes/No if graphics were present in the article  
-- Notes: This column is broad and capacious. Volunteers used it to summarize the article, write down the different subheadings in an article, point out interesting things in the article, or explain what graphics appear in this article.  
--  Volunteer: Volunteer Name (A complete list of all volunteers who compiled data for the dataset is included at the end of this essay.)  
-- Unique Identifier: This column was appended in the final creation of the file for citation purposes.
+- volume.no: *_FBN_* volume and issue number combined (represented as x.y and useful for sorting)   
+- total_pages: Number of pages in the issue that contain article content (pages in the archived .pdf. Pagination varies within the issues across the publication.)  
+- year: Year the issue was published  
+- month: Month the issue was published (Early issues are not dated as clearly as later issues. For some early issues, this column surmises the month, often from a mail cancellation.)  
+- article_title: Article title (There is great variability among titles, subtitles, and title conventions over the lifetime of the periodical. There is no imposed standardization on this field.)  
+- page_start: the page number on which the item first appears  
+- page_end: the page number on which the item last appears. (Beginning in the early 1980s, *_FBN_* used a cardstock cover. These covers (front cover, inside front, inside back, and back cover) are unpaginated. The dataset uses c1, c2, c3, and c4 respectively in this field and the previous one to indicate these pages.)  
+- author: Author of the article (when attributed. Carol Seajay is the presumptive author of many unattributed articles. There is inconsistency in the file of the application of her name to the author category, for instance, some records indicate unknown \[Seajay\] and others indicate unknown \[_FBN_\]; all may have been written by Carol Seajay. In some records, a presumptive author is indicated in brackets after unknown.)  
+- category: See below for more information on descriptions of each category.  
+- graphics? Yes/No if graphics were present in the article  
+- notes: This column is broad and capacious. Volunteers used it to summarize the article, write down the different subheadings in an article, point out interesting things in the article, or explain what graphics appear in this article.  
+- volunteer: Volunteer Name (A complete list of all volunteers who compiled data for the dataset is included at the end of this essay.)  
+- unique_id: This column was appended in the final creation of the file for citation purposes.
 
 A database necessarily imposes a structure onto materials that evolved over twenty-four years. In compiling the database, the team tried to capture the material in ways that respect the expressions and evolutions of the periodical. In collectively compiling the data, the volunteer team erred more on the side of expression than standardization.
 
@@ -257,7 +261,73 @@ What each category means:
 
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
-## Ethical Considerations
+# *_FBN_* Issue List
+
+The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
+
+<!-- FOR EDITORIAL TEAM:
+
+To create a data table, first add the dataset to the datasets/ directory in the GitHub repo. 
+
+Then, find the raw GitHub URL for that dataset and insert it below, customizing columns as needed.
+
+Areas that need to be edited are marked with MAKE EDITS HERE -->
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# data <- read.csv("https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-issue-list_2024-12-23.csv")
+# print(names(data))
+
+# Load the function
+source("../../scripts/createDataTable.R")
+
+createDataTable(
+  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-issue-list_2024-12-23.csv",
+
+  # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+  displayed_columns = c("volume", "number", "year_published", "number_of_pages", 
+  "format", "notes"),
+
+   # MAKE EDITS HERE: Customize any column widths 
+  # If none, comment out
+   # column_widths = c("volume" = "50px", "number" = "50px", "notes" = "140px"),
+
+   # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
+   # If none, comment out
+  # currency_columns = c("prize_amount"),
+
+   # MAKE EDITS HERE: Select any columns that should be filterable as a category
+  # If none, comment out
+
+  category_columns = c("number",
+    #"Author",
+   "format", 
+    "volume"
+   #"Month"
+   ),
+
+    # Select column to sort by, and order
+  sort_columns = c("volume"),
+  sort_orders = c("asc")
+)
+```
+
+## Description
+
+The “*_FBN_* Issue List” contains the following columns:
+- volume: *_FBN_* volume number (Sequentially numbered 1-23.)
+- number: *_FBN_* issue number 
+- year_published: Year the issue was published
+- number_of_pages: Number of pages in the archived .pdf (can differ from the total_pages in “Descriptive Database of Articles in *Feminist Bookstores News* (1976-2000)” because of paratext inclusion)
+- format: Newsletter is used for the first issues where the pages were mimeographed and the issue was stapled in the upper left hand corner. Magazine is used for the later format where pages were stapled together in a magazine format. Supplement is used for the one supplement of FBN. Electronic indicates the one issue published and distributed through email.
+- on_jstor: A N indicates that this issue is not on JSTOR; a Y indicates that it is.
+- on_lpa: A N indicates that this issue is not on the Lesbian Poetry Archive (LPA); a Y indicates that it is.
+- notes: These highlight particular themes of issues of interest to readers.
+
+# Ethical Considerations
 
 Carol Seajay created *_FBN_* in the feminist context of the women in print movement which was part of the broader women’s liberation movement in the United States; *_FBN_* was dedicated to building a network of feminist booksellers and promoting the print, publishing, and book work of feminists. This database was compiled by volunteers through *Sinister Wisdom*, a lesbian-feminist periodical. While all involved in the project take a broad, capacious, and ecumenical view of feminism and believe passionately in this data to illuminate feminist as well as other, non-feminist and feminist-adjacent work, it would not be ethical to use this data in a way that would harm feminist writers, authors, activists, publishers, printers, or book projects. The expectation is that the data will be used with mindfulness about its feminist origins and intentions.
 
@@ -265,13 +335,13 @@ The dataset does not contain confidential information. It does contain informati
 
 No institutional review board process is associated with this project.
 
-## Versioning
+# Versioning
 
 The research team at *Sinister Wisdom* is now working on another dataset enumerating every book mentioned in *_FBN_*. It is likely that through that research process errors or additional missing data may be discovered, compelling an update of this database. If an updated version is released, the target date would be at the end of calendar year 2025\.
 
 An additional report from *Sinister Wisdom* explores the project and its process. It is available at [www.sinisterwisdom.org/_FBN_](http://www.sinisterwisdom.org/_FBN_). 
 
-## Bibliography
+# Bibliography
 
 Baco, Joshua Ortiz, Benjamin Charles Germain Lee, Jim Casey, and Sarah H. Salter. “Toward an Experimental Bibliography of Hemispheric Reconstruction Newspapers,” *Criticism,* Summer/Fall 2022, vol 64, nos 3-4, pp. 453-470.  
 Enszer, Julie R. “Barbara Grier’s Enumerative Bibliographies: Iterating Communal Lesbian Identities,” *Criticism: A Quarterly for Literature and the Arts*, Summer/Fall 2022, Vol. 64, Nos. 3–4, pp. 397–412.  
