@@ -289,7 +289,7 @@ createDataTable(
 
   # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
   displayed_columns = c("volume", "number", "year_published", "number_of_pages", 
-  "format", "on_jstor?", "on_lpa?", "notes"),
+  "format", "on_jstor", "on_lpa", "notes"),
 
    #MAKE EDITS HERE: Customize any column widths 
   # If none, comment out
