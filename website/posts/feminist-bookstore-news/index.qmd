@@ -3,7 +3,7 @@ title: "*_Feminist Bookstore News_* Issues and Articles (1976-2000)"
 author:
   - name: Julie R. Enszer
     url: https://julierenszer.com/
-  - name: Sam Grasland
+  - name: Salome Grasland
   - name: Cassidy Hunt
   - name: Michaela Hayes
 abstract: "This dataset includes metadata for for all articles in *_Feminist Bookstore News_* from 1976-2000 and their corresponding issues."
