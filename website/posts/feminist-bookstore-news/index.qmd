@@ -59,11 +59,11 @@ Credit: [Litmus Press](https://litmuspress.org/feminist-bookstore-news-the-post-
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
-# “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)”
+# 1. “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)”
 
 The “Descriptive Database of Articles in *_Feminist Bookstore News_* (1976-2000)” is a descriptive bibliography of articles in *_FBN_* for researchers to search and explore the thousands of published articles and wide range of material considered in the magazine.
 
-
+## Data Table
 <!-- FOR EDITORIAL TEAM:
 
 To create a data table, first add the dataset to the datasets/ directory in the GitHub repo. 
@@ -261,9 +261,11 @@ What each category means:
 
 The categories list developed over time and reflects the project’s evolution as well as the changes within the periodical.
 
-# *_FBN_* Issue List
+# 2. *_FBN_* Issue List
 
 The “*_FBN_* Issue List” is a file with a list of all of the issues of *_FBN_*. 
+
+## Data Table
 
 <!-- FOR EDITORIAL TEAM:
 
@@ -364,7 +366,7 @@ So, Richard Jean, *Redlining Culture: A Data History of Racial Inequality and Po
 Thomas, June. *A Place of Our Own: Six Spaces that Shaped Queer Women’s Culture*. New York: Seal Press, 2024\.  
 Travis, Trysh. “The Women in Print Movement: History and Implications,” *Book History* 11 (2008): 276\.
 
-## Volunteer List / Acknowledgements
+# Volunteer List / Acknowledgements
 
 Thank you to two anonymous reviewers of this project for their invaluable feedback, and thank you to Dan Sinykin and Melanie Walsh for their feedback, editorial acumen, and support of this project. 
 
