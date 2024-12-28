@@ -15,7 +15,7 @@ license: CC BY-NC-SA
 citation:
   type: article-journal
   container-title: "Post45 Data Collective"
-  doi: "10.18737/CNJV1733p4520221212"
+  doi: "10.18737/410409"
   url: data.post45.org/feminist-bookstore-news/
   editor:
   - Dan Sinykin
