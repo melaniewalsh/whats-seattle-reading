@@ -1,5 +1,5 @@
 ---
-title: "The Nordic Noir in Translation Database 2000–2020"
+title: "The Nordic Noir in Translation Database (2000–2020)"
 author:
   - name: Karl Berglund
     # url: https://www.linkedin.com/in/jordan-pruett-a30502ba/
