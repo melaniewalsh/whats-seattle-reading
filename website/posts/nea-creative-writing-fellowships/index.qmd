@@ -1,6 +1,6 @@
 ---
 title: "The National Endowment for the Arts Creative Writing Fellowships (1965-2024)"
-image: "https://upload.wikimedia.org/wikipedia/commons/3/3b/National_Endowment_for_the_Arts_%28NEA%29_Logo_2018_Square_on_Black.svg"
+image: "https://www.arts.gov/sites/default/files/2018-%20Horizontal-Logo-white-on-black-with-url.png"
 author:
   - name: Alexander Manshel
 format: 
