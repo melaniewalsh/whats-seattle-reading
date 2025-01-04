@@ -8,8 +8,8 @@ website:
   twitter-card: true
   open-graph: true
   google-analytics: "G-H9Z8DC0X8Q"
-  title: "POST45 DATA COLLECTIVE"
-  site-url: "https://data.post45.org"
+  title: "Post45 Data Collective"
+  site-url: https://data.post45.org
   page-footer:
     background: "#455B64"
   # right: <p style="color:white">Copyright &copy; 2024</p>
