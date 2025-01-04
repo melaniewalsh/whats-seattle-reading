@@ -18,8 +18,8 @@ citation:
   doi: "10.18737/410409"
   url: data.post45.org/feminist-bookstore-news/
   editor:
-  - Dan Sinykin
-  - Melanie Walsh
+   name: "Dan Sinykin"
+   name: "Melanie Walsh"
 title-block-style: default
 format-links: [ipynb, pdf, docx]
 code-tools: false
