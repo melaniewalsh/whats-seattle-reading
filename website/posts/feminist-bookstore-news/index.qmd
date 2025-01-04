@@ -1,11 +1,11 @@
 ---
 title: "*_Feminist Bookstore News_* Issues and Articles (1976-2000)"
 author:
-  - name: "Julie R. Enszer"
+  - name: Julie R. Enszer
     url: https://julierenszer.com/
-  - name: "Salome Grasland"
-  - name: "Cassidy Hunt"
-  - name: "Michaela Hayes"
+  - name: Salome Grasland
+  - name: Cassidy Hunt
+  - name: Michaela Hayes
 abstract: "This dataset includes metadata for for all articles in *_Feminist Bookstore News_* from 1976-2000 and their corresponding issues."
 categories: [print, feminist, bookstore, publishing, dataset]
 image: https://litmuspress.org/wp-content/uploads/2022/03/FBN-covers_Page_01.jpg
@@ -18,8 +18,8 @@ citation:
   doi: "10.18737/410409"
   url: data.post45.org/feminist-bookstore-news/
   editor:
-   name: "Dan Sinykin"
-   name: "Melanie Walsh"
+   - name: Dan Sinykin
+   - name: Melanie Walsh
 title-block-style: default
 format-links: [ipynb, pdf, docx]
 code-tools: false
