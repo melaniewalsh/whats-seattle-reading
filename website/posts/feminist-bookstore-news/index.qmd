@@ -1,7 +1,10 @@
 ---
 title: "*_Feminist Bookstore News_* Issues and Articles (1976-2000)"
 author:
-  - name: Julie R. Enszer
+  - name: {
+            "given": "Julie R.",
+            "family": "Enszer"
+        }
     url: https://julierenszer.com/
   - name: Salome Grasland
   - name: Cassidy Hunt
