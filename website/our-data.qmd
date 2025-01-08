@@ -6,7 +6,7 @@ listing:
   contents: posts
   type: default
   exclude:
-    categories: ["news", "ignore", "bookstore"]
+    categories: ["news", "ignore"]
   sort: "date desc"
   categories: unnumbered 
   sort-ui: true
