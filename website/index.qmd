@@ -11,7 +11,7 @@ listing:
   id: datasets
   contents: posts
   exclude:
-    categories: ["news", "ignore"]
+    categories: ["news", "ignore", "draft"]
   sort: "date desc"
   type: default
   categories: unnumbered 
