@@ -17,7 +17,7 @@ The Post45 Data Collective peer reviews and houses literary and cultural data fr
 
 All datasets are accompanied by a contextual statement or “data essay” that addresses (in **4,000 words or less**) the significance of the data; the social and historical context of the data; how the data was collected, cleaned, and organized; and possible ethical concerns or misuses of the data. Data essays are published alongside datasets on the Post45 Data Collective website.
 
-If you’re interested in submitting a dataset to the Post45 Data Collective, please prepare a data essay and format your data according to the guidelines below. When you’re ready, email the dataset and data essay (as a Word document) to Dan Sinykin (daniel.sinykin@emory.edu)  and Melanie Walsh (melwalsh@uw.edu).
+If you’re interested in submitting a dataset to the Post45 Data Collective, please prepare a data essay and format your data according to the guidelines below. When you’re ready, email the dataset and data essay (as a Word document) to Melanie Walsh (melwalsh@uw.edu), Alexander Manshel (alexander.manshel@mcgill.ca ), and J.D. Porter (porterjd@sas.upenn.edu ).
 
 Peer Review & Data Essay Criteria
 ---------------------------------
