@@ -19,7 +19,7 @@ The image from Dan's great LARB essay ["Fuck the Poetry Police"](https://larevie
 
 We are very excited to announce that [Alexander Manshel](https://www.mcgill.ca/english/staff/alexander-manshel) and [J.D. Porter](https://pricelab.sas.upenn.edu/fellows/porter-jd) will be joining me (Melanie Walsh) as co-editors of the Post45 Data Collective. 
 
-Xander is an Associate Professor in the English Department at McGill University, and J.D. is a Digital Humanities Specialist at the Price Lab for Digital Humanities at the Univeristy of Pennsylvania. Between them, they bring a wealth of knowledge about 20th and 21st century literature, digital humanities, and data science—as well as extensive experience curating and publishing cultural data (see Xander's [NEA fellowship dataset](https://data.post45.org/posts/nea-creative-writing-fellowships/)).
+Alexander is an Associate Professor in the English Department at McGill University, and J.D. is a Digital Humanities Specialist at the Price Lab for Digital Humanities at the Univeristy of Pennsylvania. Between them, they bring a wealth of knowledge about 20th and 21st century literature, digital humanities, and data science—as well as extensive experience curating and publishing cultural data (see Alexander's [NEA fellowship dataset](https://data.post45.org/posts/nea-creative-writing-fellowships/)).
 
 This transition also means that Dan Sinykin—who founded the Post45 Data Collective with Laura McGrath in 2021 and has led the Collective since then—will be stepping back to the Editorial Board. This project would not what it is today without Dan's ambition, vision, fastidious email communication, and hilarious social media game.
 
