@@ -26,6 +26,7 @@
   {
     "listing": "/news.html",
     "items": [
+      "/news/editor-news.html",
       "/news/data-analyst-summer-2023.html",
       "/news/ddp-recap.html",
       "/news/ddp-rfp-2021.html",

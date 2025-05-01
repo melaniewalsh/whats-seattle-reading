@@ -71,5 +71,14 @@
   },
   "posts/feminist-bookstore-news/index.qmd": {
     "index.html": "76ccfc5d"
+  },
+  "posts/scifi/index.qmd": {
+    "index.html": "2dd1e676"
+  },
+  "news/editor-news.qmd": {
+    "editor-news.html": "b28514eb"
+  },
+  "posts/futuristic_fiction/index.qmd": {
+    "index.html": "11caf302"
   }
 }

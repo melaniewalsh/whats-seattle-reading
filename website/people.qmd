@@ -4,8 +4,10 @@ title: "People"
 ---
 
 ### The Editors
-- **Dan Sinykin**, Assistant Professor of English, Emory University  
-- **Melanie Walsh**, Assistant Professor, Information School at the University of Washington  
+
+- [**Melanie Walsh**](https://melaniewalsh.org/), Assistant Professor, Information School at the University of Washington  
+- [**Alexander Manshel**](https://www.mcgill.ca/english/staff/alexander-manshel), Associate Professor, McGill University
+- [**J.D. Porter**](https://pricelab.sas.upenn.edu/fellows/porter-jd), DH Specialist, University of Pennsylvania
 
 ### The Editorial Board
 - **Katherine Bode**, Professor of Literary and Textual Studies, ANU  
@@ -15,6 +17,7 @@ title: "People"
 - **Laura B. McGrath**, Assistant Professor of English and Digital Humanities, Temple University  
 - **Thomas Padilla**, Bristle Cone Strategy 
 - **Kenton Rambsy**, Assistant Professor of African American Literature and Digital Humanities, UT-Arlington  
+- **Dan Sinykin**, Associate Professor of English, Emory University  
 - **Richard Jean So**, Assistant Professor of English, McGill  
 - **Lindsay Thomas**, Associate Professor of English, Cornell University  
 
