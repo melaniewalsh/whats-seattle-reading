@@ -14,7 +14,7 @@ abstract: "This dataset contains metadata for 2,564 English-language narrative w
 categories: [speculative fiction, science fiction, films, fiction, video games, television, comics, radio drama, dataset, draft]
 # Provide link to an image that will show up in "Our Datasets" aggregation
 # not complete
-image: "https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg"
+image: "https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg"
 # Insert DOI for this data essay
 # not complete
 doi: "10.18737/CNJV1733p4520221212"
@@ -60,7 +60,9 @@ Then, duplicate this template, rename it index.qmd, and place it inside the appr
 Then fill in the rest of the information above and below. -->
 ```
 
-<!-- Include image for data essay --> not complete ![](https://data.post45.org/wp-content/uploads/2023/07/awards.jpeg)
+<!-- Include image for data essay -->
+
+![](https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg)
 
 <!-- Include brief introduction to/description of data essay  -->
 
@@ -90,28 +92,30 @@ source("../../scripts/createDataTable.R")
 
 # MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
 createDataTable(
-  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/major_literary_prizes/major_literary_prizes-winners_judges.csv",
+    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/major_literary_prizes/major_literary_prizes-winners_judges.csv",
 
-  # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("full_name", "gender",
-   "mfa_degree", "role", "prize_year", "prize_name", "prize_amount", "prize_institution", "prize_type", "prize_genre", "author_wikidata", "author_viaf", "author_lccn", "elite_institution", "graduate_degree", "stegner", "title_of_winning_book"),
+    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+    displayed_columns = c(
+        "full_name", "gender",
+        "mfa_degree", "role", "prize_year", "prize_name", "prize_amount", "prize_institution", "prize_type", "prize_genre", "author_wikidata", "author_viaf", "author_lccn", "elite_institution", "graduate_degree", "stegner", "title_of_winning_book"
+    ),
 
-   # MAKE EDITS HERE: Customize any column widths 
-  # If none, comment out
-   column_widths = c("gender" = "100px", "role" = "75px", "mfa_degree" = "100px", "prize_name" = "100px"),
+    # MAKE EDITS HERE: Customize any column widths
+    # If none, comment out
+    column_widths = c("gender" = "100px", "role" = "75px", "mfa_degree" = "100px", "prize_name" = "100px"),
 
-   # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
-   # If none, comment out
-  currency_columns = c("prize_amount"),
+    # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
+    # If none, comment out
+    currency_columns = c("prize_amount"),
 
-   # MAKE EDITS HERE: Select any columns that should be filterable as a category
-  # If none, comment out
+    # MAKE EDITS HERE: Select any columns that should be filterable as a category
+    # If none, comment out
 
-  category_columns = c("gender", "role", "prize_name", "prize_institution", "prize_type", "prize_genre", "elite_institution", "mfa_degree", "stegner", "graduate_degree", "elite_institution"),
+    category_columns = c("gender", "role", "prize_name", "prize_institution", "prize_type", "prize_genre", "elite_institution", "mfa_degree", "stegner", "graduate_degree", "elite_institution"),
 
     # Select column to sort by, and order
-  sort_columns = c("prize_year"),
-  sort_orders = c("desc")
+    sort_columns = c("prize_year"),
+    sort_orders = c("desc")
 )
 ```
 

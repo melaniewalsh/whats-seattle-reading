@@ -51,28 +51,23 @@ This dataset contains a comprehensive list of the writers sponsored by National 
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/Post45_NEAData_Final.csv"
+data_path <- "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nea_writing_fellowships/nea_fellowships.csv"
 
 createDataTable(
-  data_path = data_path,
+    data_path = data_path,
+    style = "bootstrap", # Bootstrap DataTables style
+    bootstrap_classes = "table-condensed", # Add extra classes
 
-     style = "bootstrap",  # Bootstrap DataTables style
-  bootstrap_classes = "table-condensed",  # Add extra classes
-
-   displayed_columns = c("nea_grant_year", "full_name_firstlast", "given_name_middle","family_name", "gender","race_ethnicity", "birth_year","country","us_state","hometown","ba","ba2","ma","ma2","phd","mfa","mfa2","post45_hathi_entry",  "nea_person_id"),
-
+    displayed_columns = c("nea_grant_year", "full_name_firstlast", "given_name_middle", "family_name", "gender", "race_ethnicity", "birth_year", "country", "us_state", "hometown", "ba", "ba2", "ma", "ma2", "phd", "mfa", "mfa2", "post45_hathi_entry", "nea_person_id"),
     column_widths = c("gender" = "100px", "race" = "100px", "country" = "100px", "author" = "100px"),
 
     # date_columns = c("week"),
 
-  # currency_columns = c("prize_amount"),
+    # currency_columns = c("prize_amount"),
 
-   category_columns = c("gender", "race_ethnicity", "country", "us_state"),
-
-   sort_columns = c("nea_grant_year"),
-   sort_orders = c("desc"),
-
-  
+    category_columns = c("gender", "race_ethnicity", "country", "us_state"),
+    sort_columns = c("nea_grant_year"),
+    sort_orders = c("desc"),
 )
 
 # Print out column names to make it easier to customize above
@@ -105,7 +100,7 @@ import {viewof groupByColumn, viewof topX, fetchData, viewof neaGrantYearRange, 
 //|echo: false
 //|output: false
 table_data = fetchData(
-  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/Post45_NEAData_Final.csv"
+  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nea_writing_fellowships/nea_fellowships.csv"
 )
 
 

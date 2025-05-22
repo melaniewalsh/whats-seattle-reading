@@ -1,5 +1,5 @@
 ---
-title: "*_Feminist Bookstore News_* Issues and Articles (1976-2000)"
+title: "Feminist Bookstore News Issues and Articles (1976-2000)"
 author:
   - name: {
             "given": "Julie R.",
@@ -88,35 +88,39 @@ source("../../scripts/createDataTable.R")
 
 # MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
 createDataTable(
-  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-descriptive_2024-12-23.csv",
+    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/feminist_bookstore_news/feminist_bookstore_news-descriptive.csv",
 
-  # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("vol", "no", "vol.no", "article_title", 
-  "author", "category", "year", "month", "notes", "volunteer", "total_pages", "unique_id"),
-
-   # MAKE EDITS HERE: Customize any column widths 
-  # If none, comment out
-   column_widths = c("vol" = "50px", "no" = "50px", "author" = "100px", "category" = "120px", "year" = "100px"
-    #"prize_name" = "100px"
+    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+    displayed_columns = c(
+        "vol", "no", "vol.no", "article_title",
+        "author", "category", "year", "month", "notes", "volunteer", "total_pages", "unique_id"
     ),
 
-   # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
-   # If none, comment out
-  # currency_columns = c("prize_amount"),
+    # MAKE EDITS HERE: Customize any column widths
+    # If none, comment out
+    column_widths = c(
+        "vol" = "50px", "no" = "50px", "author" = "100px", "category" = "120px", "year" = "100px"
+        # "prize_name" = "100px"
+    ),
 
-   # MAKE EDITS HERE: Select any columns that should be filterable as a category
-  # If none, comment out
+    # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
+    # If none, comment out
+    # currency_columns = c("prize_amount"),
 
-  category_columns = c( "category", "no",
-    #"Author",
-   #"Year", 
-    "vol"
-   #"Month"
-   ),
+    # MAKE EDITS HERE: Select any columns that should be filterable as a category
+    # If none, comment out
+
+    category_columns = c(
+        "category", "no",
+        # "Author",
+        # "Year",
+        "vol"
+        # "Month"
+    ),
 
     # Select column to sort by, and order
-  sort_columns = c("vol"),
-  sort_orders = c("asc")
+    sort_columns = c("vol"),
+    sort_orders = c("asc")
 )
 
 ```
@@ -290,33 +294,36 @@ Areas that need to be edited are marked with MAKE EDITS HERE -->
 source("../../scripts/createDataTable.R")
 
 createDataTable(
-  data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/website/refs/heads/main/datasets/feminist-bookstore-news/feminist-bookstore-news-issue-list_2024-12-23.csv",
+    data_path = "https://github.com/Post45-Data-Collective/data/blob/main/feminist_bookstore_news/feminist_bookstore_news-issue_list.csv",
 
-  # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-  displayed_columns = c("volume", "number", "year_published", "number_of_pages", 
-  "format", "notes"),
+    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+    displayed_columns = c(
+        "volume", "number", "year_published", "number_of_pages",
+        "format", "notes"
+    ),
 
-   # MAKE EDITS HERE: Customize any column widths 
-  # If none, comment out
-   # column_widths = c("volume" = "50px", "number" = "50px", "notes" = "140px"),
+    # MAKE EDITS HERE: Customize any column widths
+    # If none, comment out
+    # column_widths = c("volume" = "50px", "number" = "50px", "notes" = "140px"),
 
-   # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
-   # If none, comment out
-  # currency_columns = c("prize_amount"),
+    # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
+    # If none, comment out
+    # currency_columns = c("prize_amount"),
 
-   # MAKE EDITS HERE: Select any columns that should be filterable as a category
-  # If none, comment out
+    # MAKE EDITS HERE: Select any columns that should be filterable as a category
+    # If none, comment out
 
-  category_columns = c("number",
-    #"Author",
-   "format", 
-    "volume"
-   #"Month"
-   ),
+    category_columns = c(
+        "number",
+        # "Author",
+        "format",
+        "volume"
+        # "Month"
+    ),
 
     # Select column to sort by, and order
-  sort_columns = c("volume"),
-  sort_orders = c("asc")
+    sort_columns = c("volume"),
+    sort_orders = c("asc")
 )
 ```
 

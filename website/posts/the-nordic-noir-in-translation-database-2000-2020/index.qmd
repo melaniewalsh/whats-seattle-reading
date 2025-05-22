@@ -59,29 +59,22 @@ This dataset contains bibliographic records of (in theory) all translations of N
 # Load the function
 source("../../scripts/createDataTable.R")
 
-data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nordic_noir_translation_database/nordic-noir-translation-database.csv"
+data_path <- "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nordic_noir_translation_database/nordic_noir_translation_database.csv"
 
 createDataTable(
-  data_path = data_path,
+    data_path = data_path,
+    style = "bootstrap", # Bootstrap DataTables style
+    bootstrap_classes = "table-condensed", # Add extra classes
 
-     style = "bootstrap",  # Bootstrap DataTables style
-  bootstrap_classes = "table-condensed",  # Add extra classes
-
-   displayed_columns = c("author","original_title","original_language", "original_publication_year", "translated_title", "translated_language","translated_publication_year"
-),
-
+    displayed_columns = c("author", "original_title", "original_language", "original_publication_year", "translated_title", "translated_language", "translated_publication_year"),
     column_widths = c("author" = "100px", "rank" = "75px", "year" = "75px", "author" = "100px"),
-
     date_columns = c("week"),
 
-  # currency_columns = c("prize_amount"),
+    # currency_columns = c("prize_amount"),
 
-   category_columns = c("original_language", "translated_language"),
-
-   sort_columns = c("original_publication_year"),
-   sort_orders = c("desc"),
-
-  
+    category_columns = c("original_language", "translated_language"),
+    sort_columns = c("original_publication_year"),
+    sort_orders = c("desc"),
 )
 
 # Print out column names to make it easier to customize above
