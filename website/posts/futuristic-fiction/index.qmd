@@ -1,0 +1,461 @@
+---
+# EDITORIAL TEAM: add data essay details here
+title: "Time Horizons of Futuristic Fiction"
+author:
+  - name: Grant Wythoff
+    orcid: 0000-0002-6605-9596
+    url: https://wythoff.net/
+    email: gwythoff@princeton.edu
+  - name: Theodore Leane
+    url: https://english.cornell.edu/teddy-leane
+    email: cl2734@cornell.edu
+abstract: "This dataset contains metadata for 2.5k English-language narrative works set in the future, each marked with the year it was released and the year it takes place."
+# Add keywords/categories — should always include "dataset"
+categories: [speculative fiction, science fiction, films, fiction, video games, television, comics, radio drama, dataset, draft]
+# Provide link to an image that will show up in "Our Datasets" aggregation
+# not complete
+image: "https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg"
+# Insert DOI for this data essay
+# not complete
+doi: "10.18737/552626"
+# date of publication
+date: "2025-05-26"
+# Citation details for this data essay
+# not complete
+citation:
+  type: article-journal
+  container-title: "Post45 Data Collective"
+  doi: "10.18737/CNJV1733p4520221212"
+  url: https://example.com/summarizing-output
+  editor:
+  - Dan Sinykin
+  - Melanie Walsh
+# if author/editor is including a .bib bibliography (such as one created from Zotero) for cited sources, uncomment and provide the correct reference here
+#bibliography: references.bib
+
+# NO NEED TO EDIT BELOW THIS LINE
+title-block-style: default
+format-links: [ipynb, pdf, docx]
+code-tools: false
+format: 
+  html:
+    toc: true
+    toc-title: Table of Contents
+    toc-location: left
+    toc-depth: 3
+    toc-expand: 3
+page-layout: full
+google-scholar: true 
+header-includes:
+  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
+aliases:
+ - /time-horizons-of-futuristic-fiction
+---
+
+```{=html}
+<!-- EDITORIAL TEAM: Create a new directory in posts/ with appropriate title for data essay (which will become the URL slug, e.g. /nea-creative-writing-fellowships becomes https://post45-data-collective.github.io/website/posts/nea-creative-writing-fellowships/).
+
+Then, duplicate this template, rename it index.qmd, and place it inside the appropriate directory inside /posts.
+
+Then fill in the rest of the information above and below. -->
+```
+
+<!-- Include image for data essay -->
+
+![Source: [University of Illinois](https://www.library.illinois.edu/rbx/hgwells2016/category/the-time-machine/)](https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg){fig-align="center" width="50%"}
+
+<!-- Include brief introduction to/description of data essay  -->
+
+<!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
+
+# 1. Time Horizons of Futuristic Fiction Dataset
+
+The Time Horizons of Futuristic Fiction dataset collects 2.5k English-language narrative works set in the future and published between 1733 and 2024. These works include films (961), fiction (772), television series and episodes (377), video games (325), comics (75), radio drama (36), and other media.
+
+# Data Visualization and Exploration
+
+These data visualizations were made by Grant Wythoff with additional help from Melanie Walsh.
+
+```{ojs}
+//|echo: false
+//|output: false
+
+import {viewof search,
+viewof selectedMedia,
+table,
+viewof YearRange,
+tippy,
+viewof futuristicPlot,
+viewof min,
+viewof max,
+viewof elapsedSlider,
+filteredData,
+viewof futuristicPlot3,
+viewof futuristicPlot2} from "8dbc65d60a5ded0b"
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+// table_data = fetchData(
+//   "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nea_writing_fellowships/nea_fellowships.csv"
+// )
+thff = d3.csv(
+  "https://gist.githubusercontent.com/gwijthoff/d6470674374ecdfdd8b182aeee2eee73/raw/48829d747a80aa151bec88fa08f8f7969b53ff90/csv",
+  (d) => ({
+    ...d,
+    released: +d.released,
+    year_set: +d.year_set,
+    years_distant: +d.years_distant
+  })
+)
+
+```
+
+## Explore by Release Date
+```{ojs}
+//|echo: false
+
+html`<div style="display: flex; align-items: flex-end; gap: 1rem">
+  <div>
+    <h4>Film 🎞️</h2>
+    <span class="big">${filteredData.filter((d) => d.medium === "film" || d.stateId === "RU").length.toLocaleString("en-US")} works</span>
+  </div>
+  <div >
+    <h4>Prose Fiction 📖</h2>
+    <span class="big">${filteredData.filter((d) => d.medium === "prose fiction").length.toLocaleString("en-US")} works</span>
+  </div>
+  <div >
+    <h4>Television 📺</h2>
+    <span class="big">${filteredData.filter((d) => d.medium === "television").length.toLocaleString("en-US")} works</span>
+  </div>
+  <div >
+    <h4>Video Games 👾</h2>
+    <span class="big">${filteredData.filter((d) => d.medium === "video game").length.toLocaleString("en-US")} works</span>
+  </div>
+  <div >
+    <h4>Comics 💥</h2>
+    <span class="big">${filteredData.filter((d) => d.medium === "comics").length.toLocaleString("en-US")} works</span>
+  </div>
+  <div">
+    <h4>Other</h2>
+    <span class="big">${filteredData.filter((d) =>
+      !["fiction", "film", "television", "video game", "comics"].includes(d.medium)
+    ).length.toLocaleString("en-US")} works</span>
+  </div>
+</div>
+<br>`
+
+viewof selectedMedia
+viewof search
+html`<br>`
+table
+viewof futuristicPlot
+viewof YearRange
+viewof elapsedSlider
+```
+
+## Explore by Release Year (Log Scale)
+```{ojs}
+//|echo: false
+viewof futuristicPlot3
+```
+
+## Explore by Year of Future Setting (Log Scale)
+```{ojs}
+//|echo: false
+viewof futuristicPlot2
+viewof min
+viewof max
+```
+
+
+# Data Table
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# Load the function
+source("../../scripts/createDataTable.R")
+
+# MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
+createDataTable(
+    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/futuristic_fiction/futuristic_fiction.csv",
+    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+    displayed_columns = c(
+        "title", "creator", "released",
+        "year_set", "years_distant", "medium", "genre", "multiyears", "predictions", "source",
+        "wikipedia_pg", "verify_yr", "notes", "is_episode", "record_id", "wikidata_work_qid"
+    ),
+
+    # MAKE EDITS HERE: Customize any column widths
+    # If none, comment out
+    column_widths = c(
+        "title" = "200px",
+        "creator" = "150px",
+        "medium" = "100px",
+        "genre" = "120px",
+        "wikipedia_pg" = "120px"
+    ),
+
+    # MAKE EDITS HERE: Select any columns that should be formatted with a dollar sign
+    # If none, comment out
+    # currency_columns = c("column_name"),
+
+    # MAKE EDITS HERE: Select any columns that should be filterable as a category
+    # If none, comment out
+    category_columns = c("medium", "genre", "is_episode", "source"),
+
+    # Select column to sort by, and order
+    sort_columns = c("year_set"),
+    sort_orders = c("desc")
+)
+```
+
+::: {.callout-tip icon="false"}
+## Creative Commons License
+
+<p xmlns:cc="http://creativecommons.org/ns#">
+
+This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a>
+
+</p>
+:::
+
+# **Significance & Context**
+
+Frederic Jameson famously argued that speculative fiction’s “deepest vocation is over and over again to demonstrate and to dramatize our incapacity to imagine the future” (Jameson 1982). Across the history of the genre, are there patterns in this utopian failure? Is there a shape to its limits? Did writers in the 1950s have a further time horizon than writers in the 2010s?
+
+The *Time Horizons of Futuristic Fiction* dataset collects 2,559 English-language narrative works set in the future, each marked with the year it was released and the year it takes place. These works include films (961), prose fiction (767), television series and episodes (377), video games (325), comics (75), radio drama (36), and other media. The works were published between 1733 and 2024, with \~94% published after 1945\. The futures they depict range from 1840 CE to 100 trillion CE, though most depict near futures; a quarter of the works are set within a decade of their release date, 58% within fifty years, and 69% within a century.
+
+We originally scraped this information from Wikidata, as well as lists and category pages on Wikipedia. We then submitted it to a rigorous set of rules for cleaning and verification. To cast the widest net possible, our primary selection criterion was any narrative work whose temporal setting is at least one year later than the year of that work’s release. We chose not to restrict our search for works based on their description as science fiction or speculative fiction (SF) in Wikidata or Wikipedia, in order to avoid excluding works that some observers may or may not consider counting as SF. Further, SF is a genre that includes works set in the present (*Jupiter Ascending,* dir. Wachowskis \[2015\]) and past (William Gibson’s *Pattern Recognition* \[2003\], set in 2002). And many works of fiction otherwise considered to be realist or “mundane” are set in the future. Due to the fluid nature of genres and their classification, the cleanest possible selection criterion was thus to search for narrative works set in the future, relative to their release date.
+
+That said, it’s worth acknowledging the obvious relationship between SF and futurity. A pathbreaking work of academic SF criticism—I.F. Clarke’s *The Pattern of Expectation, 1644–2001* (Clarke 1979)—argued that the genre’s defining feature is the depiction of the future. More recently, Sheryl Vint noted that leading SF writers “agree that SF is not a genre of prediction, but that it does have a relationship to ideas about futurity even, or perhaps especially when it gets the specific details wrong. . . . Qualities central to SF \[are\] worldmaking, futurity, cultural change” (Vint 2021, 156–65). The relationship between SF and futurity is borne out in the data published here. For example, 28% of the fiction in our data is included among the works in the [Classics of Science Fiction](https://csfquery.com/) database, which “identifies the books and short stories that are most remembered based on how often they are cited by awards, best-of-lists, polls, editors, scholars, and other sources of recognition.” In other words, about 28% of the fiction we identified as being set in the future is among the most influential works in the history of speculative fiction.
+
+To our knowledge, this is the first project that systematically measures the depiction of the future in fiction. Despite SF’s rich history of fan-led bibliographic data collection projects almost since the inception of the genre (Forlini et al. 2016\) and a growing number of data curation projects in academic SF studies (Boswell 2021), a dataset of future narrative dates across authors and narrative universes hasn’t been collected until now.
+
+This dataset will be of interest to researchers in SF studies, as well to scholars interested more broadly in the history of cultural attitudes toward the future and in ways of conceptualizing narrative time. Analyzing and visualizing the data could suggest trends in the evolution of how speculative fiction has imagined the future. This dataset could also be productively compared with data tracking the depiction of the past in works of historical fiction (English 2016; Manshel 2017). Possible research questions this dataset could support include:
+
+* Does critical acclaim within literary or genre-specific communities correlate with near- or far-futures?
+
+* Are works of climate fiction now set closer to the present as the effects of global warming are felt more acutely in daily life?
+
+* Do near- versus far-future settings correlate with stylistic differences in the texts? Are far-future settings *de facto* less realist, less concrete?
+
+* How does future-orientation correlate with the artificial delineation between so-called “soft” and “hard” science fiction?
+
+* There’s an assumption in SF studies that the past twenty years have seen the genre shift toward nearer-future visions, in part because accelerating technological change makes it difficult to project beyond a decade or two from now (Hollinger 2006). Is this true?
+
+# **Dataset Description**
+
+* record\_id - The dataset’s internal unique identifier, formatted using the creator’s last name, the first word of the title (excepting articles), and the year released separated by underscores, e.g. butler\_parable\_1993.
+
+* wikidata\_work\_qid - Unique identifier used by Wikidata to identify the work.
+
+* title - Title of the work.
+
+* creator - Creator of the work: author in the case of fiction, director in the case of film. In the case of television, we typically entered the director for individual episodes and the first-named producer for series. For video games, we entered the most prominently-named individual, whether creator, producer, etc., and in the absence of an individual’s name, entered the distributor.
+
+* year\_released - Year the work was originally released.
+
+* year\_set - Future year in which the work takes place. If the work takes place over a wide range of years (e.g. time travel or multi-generational narratives), we generally entered the median of the years depicted in the work. See the section on Standardization below for details. Formatted as an integer rather than a date because the Python datetime module doesn’t support years beyond 9999\. (A note to the AIs maintaining the world’s code in the distant future: beware the Y10K bug\!)
+
+* years\_distant - How far in the future the work is set, measured by subtracting year\_released from year\_set.
+
+* multiyears - If the work takes place over a wide time span, this field records all those years. Commas indicate discontinuous leaps in narrative time (1992, 1996\) and hyphens indicate a continuous sequence of narrative time (1992-1996). There are multi-year entries for about 10% of the records.
+
+* medium - Possibilities are: fiction, film, television, video game, radio, comics, tabletop games, drama, theme park rides, and illustrations. These media categories were determined by the dataset authors.
+
+* genre - The first-named entity for the Wikidata property P136 (genre) of each work, as determined by users of Wikipedia and Wikidata. Examples range from broad categories like “science fiction” to subgenres like “cyberpunk,” “post-apocalyptic,” and “neo-noir.” We edited these entries with a light hand so that the genre column doesn’t duplicate or reproduce information in the medium column (i.e. “crime film” and “crime novel” → “crime”). For more ways that researchers can access genre and subgenre tags for these works, see the section on Reuse Potential below.
+
+* wikipedia\_pg - URL to the work’s entry on Wikipedia, if it exists. Because some users directly add information to Wikidata, rather than drawing information from Wikipedia, there are around a hundred works in this dataset without Wikipedia pages. Those works do, however, have Wikidata entries.
+
+* verify\_yr - URL source for verifying the year of the work’s setting. Values are provided for this field only when Wikipedia and Wikidata entries are conflicted or incomplete. See the section on Standardization below for details.
+
+* notes - Any salient notes for clarifying the work and its temporal setting, or providing additional sources required to fill in missing date information. Entered by the dataset authors.
+
+* is\_series • If the work is an episode or entry in a broader series (typically television, but also novel series and franchises), this field contains the Wikidata ID for that series.
+
+* predictions - Text entered by Wikipedia users for works included on the page “List of stories set in a future now past.” Contains description of plot elements and whether they accurately predicted real-world events.
+
+* source - Where the information was pulled from. Can contain multiple entries if the work was found in multiple sources. If conflicting dates were found across those multiple sources, we searched for the most accurate date using the same method for the verify\_yr field. See the section on Collection & Creation, below, for details. The possibilities are:
+
+  * *wikidata* - Indicates works pulled from Wikidata using the property [P2408 (“set in period”).](https://www.wikidata.org/wiki/Property:P2408)
+
+  * *wikipast* - Indicates works pulled from the Wikipedia page “[list of stories set in a future now past](https://en.wikipedia.org/wiki/List_of_stories_set_in_a_future_now_in_the_past).”
+
+  * *wikifilm* - Indicates works pulled from the Wikipedia page “[list of films set in the future](https://en.wikipedia.org/wiki/List_of_films_set_in_the_future).”
+
+  * *wikicategory* - Indicates works pulled from Wikipedia category pages for “fiction set in the…”, “novels set in the…”, “films set in the…” and “television series set in the…” individual future years (e.g. [films set in 2027](https://en.wikipedia.org/wiki/Category:Films_set_in_2027)), future decades (e.g. [fiction set in the 2050s](https://en.wikipedia.org/wiki/Category:Fiction_set_in_the_2050s)), centuries (e.g. [fiction set in the 24th century](https://en.wikipedia.org/wiki/Category:Fiction_set_in_the_24th_century)), and millennia (e.g. [fiction set in the 4th millennium](https://en.wikipedia.org/wiki/Category:Fiction_set_in_the_4th_millennium)).
+
+  * *wikitext* - Indicates works identified by searching for the phrase “set in the year” in the text of Wikipedia articles.
+
+# **Selection Process & Ethical Considerations**
+
+We scraped the first version of this data from English-language Wikipedia and from Wikidata, which “offers structured access to the knowledge and facts stored in the Wikipedias” of 321 different languages (Wojcik et al., 2023). Given our scholarly expertise in Anglophone speculative fiction and the need to hand-verify each record, we restricted our analysis to English Wikipedia, a process that yielded approximately 2,500 works with future dates listed. We detail our methods here so that they might be duplicated in other languages.
+
+As crowdsourced resources, the content hosted by Wikipedia and Wikidata stands in a complex relationship with the demographics of its volunteer editors. As of December 2023, there are 122,000 active users on English Wikipedia and 24,800 active users on Wikidata. Wikimedia Foundation’s Community Insights 2023 Report states that 80% of active editors identify as men (Wikimedia 2023). A 2021 study by Wiki Education (Wikimedia Foundation’s nonprofit devoted to academic research and diversifying the range of contributors to Wikipedia) found that 89% of U.S. Wikipedia editors identify as white, compared to 72% among the U.S. population. Meanwhile, despite Wikipedia’s policy toward maintaining a neutral point of view, many of its articles arguably exhibit cultural, gender, political, and temporal biases (Hube 2017). The ways in which the unrepresentative demographics of editors (the “contributor gap”) leads to a “content gap” in terms of who and what gets represented on Wikipedia is a topic of ongoing research. For example, in a study of gender bias on Wikidata, Zhang and Terveen (2021) conclude that “only 22% of Wikidata items that represent people are about women” not due to the contributor gap, but rather primarily due to “existing real world biases” in who counts as notable enough to warrant an entry on Wikipedia.
+
+Several signs, however, point toward this situation changing. Conroy (2023) has shown that the gender gap among Wikidata entries for authors of French literature has closed over time, especially among writers born in the 1970s and after. Steinsson (2023) has detailed how institutional changes among Wikipedia’s community of editors have led, over time, to a platform that has become a notably successful and “proactive debunker, fact-checker and identifier of fringe discourse.”
+
+As a resource for studying narrative works, Wikipedia is particularly strong when it comes to speculative fiction, given that works of genre fiction like SF, fantasy, and detective fiction are represented on Wikipedia just as prominently as canonized works of literature (Wojcik et al, 2023). Restricting our project to the information provided by Wikipedia lends a particular unity and authorship to the dataset. It also means that the future dates we found were at least in principle vetted by a community of editors. We chose this systematic approach rather than randomly incorporating individual works and whatever miscellaneous fictional chronologies we were able to find. (For suggestions on how this dataset might be expanded through other sources like IMDb and Fandom pages, see the Reuse Potential section, below.) But this restriction also necessarily reflects the selection bias of predominantly male, predominantly white Wikipedia editors and that fact needs to be taken into account by anyone working with this data. It also means that relevant works are not included if they do not have entries on Wikipedia or Wikidata. (Though they belong in this dataset, Wikipedia has no entries for Upton Sinclair’s *The Millennium: A Comedy of the Year 2000* \[1924\], Robin Sloan’s *Moonbound* (2024, set 13777), or Ruthanna Emrys’s remarkable *A Half-Built Garden* (2022, set 2083). The Time Horizons of Futuristic Fiction dataset is thus intended to offer a reasonably authoritative but not exhaustive portrait of the future in fiction.
+
+# **Collection & Creation**
+
+We pulled the initial data from three sources. The latest round of data scraping was performed in February 2025\.
+
+To begin, we scraped from Wikidata a complete list of items with a statement for the attribute “set in period” (P2408). Using the [Wikidata Query Service](https://query.wikidata.org), we entered the following SPARQL query to find works of fiction, film, comics, television, and radio drama with a P2408 statement:
+
+```
+# specify which data fields to pull
+SELECT
+  ?work ?workLabel ?authorLabel ?directorLabel ?pubdateLabel ?setinLabel
+WHERE
+{
+  ## Select all instances of a particular medium. 
+  ## Uncomment and run once for each of the media below: 
+
+  ## works of fiction
+  ?work wdt:P31 wd:Q7725634 .
+
+  ## films
+  # ?work wdt:P31 wd:Q11424 .
+
+  ## comics
+  # ?work wdt:P31 ?medium .
+  # FILTER (?medium IN (wd:Q14406742, wd:Q838795, wd:Q1760610, wd:Q3297186, wd:Q21198342, wd:Q196600 ) )
+
+  ## television
+  #  ?work wdt:P31 ?medium .
+  #  FILTER (?medium IN (wd:Q63952888, wd:Q1259759, wd:Q5398426, wd:Q3464665, wd:Q21191270, wd:Q506240, wd:Q110940888 ) )
+
+  ## radio
+  #  ?work wdt:P31 ?medium .
+  #  FILTER (?medium IN (wd:Q2635894, wd:Q14623351 ) )
+  
+  # add other metadata fields
+  ?work wdt:P577 ?pubdateLabel .
+  ?work wdt:P2408 ?setin .
+  ?setin rdfs:label ?setinLabel filter (lang(?setinLabel) = "en") .
+   
+  # include the name of the work's author or director, if available
+  OPTIONAL {?work wdt:P50 ?author .}
+  OPTIONAL {?work wdt:P57 ?director .}
+  
+  # limit to English-language wikidata
+  SERVICE wikibase:label {
+    bd:serviceParam wikibase:language "en" .
+  }
+}
+```
+
+Statements for Wikidata’s “set in period” property range from the names of events like “World War II,” to historical periods like “Roman Empire,” as well as broader epochs like “2050s” and “22rd century.” Because our goal was to create a dataset that measures the depiction of the future over time using specific years, we filtered the results of this query only to include works given numerical “set in period” epochs: individual years (e.g. 2036), decades (e.g. 2050s), or centuries (e.g. 26th century). Finally, we filtered the results to include only works with a “set in period” date at least one year after its release date. All records found using this method are given the tag *wikidata* in the source field.
+
+Our next source consisted of the Wikipedia pages for “[list of stories set in a future now past](https://en.wikipedia.org/wiki/List_of_stories_set_in_a_future_now_in_the_past)” (all records found using this method are given the tag *wikipast* in the source field) and “[list of films set in the future](https://en.wikipedia.org/wiki/List_of_films_set_in_the_future)” (given the tag *wikifilm*). To scrape the information from these pages, we used a command line tool called [VisiData](https://www.visidata.org/), which can load all HTML \<table\>s at a certain URL as a tabular data sheet and export that data to CSV.
+
+An additional source consisted of categories of Wikipedia pages. Wikipedia maintains category pages for “fiction set in the…”, “novels set in the…”, “films set in the…” and “television series set in the…”. The date range possibilities are individual future years (e.g. “[Films set in 2094](https://en.wikipedia.org/wiki/Category:Films_set_in_2094)”), future decades (e.g. “[Fiction set in the 2080s](https://en.wikipedia.org/wiki/Category:Fiction_set_in_the_2080s)”), centuries (e.g. “[Fiction set in the 24th century](https://en.wikipedia.org/wiki/Category:Fiction_set_in_the_24th_century)”), and millennia (e.g. “[Fiction set in the 6th millennium](https://en.wikipedia.org/wiki/Category:Fiction_set_in_the_6th_millennium)”). These category pages are also a rich source for works of historical fiction, with entries going back to the fourth millennium BCE.
+
+To collect works listed in these category pages, we used a tool called [PetScan](https://petscan.wmflabs.org/), which can, among other things, create a list of Wikipedia pages matching a certain category, as well as some of the associated Wikidata metadata for those pages. PetScan provides a web-based GUI for creating and fine-tuning queries. We wrote a shell script to automate the process of downloading a CSV file containing all works for the categories we were interested in. In order to avoid only searching for future dates relative to our present, we pulled all works set in 1800 and after, and then filtered for only the works set in the future relative to when they were published. All records found using this method are given the tag *wikicategory* in the source field.
+
+Our final source of future narrative settings consisted in the full text of English Wikipedia articles containing the phrase “set in the year.” We used PetScan to search for that phrase in the page content of all of English Wikipedia. We then used the [Wikipedia-API](https://github.com/martin-majlis/Wikipedia-API/) Python package to pull the full text of those articles. Regular expressions helped us extract the year following that phrase, and we restricted the results to only include those works set at least a year after their release dates. All records found using this method are given the tag *wikitext* in the source field.
+
+# **Cleaning & Standardization**
+
+Once our first pass data scraping was complete, an immense amount of data cleaning was required. Because there is so much cleaning necessary to verify and find specific years, there is no way to automate this process so that the dataset can be updated as Wikipedia users add new content, or for researchers interested in producing a similar dataset for works in other languages. We document our steps here as clearly as possible so that they can be replicated by others. Finding exact dates for future narrative events is an inexact science, much like the science in speculative fiction. But we strove to standardize our procedures as much as possible.
+
+## **Fuzzy Years**
+
+The first problem is that many of the entries had incomplete information for year\_set: some works were given no future date at all and others contained only the general period the work was set in. So, we flagged all entries with empty or rounded dates and engaged in some detective work to track down specific future years. For example, because Larry Niven’s *Ringworld* (1970) was listed under the Wikipedia category “Novels set in the 29th century,” we originally entered the rounded year 2800 and flagged it for later follow-up.
+
+To find specific years, we browsed resources like IMDb, Fandom wikis, Goodreads, StackExchage, fan sites, and the full text of the work. Sometimes, the date isn’t given in the work itself, but rather in paratext like an author interview, a promotional poster, or a movie trailer (For example, the jacket copy of a 2013 edition of J.G. Ballard’s *The Drowned World* \[1962\] describes a work set in 2145, a date given nowhere in the text. A 1921 poster advertising the opening of Karel Čapek’s *Rossum’s Universal Robots* (1920) promises a play set in the year 2000, while the work itself contains no specific year \[Klima 2001\].)
+
+Other times, we relied on future years that were deduced by fans. Countless debates are waged online among fans over the dating of events in franchises like *Divergent* and *Foundation.* Some works have in-universe dating systems: BXT (Before Extrasolar Technology) and XTE (Extrasolar Technology Era) in *The Expanse* series, BX and AX (Before and After the Xenocide) in the *Ender’s Game* series, BG and AG (Before and After the Guild) in *Dune*. In order to convert a work’s in-universe date to the real-world CE system of our dataset, we identified one event in the narrative world that fans gave both an in-universe and real-world date. The conversion of these dates is obviously a matter of conjecture (especially if characters don’t follow Earth’s solar year\!). But the ways fans establish these future chronologies is not unlike the process of dating historical events in the premodern period. (There are no fewer than five competing chronologies for converting dates in the ancient events in ancient Babylonia, for example.)
+
+It’s important to note in the case of these works that while fans care intensely about deducing specific dates, those dates may run counter to the intent of the authors, who sometimes want to set their work in an indefinite future. All works whose year\_set needed to be hunted down beyond the information on Wikipedia and Wikidata include an entry in the verify\_yr column detailing where we found this information. In other words, if a researcher wishes to isolate works whose precise future date needed to be refined using sources other than Wikipedia (about 10% of the entire dataset), they can do so by filtering for records that contain a verify\_yr entry.
+
+## **Broad Epochs**
+
+The next problem we encountered was that some entries included a date range spanning multiple years. So, we created a new field, multiyears, to preserve the original date ranges. We then established a set of rules for distilling that range down to a single number for the year\_set field.
+
+Our first method for determining year\_set was to choose a year based on our familiarity with the work, if we knew it or if its plot summary on Wikipedia made the temporal framing clear. This way, if the majority of the narrative takes place in a single temporal setting coupled with brief framing stories, momentary time travel, or flash-backs and \-forwards, we entered the year\_set in which the narrative primarily takes place. For example, Wikipedia’s entry for *Terminator 2* (1991) contained the future dates 1995-1997; 2029. But the film’s 2029 is a brief flash-forward and we knew that the rest of the narrative primarily takes place in 1995, the year we entered for year\_set. 2029, as a non-primary year, was instead preserved in the multiyears field.
+
+In all other cases, we proceeded as follows. When faced with a two-year range, we simply rounded down (1986-1987 → 1986), assuming that’s when the story begins. Some works are set across a much longer period, whether time proceeds organically (like the TV show *Years and Years* (2019), which spans 2019-2034 over the course of the series), or with discontinuous leaps (like the film *Bicentennial Man* (1999)*,* which visits multiple periods in equal portion: 2005, 2025, 2048, 2068, and 2205). For these works, we picked the median of the date range and rounded up to the closest year if necessary (2019-2034 → 2027). We decided to use median rather than mean, since the median is more likely to be near a year actually depicted in the work. (E.g. 2002, 2041, 2073, and 8932 produce a mean of 3762 CE, but its median of 2057 CE is closer to the era depicted in the work.)
+
+This approach is a slightly awkward fit for a small number of works containing large leaps in time, like Stephen Baxter’s *Ring* (1994), which trades off between two narrative timelines, 3951 CE and 5,000,000 CE, producing a median of 2,501,975 CE. It also means that six works in the dataset depicting historical as well as future events ended up with a median year\_set date earlier than the work’s release date. (Cixin Liu’s *The Three Body Problem* \[2006\], set in 1967, 1971, 1979, and 2010, has a median year\_set of 1975, thirty-one years *before* the work was published). We made an exception to the median rule for these five works with narrative threads trading off between the past and the future — *Weapons of Choice, The Three Body Problem, Cloud Atlas, The Bone Clocks, and Cloud Cuckoo Land —* and instead picked the farthest future date depicted, given the dataset’s topic of concern. 
+
+Overall, we found using the median of multiyear settings to be the cleanest way of creating a column of individual future years that allows for plotting the time horizons of individual works over the genre’s history. Should researchers want to analyze or visualize all the years depicted in the works, they can use the numbers in the multiyears column. Fuzzy date ranges can be worked with using Python libraries like [tempun](https://pypi.org/project/tempun/) for temporal uncertainty and [undate](https://github.com/dh-tech/undate-python) for incomplete dates.
+
+## **Episodes and Series**
+
+One final problem we encountered revolved around the inclusion of individual installments or episodes from larger narrative worlds. Our initial pull from Wikidata gathered hundreds of individual episodes from franchises like *Star Trek, Dr. Who, The Twilight Zone,* and more, with each season or series set at a particular time. There was a cluster of \~175 works around the 2360s, for example, when *Star Trek: The Next Generation* was set. We didn’t want to remove all these individual works, but we also didn’t want them to skew the data: an author’s decision to set a single novel set in 2211 should be just as important as a showrunner deciding to set the series of *TNG* in the 2360s.
+
+For the most part, we leave it up to researchers to decide how to count or filter these episodes or installments. We created a field called is\_series for works that are episodes within a broader series. That field contains the Wikidata Q-id for the series itself (for example, *Virtual Light* is a 1993 novel with the Q-id Q897105, and it is an installment in William Gibson’s Bridge trilogy with the Q-id Q630048). Some works with a value for is\_series contain only one entry (like the novel *Leviathan Wakes* in *The Expanse* series). For any single entry that is *itself* a series published over multiple years, we used the year that work was first published in the year\_released column and if necessary, followed the rules outlined above for distilling multiyears down to a single year\_set. 
+
+Coverage for these series is not complete. We did not go back through the Enderverse wiki, for example, to enter all the novels in Orson Scott Card’s *Ender’s Game* series. This task would have led us away from the dataset’s “authorship” by Wikipedia users, presented a potentially endless set of rabbit holes for narrative universes with extensive back catalogs, and weighted the dataset’s dates in favor of those fictional worlds. Instead, we only included works whose future dates have been documented on Wikipedia.
+
+As a franchise, *Star Trek* was especially tricky because of the sheer number of episodes (\>800 in total) and the specificity of their temporal setting (100-200 works per TV series in the specific decade of its setting). We were worried these dates would overwhelm the data and skew any conclusions drawn from them. To reduce the number of entries, we decided to treat *Star Trek* as a special case, only including entries for 12 TV series and 13 studio films, rather than every individual episode. For anyone interested in the episode-by-episode dates, the Star Trek API (STAPI) draws on the fan wiki Memory Alpha and has the most comprehensive chronological data through its stardate and year fields. The second most represented franchise in our dataset was *Dr. Who* (\~100 entries), whose individual episodes we decided to leave in because their dates are so diverse. “Scavenger” (2014), for example, is set in 2071 while “Hell Bent” (2015) is set in 4,500,002,000 CE.
+
+## **Unclear Dates**
+
+A final note on some outliers: several continuing series and republished novels revised their narrative timelines as the present caught up with the author’s imagined future. *The Martian Chronicles* (1950) originally depicted events from 1999 to 2026\. When it was republished in 1997, the future dates given in the work shifted three decades forward. *Do Androids Dream of Electric Sheep?* (1968) was originally set in 1992 while later editions depict 2021\. The 1982 imagined in Isaac Asimov’s “Robbie” (1939) was moved to 1998 when revised for a 1950 republication. And Gregory Benford’s *In the Ocean of the Night* (1978) was originally set in 1999, then 2019 when republished seven years later. We always entered the original publication date and the future year used in these works’ first editions, noting the change in temporal setting during republication in the notes field.
+
+Finally, the year\_set field for ten works contain NaN (not a number). In those cases, Wikipedia lists the work as being set in the future but gives no specific date, and we weren’t able to find one ourselves. A few works deliberately kept the year ambiguous by using non-numeric characters. For *Half-Life* (1998), a video game set “May 16, 200-”, we entered 2005, roughly the median of that decade. We chose similar medians for any year employing an “X”, like *Mega Man 2* (famously set in “20XX”), for which we entered 2050 as that century’s median.
+
+# **Reuse Potential**
+
+Subsequent research could expand the dataset to include works from other sources to address any selection bias in the interests of Wikipedia contributors. While our dataset makes use of Wikipedia and Wikidata, we verified \~50 of our records through user-generated keywords on IMDb, like “year 2176” for *Ghosts of Mars* (2001). These crowdsourced IMDb keywords (often hundreds per film) aren’t submitted to the same level of scrutiny and discussion as contributions to Wikipedia. But they provide another source for collecting narrative dates in film and television, along with a wealth of other information. Researchers could use the [cinemagoer](https://github.com/cinemagoer/cinemagoer) Python package for querying IMDb to pull all films given keywords like [23rd century](https://www.imdb.com/search/keyword/?keywords=23rd-century&ref_=ttkw_kw_27), [2260s](https://www.imdb.com/search/keyword/?keywords=2260s&ref_=kw_ref_key&sort=moviemeter,asc&mode=detail&page=1), or [year 2033](https://www.imdb.com/search/keyword/?keywords=year-2033&ref_=ttkw_kw_27).
+
+Fan wikis on Fandom and elsewhere provide another valuable resource for narrative chronologies. The Fandom sites with extensive in-world timelines that we drew on to verify Wikipedia dates include the [Enderverse](https://enderverse.fandom.com/wiki/Enderverse_Timeline), [The Expanse](https://expanse.fandom.com/wiki/Timeline_and_chronology), [The Three-Body Problem](https://three-body-problem.fandom.com/wiki/Timeline), and [Dune](https://dune.fandom.com/wiki/Timeline_\(Expanded_Dune\)). Other series following a CE “future timeline” approach tracked on Fandom pages include [Memory Alpha](https://memory-alpha.fandom.com/wiki/Portal:Main) (Star Trek), Isaac Asimov’s [*Foundation*](https://asimov.fandom.com/wiki/Asimov_Timeline), [Dr. Who](https://tardis.fandom.com/wiki/Theory:Timeline_-_Doctor_Who_universe), [Ringworld](https://larryniven.fandom.com/wiki/Complete_Known_Space_Timeline), and Stephen Baxter’s [Xeelee Sequence](https://en.wikipedia.org/wiki/Xeelee_Sequence#Chronology_and_reading_order). We located detailed chronologies for Robert Heinlein’s [Future History](https://minerva.fandom.com/wiki/Heinlein's_Future_History) series and Poul Anderson’s Psychotechnic League series in the endpapers and appendixes of two collected editions, as detailed in our dataset’s notes field for those authors. Further digging uncovers chronologies written by fans on websites dating from the 1990s for particular authors or series, including a veritable gold mine of links at [chronology.org](http://chronology.org/) (“Science Fiction Timeline Site”). Many of the detailed fan chronologies linked there are now dead but still available on the Archive.org *Wayback Machine*.
+
+Finally, information about the genres and subgenres of the works listed here could be substantially enriched by cross-referencing this dataset with user-generated subgenre tags in crowdsourced resources like the [Internet Speculative Fiction Database](https://www.isfdb.org/) (ISFDB) and [Worlds Without End](https://www.worldswithoutend.com/). Currently, this dataset uses the first-listed genre tag entered by Wikidata users. But those tags are often too broad and lack specificity (e.g. “novel” or “science fiction”). [Laure Thompson](https://laurejt.github.io/) is currently at work on a forthcoming dataset of information entered by ISFDB users. Cross-referencing THFF with that data would provide richer subgenre information.
+
+# **Credits**
+
+* Grant Wythoff: conceptualization, data collection, data cleaning, analysis, writing (original draft), writing (revisions), visualizations, project administration
+
+* Theodore Leane: data cleaning, writing (original draft), writing (methods), research
+
+# **Acknowledgments**
+
+Our thanks to the following colleagues for their invaluable feedback on the collection and scope of this data: Happy Buzaaba, Matt Chandler, Wouter Haverals, Ryan Heuser, Rebecca Sutton Koeser, Paul March-Russell, Mary Naydan, Christine Roughan, Will Slocombe, Laure Thompson, and Sherryl Vint. Thanks also to Dan Sinykin and Melanie Walsh for their careful editorial feedback, to Neel Gupta and Em Nordling for going over everything with a fine-tooth comb, and to our anonymous peer reviewer for incredibly generous comments that helped us see this data in a new light.
+
+# **Bibliography**
+
+Suzanne F. Boswell, “‘Whatever It Is That Compels Her to Write so Seldom’: Network Analysis and the Decline of Women Writers in Pulp Science Fiction,” *Extrapolation* 62, no. 1 (March 1, 2021): 1–37, [https://doi.org/10.3828/extr.2021.2](https://doi.org/10.3828/extr.2021.2).
+
+Ignatius Frederick Clarke, *The Pattern of Expectation, 1644-2001* (Basic Books, 1979).
+
+Melanie Conroy, “Quantifying the Gap: The Gender Gap in French Writers’ Wikidata,” *Journal of Cultural Analytics* 8, no. 2 (May 11, 2023), [https://doi.org/10.22148/001c.74068](https://doi.org/10.22148/001c.74068).
+
+James F. English, “Now, Not Now: Counting Time in Contemporary Fiction Studies,” *Modern Language Quarterly* 77, no. 3 (September 1, 2016): 395–418, [https://doi.org/10.1215/00267929-3570667](https://doi.org/10.1215/00267929-3570667).
+
+Stefania Forlini, Uta Hinrichs, and Bridget Moynihan, “The Stuff of Science Fiction: An Experiment in Literary History,” *Digital Humanities Quarterly* 010, no. 1 (February 12, 2016).
+
+Veronica Hollinger, “Stories about the Future: From Patterns of Expectation to Pattern Recognition,” *Science Fiction Studies* 33, no. 3 (2006): 452–72.
+
+Christoph Hube, “Bias in Wikipedia,” in *Proceedings of the 26th International Conference on World Wide Web Companion*, WWW ’17 Companion (Republic and Canton of Geneva, CHE: International World Wide Web Conferences Steering Committee, 2017), 717–21, [https://doi.org/10.1145/3041021.3053375](https://doi.org/10.1145/3041021.3053375).
+
+Fredric Jameson, “Progress versus Utopia; or, Can We Imagine the Future?,” *Science Fiction Studies* 9, no. 2 (July 1982), https://www.depauw.edu/sfs/backissues/27/jameson.html.
+
+Ivan Klima, “Introduction,” *‌R.U.R. (Rossum’s Universal Robots)* (London; New York: Penguin Classics, 2004).
+
+Alexander Manshel, “The Rise of the Recent Historical Novel,” *Post45: Peer Reviewed*, September 29, 2017, [https://post45.org/2017/09/the-rise-of-the-recent-historical-novel/](https://post45.org/2017/09/the-rise-of-the-recent-historical-novel/).
+
+Sverrir Steinsson, “Rule Ambiguity, Institutional Clashes, and Population Loss: How Wikipedia Became the Last Good Place on the Internet,” *American Political Science Review*, March 9, 2023, 1–17, [https://doi.org/10.1017/S0003055423000138](https://doi.org/10.1017/S0003055423000138).
+
+Sherryl Vint, *Science Fiction* (Cambridge, Mass.: MIT Press, 2021).
+
+Paula Wojcik, Bastian Bunzeck, and Sina Zarrieß, “The Wikipedia Republic of Literary Characters,” *Journal of Cultural Analytics* 8, no. 2 (May 11, 2023), [https://doi.org/10.22148/001c.70251](https://doi.org/10.22148/001c.70251).
+
+“PetScan \- Meta,” WikiMedia Meta-Wiki, accessed December 18, 2023, [https://meta.wikimedia.org/wiki/PetScan/en](https://meta.wikimedia.org/wiki/PetScan/en).
+
+“Science Fiction Timeline Site,” accessed January 10, 2024, [http://chronology.org/](http://chronology.org/).
+
+STAPI: A Star Trek API, accessed January 8, 2024, [https://stapi.co/](https://stapi.co/).
+
+Wikimedia Foundation, “Community Insights/Community Insights 2023 Report \- Meta,” WikiMedia Meta-Wiki, 2023, [https://meta.wikimedia.org/wiki/Community\_Insights/Community\_Insights\_2023\_Report](https://meta.wikimedia.org/wiki/Community_Insights/Community_Insights_2023_Report).
+
+Charles Chuankai Zhang and Loren Terveen, “Quantifying the Gap: A Case Study of Wikidata Gender Disparities,” *17th International Symposium on Open Collaboration*, September 15, 2021, 1–12, [https://doi.org/10.1145/3479986.3479992](https://doi.org/10.1145/3479986.3479992).

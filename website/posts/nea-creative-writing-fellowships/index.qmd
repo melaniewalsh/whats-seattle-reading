@@ -103,7 +103,7 @@ table_data = fetchData(
   "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/nea_writing_fellowships/nea_fellowships.csv"
 )
 
-
+console.log(table_data)
 // Select specific columns
 filtered_data = table_data.map(d => ({
   full_name_firstlast: d.full_name_firstlast,

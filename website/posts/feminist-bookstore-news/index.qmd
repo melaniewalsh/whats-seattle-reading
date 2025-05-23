@@ -294,7 +294,7 @@ Areas that need to be edited are marked with MAKE EDITS HERE -->
 source("../../scripts/createDataTable.R")
 
 createDataTable(
-    data_path = "https://github.com/Post45-Data-Collective/data/blob/main/feminist_bookstore_news/feminist_bookstore_news-issue_list.csv",
+    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/feminist_bookstore_news/feminist_bookstore_news-issue_list.csv",
 
     # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
     displayed_columns = c(
