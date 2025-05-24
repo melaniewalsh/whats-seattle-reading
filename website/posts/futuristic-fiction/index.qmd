@@ -7,16 +7,15 @@ author:
     url: https://wythoff.net/
     email: gwythoff@princeton.edu
   - name: Theodore Leane
+    orcid: 0009-0003-1652-3578
     url: https://english.cornell.edu/teddy-leane
     email: cl2734@cornell.edu
 abstract: "This dataset contains metadata for 2.5k English-language narrative works set in the future, each marked with the year it was released and the year it takes place."
 # Add keywords/categories — should always include "dataset"
 categories: [speculative fiction, science fiction, films, fiction, video games, television, comics, radio drama, dataset, draft]
 # Provide link to an image that will show up in "Our Datasets" aggregation
-# not complete
 image: "https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg"
 # Insert DOI for this data essay
-# not complete
 doi: "10.18737/552626"
 # date of publication
 date: "2025-05-26"
@@ -26,12 +25,12 @@ citation:
   type: article-journal
   container-title: "Post45 Data Collective"
   doi: "10.18737/CNJV1733p4520221212"
-  url: https://example.com/summarizing-output
+  url: data.post45.org/futuristic-fiction/
   editor:
   - Dan Sinykin
   - Melanie Walsh
 # if author/editor is including a .bib bibliography (such as one created from Zotero) for cited sources, uncomment and provide the correct reference here
-#bibliography: references.bib
+# bibliography: references.bib
 
 # NO NEED TO EDIT BELOW THIS LINE
 title-block-style: default
