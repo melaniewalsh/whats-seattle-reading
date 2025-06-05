@@ -61,17 +61,17 @@ The dataset also contains ISBSNs, OCLC numbers, and other related OCLC informati
 # createDataTable(
 #   data_path = data_path,
 
-#   displayed_columns = c("shorttitle","inferreddate",  "author","recordid", "hathi_rights",  "genres", "id", "docid", "juvenileprob", "nonficprob", "author_authorized_heading", "author_lccn", "author_viaf", "author_wikidata_qid", 
-  
-#   #"oldauthor",  
-#   "author_marc", 
-  
+#   displayed_columns = c("shorttitle","inferreddate",  "author","recordid", "hathi_rights",  "genres", "id", "docid", "juvenileprob", "nonficprob", "author_authorized_heading", "author_lccn", "author_viaf", "author_wikidata_qid",
+
+#   #"oldauthor",
+#   "author_marc",
+
 #   # "authordate",  "imprint", "imprintdate", "contents", "subjects",
-  
-#    "geographics", 
-  
-#   "locnum", "oclc", "oclc_owi", "oclc_holdings", "oclc_eholdings", "isbns" 
-  
+
+#    "geographics",
+
+#   "locnum", "oclc", "oclc_owi", "oclc_holdings", "oclc_eholdings", "isbns"
+
 #   # "wikidata_work_qid", "publisher_marc", "wikidata_publisher_name", "wikidata_publisher_qid", "place"
 # ),
 
@@ -84,10 +84,10 @@ The dataset also contains ISBSNs, OCLC numbers, and other related OCLC informati
 #   #  sort_columns = c("inferred_date"),
 #   #  sort_orders = c("desc")
 
-  
+
 # )
 
-  # Print out column names to make it easier to customize above
+# Print out column names to make it easier to customize above
 # df <- read.csv(data_path)
 
 # cat(paste(shQuote(colnames(df), type = "cmd"), collapse = ", "))

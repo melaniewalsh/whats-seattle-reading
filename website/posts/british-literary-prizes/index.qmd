@@ -23,7 +23,7 @@ image: "https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fw
 # not complete
 doi: "10.18737/552626"
 # date of publication
-date: "2025-05-26"
+date: "2025-06-11"
 # Citation details for this data essay
 # not complete
 citation:
@@ -67,9 +67,7 @@ Then fill in the rest of the information above and below. -->
 
 <!-- Include image for data essay -->
 
-![Source: [Booker Prize](https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F17ab84be-47ff-11ed-bad9-7fa0c293ad00.jpg?crop=1600%2C900%2C0%2C0&format=webp&resize=1500)](https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F17ab84be-47ff-11ed-bad9-7fa0c293ad00.jpg?crop=1600%2C900%2C0%2C0&format=webp&resize=1500){fig-align="center" width="50%"}
-
-The Selected British Literary Prizes (SBLP) dataset contains information on nine major literary prizes in the U.K. from 1990 to 2022 and demographic information on 682 prize winners and shortlisted authors. The prizes included are the James Tait Black, Costa, Booker, Women’s, Gold Dagger, British Science Fiction, T.S. Eliot, Ted Hughes, and Baillie Gifford.
+![Source: [Booker Prize](https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F17ab84be-47ff-11ed-bad9-7fa0c293ad00.jpg?crop=1600%2C900%2C0%2C0&format=webp&resize=1500)](https://www.thetimes.com/imageserver/image/%2Fmethode%2Ftimes%2Fprod%2Fweb%2Fbin%2F17ab84be-47ff-11ed-bad9-7fa0c293ad00.jpg?crop=1600%2C900%2C0%2C0&format=webp&resize=1500){fig-align="center" width="80%"}
 
 <!-- Include brief introduction to/description of data essay  -->
 
@@ -78,50 +76,95 @@ The Selected British Literary Prizes (SBLP) dataset contains information on nine
 
 # Data Table
 
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
+```{ojs}
+//|echo: false
+import {viewof dataSummaryView, Tabulator, viewof selectedColumns, viewof dataSet, tableContainer, fetchData, generateTabulatorTableFromCSV, progress, progressbar} from "8bb63a6cde9addff"
+```
 
-# Load the function
-source("../../scripts/createDataTable.R")
 
-# MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
-createDataTable(
-    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/british_literary_prizes/british_literary_prizes-1990-2022.csv",
-    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-    # DISPLAYED COLUMNS
-    displayed_columns = c(
-        "prize_year", "prize_name", "prize_genre", "prize_institution",
-        "given_name", "family_name", "gender", "sexuality", "uk_residence",
+```{ojs}
+//|echo: false
+//|output: false
+raw_data = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/british_literary_prizes/british_literary_prizes-1990-2022.csv")
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+
+// Example usage
+generateTabulatorTableFromCSV(
+  "#table-container4",
+
+  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/british_literary_prizes/british_literary_prizes-1990-2022.csv",
+  {
+    displayedColumns: ["prize_year", "prize_alias", "first_name", "last_name", "gender", "sexuality","prize_genre", "prize_institution", "prize_name",
+          "uk_residence",
         "ethnicity_macro", "ethnicity",
         "highest_degree", "degree_field", "degree_field_category", "degree_institution",
-        "book_title", "person_role", "viaf", "book_id", "person_id", "prize_id"
-    ),
+        "book_title", "person_role", "viaf", "book_id", "person_id", "prize_id"],
 
-    # COLUMN WIDTHS
-    column_widths = c(
-        "prize_name" = "200px",
-        "prize_institution" = "180px",
-        "given_name" = "130px",
-        "family_name" = "130px",
-        "book_title" = "200px",
-        "degree_institution" = "160px",
-        "ethnicity_macro" = "250px",
-        "degree_field_category" = "160px"
-    ),
+    columnPopups: [
+  "Year the prize was awarded",                      // prize_year
 
-    # CATEGORY COLUMNS
-    category_columns = c(
-        "prize_genre", "gender", "sexuality", "uk_residence",
-        "ethnicity_macro", "ethnicity", "highest_degree", "degree_field_category", "person_role"
-    ),
-
-    # SORTING
-    sort_columns = c("prize_year"),
-    sort_orders = c("desc")
-)
+  "Name of the prize currently",              // prize_alias
+  "Author's first name",                             // given_name
+  "Author's last name",                            // family_name
+  "Author's gender (self-declared or public)",       // gender
+  "Author's sexuality (self-declared or public)",    // sexuality
+  "Genre category of the awarded book",              // prize_genre
+  "Institution that sponsored the prize",            // prize_institution
+  "Name of the prize at time of award",              // prize_name,
+  "Whether the author holds UK residence status",    // uk_residence
+  "Ethnicity macro category (standardized)",         // ethnicity_macro
+  "Author's ethnicity (self-declared or public)",    // ethnicity
+  "Highest level of post-secondary education",       // highest_degree
+  "Field of study for highest degree",               // degree_field
+  "Degree field macro category (standardized)",      // degree_field_category
+  "Institution where the highest degree was earned", // degree_institution
+  "Title of the awarded or shortlisted book",        // book_title
+  "Whether author won or was shortlisted",           // person_role
+  "VIAF identifier for the author",                  // viaf
+  "Unique identifier for the book in this dataset",  // book_id
+  "Unique identifier for the author in this dataset",// person_id
+  "Unique identifier for the prize in this dataset"  // prize_id
+],
+    columnWidths: { "prize_name": "30px", "prize_alias": "30px" },
+    //currencyColumns: ["prize_amount"],
+    categoryColumns: [ "prize_genre", "prize_alias", "prize_name", "gender", "sexuality", "uk_residence",
+        "ethnicity_macro", "ethnicity", "highest_degree", "degree_field_category", "person_role"],
+     sortColumns: ["prize_year", "prize_name"],
+     sortOrders: ["desc"],
+    buttonContainerId: "#button-container1",
+    rawButtonId: "#download-raw1",
+    urlCopyButtonId: "#copy-url1",
+  }
+);
 ```
+
+<div id="table-container4" style="height: 500px">
+</div>
+
+Download Full Data (including hidden columns)
+<div id='button-container'>
+  <button id="download-raw1"><i class="fas fa-download"></i></i> Download Full Data</button>
+  <button id="copy-url1"><i class="fas fa-copy"></i> Copy Full Data URL</button>
+</div>
+
+Download Table Data (including filtered options)
+
+<div id='button-container1'>
+  <button id="download-csv"><i class="fas fa-download"></i></i> Download CSV</button>
+  <button id="download-json"><i class="fas fa-download"></i></i> Download JSON</button>
+  <button id="download-xlsx"><i class="fas fa-download"></i></i> Download Excel</button>
+</div>
+
+<div id="progress-container" style="width: 100%; display: block;">
+  <progress id="progress-bar" style="width: 100%;" max="100" value="0"></progress>
+  <div id="progress-text" style="text-align: center; margin-top: 5px;"></div>
+</div>
+
 
 ::: {.callout-tip icon="false"}
 ## Creative Commons License
@@ -167,7 +210,7 @@ The SBLP dataset was created by Katherine Binhammer, Kanika Batra, Theo Gray, an
 
 Data collection began with collaborators deciding upon a list of prizes based on longevity, award monies, genre coverage, and reach within and beyond Britain. Even within these parameters collaborators decided one way to prioritize information on specific awards was by 1\) the year in which they were founded; and 2\) prize money. Theo Gray hand compiled the data on each author in consultation with Katherine Binhammer based on an intersectional feminist approach which included the following: gender, sexuality, UK residency, ethnicity classifications, ethnicity, highest degree, degree institution country, degree institution, degree field category, degree field. Kanika Batra and Theo Gray discussed and arrived at the macro and parsed ethnicity categories. The main sources of information on each author were prize websites, author websites, author bios, profiles, obituary articles, interviews, podcasts, and recorded readings. Wherever possible, scholarly sources such as encyclopedias and biographical dictionaries were consulted, though because our focus was on the past few decades, such material was limited. Maryse Jayasuiya and Kanika Batra cross-checked the parsed ethnicity information with categorical complexities noted for further questioning. Collaborators met from January 2024-May 2025 to clarify and refine various categories balancing granularity and generality. 
 
-# Description
+## Metadata Discussion
 
 **Prize names:** For purposes of aggregation, we decided to normalize historic prize names to their contemporary forms in addition to their prize\_id column. This was done with an additional column (prize\_alias) that clarifies that, for instance, the “Whitbread Biography,” “Whitbread Biography Award,” and “Costa Biography” are all part of the same prize series even though they have gone by different names at different times. The same is the case with the “Booker” and the “Man Booker.” 
 
@@ -231,9 +274,9 @@ The columns in the dataset include:
 
 **book\_title**: title of the awarded or shortlisted book
 
-**Ethical Considerations**
+# Ethical Considerations
 
-***Notes on ethnic identifications*** 
+## Notes on Ethnic Identifications
 
 Collecting data to group authors' ethnicity and making general claims about writers is perhaps the most challenging component of our research. Following important Black cultural studies work we recognize that both race and ethnicity are “discursive constructs” and “sliding signifiers.” Further, ethnic groups in official UK data combine different aspects of individual identity, and many of the categories are informed by historical ideas of race (Mirza). UK government guidelines for writing about ethnicity explicitly state that they refer to ethnicity and not race because: surveys usually ask people for their ethnicity and not their race; using consistent terms helps people to understand their data. We are aware that these guidelines obscure racial identifiers and racial biases. 
 
@@ -255,46 +298,86 @@ With these qualifications. ethnicity as used in the data accomplishes the follow
 
 Ultimately, we developed the following macro categories which combine race, ethnicity, national affiliation and/or geography (the table below outlines the sub-categories): African, Asian, White American, Non-White American, Black British, Caribbean, Irish, Jewish, Non-U.K. White, unknown and White British. In Britain, as in other parts of the world mentioned in the macro categories, it is often difficult to distinguish various mixed-race ethnicities. We placed mixed race authors in the ethnic macro categories we developed, as explained at the beginning of this paragraph. Authors like Zadie Smith (one white and one black parent) or Hannah Lowe (one white and one mixed-race parent) are listed as Black British or Caribbean respectively based on the way they situate themselves in interviews, writings, promotion and publicity. Mixed race authors are not counted twice in the data. 
 
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
+## Data Table
 
-# Load the function
-source("../../scripts/createDataTable.R")
-
-# MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
-createDataTable(
-    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/british_literary_prizes/british_literary_prizes-ethnicity-1990-2022.csv",
-    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-    # DISPLAYED COLUMNS
-    displayed_columns = c(
-        "person_id", "ethnicity_parsed"
-    ),
-
-    # COLUMN WIDTHS
-    column_widths = c(
-        "person_id" = "200px",
-        "ethnicity_parsed" = "200px"
-        # "given_name" = "130px",
-        # "family_name" = "130px",
-        # "book_title" = "200px",
-        # "degree_institution" = "160px",
-        # "ethnicity_macro" = "250px",
-        # "degree_field_category" = "160px"
-    ),
-
-    # # CATEGORY COLUMNS
-    # category_columns = c(
-    #     "prize_genre", "gender", "sexuality", "uk_residence",
-    #     "ethnicity_macro", "ethnicity", "highest_degree", "degree_field_category", "person_role"
-    # ),
-
-    # SORTING
-    sort_columns = c("person_id"),
-    sort_orders = c("asc")
-)
+```{ojs}
+//|echo: false
+//|output: false
+raw_data2 = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/british_literary_prizes/british_literary_prizes-ethnicity-1990-2022.csv")
 ```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+
+// Example usage
+generateTabulatorTableFromCSV(
+  "#table-container2",
+
+  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/british_literary_prizes/british_literary_prizes-ethnicity-1990-2022.csv",
+  {
+     displayedColumns: ["person_id", "ethnicity_parsed"],
+    //     "given_name", "family_name", "gender", "sexuality", "uk_residence",
+    //     "ethnicity_macro", "ethnicity",
+    //     "highest_degree", "degree_field", "degree_field_category", "degree_institution",
+    //     "book_title", "person_role", "viaf", "book_id", "person_id", "prize_id"],
+
+  //   columnPopups: [
+  // "Year the prize was awarded",                      // prize_year
+  // "Name of the prize at time of award",              // prize_name
+  // "Genre category of the awarded book",              // prize_genre
+  // "Institution that sponsored the prize",            // prize_institution
+  // "Author's given name",                             // given_name
+  // "Author's family name",                            // family_name
+  // "Author's gender (self-declared or public)",       // gender
+  // "Author's sexuality (self-declared or public)",    // sexuality
+  // "Whether the author holds UK residence status",    // uk_residence
+  // "Ethnicity macro category (standardized)",         // ethnicity_macro
+  // "Author's ethnicity (self-declared or public)",    // ethnicity
+  // "Highest level of post-secondary education",       // highest_degree
+  // "Field of study for highest degree",               // degree_field
+  // "Degree field macro category (standardized)",      // degree_field_category
+  // "Institution where the highest degree was earned", // degree_institution
+  // "Title of the awarded or shortlisted book",        // book_title
+  // "Whether author won or was shortlisted",           // person_role
+  // "VIAF identifier for the author",                  // viaf
+  // "Unique identifier for the book in this dataset",  // book_id
+  // "Unique identifier for the author in this dataset",// person_id
+  // "Unique identifier for the prize in this dataset"  // prize_id
+// ],
+     columnWidths: { "ethnicity_parsed": "10px"},
+    //currencyColumns: ["prize_amount"],
+    categoryColumns: [ "ethnicity_parsed"],
+    //     "ethnicity_macro", "ethnicity", "highest_degree", "degree_field_category", "person_role"],
+    //  sortColumns: ["prize_year"],
+    //  sortOrders: ["desc"],
+      buttonContainerId: "#button-container2",
+    rawButtonId: "#download-raw2",
+    urlCopyButtonId: "#copy-url2",
+  }
+);
+```
+
+
+<div id="table-container2" style="height: 500px">
+</div>
+
+Download Full Data (including hidden columns)
+<div id='button-container'>
+  <button id="download-raw2"><i class="fas fa-download"></i></i> Download Full Data</button>
+  <button id="copy-url2"><i class="fas fa-copy"></i> Copy Full Data URL</button>
+</div>
+
+Download Table Data (including filtered options)
+
+<div id='button-container2'>
+  <button id="download-csv"><i class="fas fa-download"></i></i> Download CSV</button>
+  <button id="download-json"><i class="fas fa-download"></i></i> Download JSON</button>
+  <button id="download-xlsx"><i class="fas fa-download"></i></i> Download Excel</button>
+</div>
+
+
 
 **Asian:** Bangladeshi; Bengali; British Bangladeshi; Cantonese British; Chinese; Chinese American; Chinese British; Chinese Canadian; German Indian; Hong Kong; Indian; Indian American; British Indian; Indian Canadian; Indian English; Indian Welsh; Japanese; Japanese American; Malaysian; Pakistani; Pakistani Scottish; Sri Lankan; Sri Lankan Tamil; Sri Lankan Sinhalese; Vietnamese American; Vietnamese French American
 
@@ -363,4 +446,10 @@ Strongman, Luke. (2002). *The Booker Prize and the Legacy of Empire*. New York: 
 Todd, Richard. (1996).*Consuming Fictions: The Booker Prize and Fiction in Britain Today*. London: Bloomsbury. 
 
 Gov.uk. “Writing about Ethnicity.” (2024). [https://www.ethnicity-facts-figures.service.gov.uk/style-guide/writing-about-ethnicity/](https://www.ethnicity-facts-figures.service.gov.uk/style-guide/writing-about-ethnicity/). Accessed 6 May 2025\. 
+
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+
+<!-- Excel script -->
+<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
 

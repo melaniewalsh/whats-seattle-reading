@@ -30,6 +30,7 @@ website:
       #   href: https://twitter.com
 format:
   html:
+    # include-in-header: scripts/table-tweak.js
     theme: 
      - flatly
     #  - styles.css

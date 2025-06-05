@@ -18,7 +18,7 @@ image: "https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016
 # Insert DOI for this data essay
 doi: "10.18737/552626"
 # date of publication
-date: "2025-05-30"
+date: "2025-06-09"
 # Citation details for this data essay
 # not complete
 citation:
@@ -80,6 +80,7 @@ This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0
 
 # Data Table and Visualization
 
+
 These data visualizations were made by Grant Wythoff with additional help from Melanie Walsh.
 
 Use the search bar to filter records in the table and scatterplot below. Search input can include title, creator (author, director, etc.), year of release or setting (e.g. 2044), and franchise (e.g. Star Trek).
@@ -130,6 +131,25 @@ html`<br>`
 viewof search
 html`<br>`
 table
+```
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+# Load the function
+source("../../scripts/createDataTable.R")
+
+# MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
+createDataTable(
+    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/futuristic_fiction/futuristic_fiction.csv",
+    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
+    only_buttons = TRUE
+)
+```
+
+```{ojs}
+//|echo: false
 viewof futuristicPlot
 viewof elapsedSlider
 viewof YearRange
