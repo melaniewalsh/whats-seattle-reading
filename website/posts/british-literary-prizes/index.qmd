@@ -245,9 +245,9 @@ The columns in the dataset include:
 
 **person\_role**: whether author was shortlisted or won the prize
 
-**family\_name**: family name of author
+**last\_name**: family name of author
 
-**given\_name**: given name of author
+**first\_name**: given name of author
 
 **name**: full name author in family name, given name format
 
