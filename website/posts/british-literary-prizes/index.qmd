@@ -14,7 +14,7 @@ author:
     url: https://apps.ualberta.ca/directory/person/coleen2
   - name: Maryse Jayasuriya
     url: https://www.slu.edu/arts-and-sciences/english/faculty/maryse-jayasuriya.php
-abstract: "The Selected British Literary Prizes (SBLP) dataset contains information on nine major literary prizes in the U.K. from 1990 to 2022 and demographic information on 682 prize winners and shortlisted authors. The prizes included are the James Tait Black Memorial Prize, Costa Book Award, The Booker Prize, Women’s Prize for Fiction, The Gold Dagger Award, The British Science Fiction Association Award, The T.S. Eliot Prize for Poetry, The Ted Hughes Award for New Work in Poetry, and The Baillie Gifford Prize for Non-Fiction."
+abstract: "The Selected British Literary Prizes (SBLP) dataset contains information on nine major literary prizes in the U.K. from 1990 to 2022 and demographic information on 682 prize winners and shortlisted authors."
 # Add keywords/categories — should always include "dataset"
 categories: [prizes, british, dataset, race, gender]
 # Provide link to an image that will show up in "Our Datasets" aggregation
