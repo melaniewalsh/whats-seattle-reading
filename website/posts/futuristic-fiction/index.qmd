@@ -12,13 +12,13 @@ author:
     email: cl2734@cornell.edu
 abstract: "This dataset contains metadata for 2.5k English-language narrative works set in the future, each marked with the year it was released and the year it takes place."
 # Add keywords/categories — should always include "dataset"
-categories: [speculative fiction, science fiction, films, fiction, video games, television, comics, radio drama, dataset, draft]
+categories: [speculative fiction, science fiction, film, fiction, video games, television, comics, radio, dataset]
 # Provide link to an image that will show up in "Our Datasets" aggregation
 image: "https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg"
 # Insert DOI for this data essay
 doi: "10.18737/552626"
 # date of publication
-date: "2025-06-09"
+date: "2025-06-24"
 # Citation details for this data essay
 # not complete
 citation:
@@ -68,6 +68,130 @@ Then fill in the rest of the information above and below. -->
 
 <!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
 
+# Data Table
+
+
+```{ojs}
+//|echo: false
+import {viewof dataSummaryView, Tabulator, viewof selectedColumns, viewof dataSet, tableContainer, fetchData, generateTabulatorTableFromCSV, progress, progressbar} from "8bb63a6cde9addff"
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+raw_data = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/futuristic_fiction/futuristic_fiction.csv")
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+
+// Example usage
+generateTabulatorTableFromCSV(
+  "#table-container4",
+  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/futuristic_fiction/futuristic_fiction.csv",
+  {
+    displayedColumns: [
+      "wikidata_work_qid", 
+      "title", 
+      "creator", 
+      "year_set", 
+      "released",
+      "years_distant", 
+      "medium",
+      "genre",
+      "multiyears", 
+      "wikipedia_pg", 
+      "verify_yr", 
+      "notes", 
+      "is_series", 
+      "predictions", 
+      "source",
+       "record_id"
+    ],
+
+    columnPopups: [
+      "Wikidata QID for the work",                                                                                                     // wikidata_work_qid
+      "Title of the work.",                                                                                                           // title
+      "Creator (author, director, etc.) of the work.",                                                                                  // creator
+    
+    "Future year in which the work takes place. For multi-year works, typically the median year.",   
+
+                                                                                   
+        "Year the work was originally released.",    
+        // released  
+                        "How far in the future the work is set (year_set minus released).",     // year_set                                                                              // years_distant
+      "Medium: fiction, film, television, video game, radio, comics, tabletop games, drama, theme park rides, illustrations.",          // medium
+      "Genre from Wikidata (e.g., science fiction, cyberpunk, crime, etc.).",                                                           // genre
+      "If the work takes place over a wide range of years, all those years (e.g., '1992-1996' or '1992, 1996').",                      // multiyears
+      "URL to the work’s Wikipedia page, if available.",                                                                                // wikipedia_pg
+      "URL/source for verifying the year the work is set. Populated when Wikipedia/Wikidata are unclear.",                              // verify_yr
+      "Any clarifying notes or extra sources for the work or its temporal setting.",                                                    // notes
+      "If the work is part of a series, the Wikidata ID for that series.",                                                              // is_series
+      "Text from Wikipedia users about predictions: describes plot elements and whether they came true.",                               // predictions
+      "Where information was sourced: wikidata, wikipast, wikifilm, wikicategory, wikitext (may be multiple sources per work).",         // source
+      "Dataset’s unique ID: creator’s last name, first word of title, year released (e.g., butler_parable_1993)."                      // record_id
+    ],
+
+    columnWidths: {
+      "title": "20px",
+      "creator": "20px",
+      "medium": "20px",
+      "genre": "20px",
+      "verify_yr": "20px",
+      "notes": "30px",
+      // Add others if you want
+    },
+    numericColumns : ['year_set', 'released', 'years_distant'],
+
+    // Groupings for dropdowns/filters (customize as needed)
+    categoryColumns: [
+      "medium", "genre", "source"
+    ],
+
+    // Sort primarily by year set, then released date
+    sortColumns: ["year_set"],
+    sortOrders: ["desc"],
+
+    buttonContainerId: "#button-container1",
+    rawButtonId: "#download-raw1",
+    urlCopyButtonId: "#copy-url1",
+  }
+);
+```
+
+<div id="table-container4" style="height: 500px">
+</div>
+
+Download Full Data
+<div id='button-container'>
+  <button id="download-raw1"><i class="fas fa-download"></i></i> Download Full Data</button>
+  <button id="copy-url1"><i class="fas fa-copy"></i> Copy Full Data URL</button>
+</div>
+
+Download Table Data (including filtered options)
+
+<div id='button-container1'>
+  <button id="download-csv"><i class="fas fa-download"></i></i> Download CSV</button>
+  <button id="download-json"><i class="fas fa-download"></i></i> Download JSON</button>
+  <button id="download-xlsx"><i class="fas fa-download"></i></i> Download Excel</button>
+</div>
+
+<div id="progress-container" style="width: 100%; display: block;">
+  <progress id="progress-bar" style="width: 100%;" max="100" value="0"></progress>
+  <div id="progress-text" style="text-align: center; margin-top: 5px;"></div>
+</div>
+
+
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+
+<!-- Excel script -->
+<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+
+
 ::: {.callout-tip icon="false"}
 ## Creative Commons License
 
@@ -78,12 +202,11 @@ This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0
 </p>
 :::
 
-# Data Table and Visualization
-
+# Data Visualization
 
 These data visualizations were made by Grant Wythoff with additional help from Melanie Walsh.
 
-Use the search bar to filter records in the table and scatterplot below. Search input can include title, creator (author, director, etc.), year of release or setting (e.g. 2044), and franchise (e.g. Star Trek).
+Use the search bar to filter records in the scatterplot below. Search input can include title, creator (author, director, etc.), year of release or setting (e.g. 2044), and franchise (e.g. Star Trek).
 
 ```{ojs}
 //|echo: false
@@ -130,22 +253,6 @@ thff = d3.csv(
 html`<br>`
 viewof search
 html`<br>`
-table
-```
-```{r}
-#| echo: false
-#| warning: false
-#| message: false
-
-# Load the function
-source("../../scripts/createDataTable.R")
-
-# MAKE EDITS HERE: Plug in the raw GitHub URL to the dataset below
-createDataTable(
-    data_path = "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/futuristic_fiction/futuristic_fiction.csv",
-    # MAKE EDITS HERE: Select the columns that will be displayed in the data table, and the order
-    only_buttons = TRUE
-)
 ```
 
 ```{ojs}
@@ -214,33 +321,32 @@ html`
 <div class="medium-cards">
   <div class="medium-card">
     <h4>Film 🎞️</h4>
-    <span class="big">${filteredData.filter((d) => d.medium === "film" || d.stateId === "RU").length.toLocaleString("en-US")} works</span>
+    <span class="big">${thff.filter((d) => d.medium === "film" || d.stateId === "RU").length.toLocaleString("en-US")} works</span>
   </div>
   <div class="medium-card">
     <h4>Prose Fiction 📖</h4>
-    <span class="big">${filteredData.filter((d) => d.medium === "prose fiction").length.toLocaleString("en-US")} works</span>
+    <span class="big">${thff.filter((d) => d.medium === "prose fiction").length.toLocaleString("en-US")} works</span>
   </div>
   <div class="medium-card">
     <h4>Television 📺</h4>
-    <span class="big">${filteredData.filter((d) => d.medium === "television").length.toLocaleString("en-US")} works</span>
+    <span class="big">${thff.filter((d) => d.medium === "television").length.toLocaleString("en-US")} works</span>
   </div>
   <div class="medium-card">
     <h4>Video Games 👾</h4>
-    <span class="big">${filteredData.filter((d) => d.medium === "video game").length.toLocaleString("en-US")} works</span>
+    <span class="big">${thff.filter((d) => d.medium === "video game").length.toLocaleString("en-US")} works</span>
   </div>
   <div class="medium-card">
     <h4>Comics 💥</h4>
-    <span class="big">${filteredData.filter((d) => d.medium === "comics").length.toLocaleString("en-US")} works</span>
+    <span class="big">${thff.filter((d) => d.medium === "comics").length.toLocaleString("en-US")} works</span>
   </div>
   <div class="medium-card">
     <h4>Other</h4>
-    <span class="big">${filteredData.filter((d) =>
-      !["fiction", "film", "television", "video game", "comics"].includes(d.medium)
-    ).length.toLocaleString("en-US")} works</span>
+  <span class="big">${thff.filter((d) => d.medium !== "prose fiction" && d.medium !== "film" && d.medium !== "television" && d.medium !== "video game" && d.medium !== "comics").length.toLocaleString("en-US")} works</span>
   </div>
 </div>
 <br>
 `
+
 ```
 
 <!-- ## Explore by Year of Future Setting (Log Scale) -->
@@ -266,7 +372,7 @@ That said, it’s worth acknowledging the obvious relationship between SF and fu
 
 To our knowledge, this is the first project that systematically measures the depiction of the future in fiction. Despite SF’s rich history of fan-led bibliographic data collection projects almost since the inception of the genre (Forlini et al. 2016) and a growing number of data curation projects in academic SF studies (Boswell 2021), a dataset of future narrative dates across authors and narrative universes hasn’t been collected until now.
 
-This dataset will be of interest to researchers in SF studies, as well to scholars interested more broadly in the history of cultural attitudes toward the future and in ways of conceptualizing narrative time. Analyzing and visualizing the data could suggest trends in the evolution of how speculative fiction has imagined the future. This dataset could also be productively compared with data tracking the depiction of the past in works of historical fiction (English 2016; Manshel 2017). Possible research questions this dataset could support include:
+This dataset will be of interest to researchers in SF studies, as well to scholars interested more broadly in the history of cultural attitudes toward the future and in ways of conceptualizing narrative time. Analyzing and visualizing the data could suggest trends in the evolution of how speculative fiction has imagined the future. This dataset could also be productively compared with data tracking the depiction of the past in works of historical fiction (English 2016; Manshel 2023). Possible research questions this dataset could support include:
 
 -   Does critical acclaim within literary or genre-specific communities correlate with near- or far-futures?
 
@@ -471,7 +577,7 @@ Fredric Jameson, “Progress versus Utopia; or, Can We Imagine the Future?,” *
 
 Ivan Klima, “Introduction,” *‌R.U.R. (Rossum’s Universal Robots)* (London; New York: Penguin Classics, 2004).
 
-Alexander Manshel, “The Rise of the Recent Historical Novel,” *Post45: Peer Reviewed*, September 29, 2017, <https://post45.org/2017/09/the-rise-of-the-recent-historical-novel/>.
+Alexander Manshel, *Writing Backwards: Historical Fiction and the Reshaping of the American Canon*, Columbia University Press, 2023, <https://cup.columbia.edu/book/writing-backwards/9780231211277/>.
 
 Sverrir Steinsson, “Rule Ambiguity, Institutional Clashes, and Population Loss: How Wikipedia Became the Last Good Place on the Internet,” *American Political Science Review*, March 9, 2023, 1–17, <https://doi.org/10.1017/S0003055423000138>.
 
