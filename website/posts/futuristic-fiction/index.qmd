@@ -573,17 +573,17 @@ Veronica Hollinger, “Stories about the Future: From Patterns of Expectation to
 
 Christoph Hube, “Bias in Wikipedia,” in *Proceedings of the 26th International Conference on World Wide Web Companion*, WWW ’17 Companion (Republic and Canton of Geneva, CHE: International World Wide Web Conferences Steering Committee, 2017), 717–21, <https://doi.org/10.1145/3041021.3053375>.
 
-Fredric Jameson, “Progress versus Utopia; or, Can We Imagine the Future?,” *Science Fiction Studies* 9, no. 2 (July 1982), <https://www.depauw.edu/sfs/backissues/27/jameson.html>.
+Fredric Jameson, “Progress versus Utopia; or, Can We Imagine the Future?,” *Science Fiction Studies* 9, no. 2 (July 1982), [https://www.depauw.edu/sfs/backissues<wbr>/<wbr>27/jameson.html](https://www.depauw.edu/sfs/backissues/27/jameson.html).
 
 Ivan Klima, “Introduction,” *‌R.U.R. (Rossum’s Universal Robots)* (London; New York: Penguin Classics, 2004).
 
-Alexander Manshel, *Writing Backwards: Historical Fiction and the Reshaping of the American Canon*, Columbia University Press, 2023, <https://cup.columbia.edu/book/writing-backwards/9780231211277/>.
+Alexander Manshel, *Writing Backwards: Historical Fiction and the Reshaping of the American Canon*, Columbia University Press, 2023, [https://cup.columbia.edu/book/writing-backwards<wbr>/9780231211277/](https://cup.columbia.edu/book/writing-backwards/9780231211277/).
 
 Sverrir Steinsson, “Rule Ambiguity, Institutional Clashes, and Population Loss: How Wikipedia Became the Last Good Place on the Internet,” *American Political Science Review*, March 9, 2023, 1–17, <https://doi.org/10.1017/S0003055423000138>.
 
 Sherryl Vint, *Science Fiction* (Cambridge, Mass.: MIT Press, 2021).
 
-Paula Wojcik, Bastian Bunzeck, and Sina Zarrieß, “The Wikipedia Republic of Literary Characters,” *Journal of Cultural Analytics* 8, no. 2 (May 11, 2023), <https://doi.org/10.22148/001c.70251>.
+Paula Wojcik, Bastian Bunzeck, and Sina Zarrieß, “The Wikipedia Republic of Literary Characters,” *Journal of Cultural Analytics* 8, no. 2 (May 11, 2023), [https://doi.org/10.22148<wbr>/<wbr>001c.70251](https://doi.org/10.22148/001c.7025).
 
 “PetScan - Meta,” WikiMedia Meta-Wiki, accessed December 18, 2023, <https://meta.wikimedia.org/wiki/PetScan/en>.
 
@@ -593,4 +593,4 @@ STAPI: A Star Trek API, accessed January 8, 2024, <https://stapi.co/>.
 
 Wikimedia Foundation, “Community Insights/Community Insights 2023 Report - Meta,” WikiMedia Meta-Wiki, 2023, [https:<wbr>//<wbr>meta.wikimedia.org<wbr>/wiki/Community_Insights/<wbr>Community_Insights<wbr>\_2023<wbr>\_Report](https://%3Cwbr%3Emeta.wikimedia.org%3Cwbr%3E/wiki/Community_Insights%3Cwbr%3E/%3Cwbr%3ECommunity_Insights_2023_Report).
 
-Charles Chuankai Zhang and Loren Terveen, “Quantifying the Gap: A Case Study of Wikidata Gender Disparities,” *17th International Symposium on Open Collaboration*, September 15, 2021, 1–12, <https://doi.org/10.1145/3479986.3479992>.
+Charles Chuankai Zhang and Loren Terveen, “Quantifying the Gap: A Case Study of Wikidata Gender Disparities,” *17th International Symposium on Open Collaboration*, September 15, 2021, 1–12, [https://doi.org/10.1145<wbr>/<wbr>3479986.3479992](https://doi.org/10.1145/3479986.3479992).
