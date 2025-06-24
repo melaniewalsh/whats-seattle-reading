@@ -136,11 +136,11 @@ generateTabulatorTableFromCSV(
     ],
 
     columnWidths: {
-      "title": "20px",
-      "creator": "20px",
-      "medium": "20px",
-      "genre": "20px",
-      "verify_yr": "20px",
+      "title": "30px",
+      "creator": "40px",
+      "medium": "40px",
+      "genre": "30px",
+      "verify_yr": "40px",
       "notes": "30px",
       // Add others if you want
     },
@@ -150,6 +150,8 @@ generateTabulatorTableFromCSV(
     categoryColumns: [
       "medium", "genre", "source"
     ],
+
+    linkColumns: ['wikipedia_pg', 'verify_yr'],
 
     // Sort primarily by year set, then released date
     sortColumns: ["year_set"],
