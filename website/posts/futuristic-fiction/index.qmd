@@ -364,7 +364,7 @@ viewof max
 
 # **Significance & Context**
 
-Frederic Jameson famously argued that speculative fiction’s “deepest vocation is over and over again to demonstrate and to dramatize our incapacity to imagine the future” (Jameson 1982). Across the history of the genre, are there patterns in this utopian failure? Is there a shape to its limits? Did writers in the 1950s have a further time horizon than writers in the 2010s?
+Fredric Jameson famously argued that speculative fiction’s “deepest vocation is over and over again to demonstrate and to dramatize our incapacity to imagine the future” (Jameson 1982). Across the history of the genre, are there patterns in this utopian failure? Is there a shape to its limits? Did writers in the 1950s have a further time horizon than writers in the 2010s?
 
 The *Time Horizons of Futuristic Fiction* dataset collects 2,552 English-language narrative works set in the future, each marked with the year it was released and the year it takes place. These works include films (960), prose fiction (761), television series and episodes (377), video games (325), comics (75), radio drama (36), and other media. The works were published between 1733 and 2024, with \~94% published after 1945. The futures they depict range from 1840 CE to 100 trillion CE, though most depict near futures; a quarter of the works are set within a decade of their release date, 58% within fifty years, and 69% within a century.
 
