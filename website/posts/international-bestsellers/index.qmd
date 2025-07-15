@@ -1,0 +1,304 @@
+---
+title: "International Bestsellers: The Dataset"
+author:
+  - name: "Sean DiLeonardi"
+    # affiliation: "Assistant Professor of English & Director, Center for Digital Studies, University of Pittsburgh at Greensburg"
+    orcid: "0000-0002-4424-972X"
+    url: "https://www.greensburg.pitt.edu/people/sean-dileonardi-phd"
+    email: "sed148@pitt.edu"
+  - name: "Becca Cohen"
+    # affiliation: "PhD Student, School of Information Sciences, University of Illinois Urbana-Champaign"
+    orcid: "0000-0003-2521-3662"
+    url: "https://rscohen2.github.io/"
+    # LinkedIn: https://www.linkedin.com/in/rebecca-cohen-3640a2145/
+    email: "rcohen21@illinois.edu"
+  - name: "Dan Sinykin"
+    # affiliation: "Associate Professor of English, Emory University; Quantitative Theory & Methods"
+    orcid: "0000-0002-5245-2333"
+    url: "http://www.dansinykin.com/"
+    email: "daniel.sinykin@emory.edu"
+abstract: |
+  The "International Bestsellers" dataset draws attention to how globalization has affected the publishing industry in the first decades of the twenty-first century. Under multinational conglomerates, works of fiction have increasingly circulated across national borders; “bestsellers” serve the bottom line and work as advertisements for themselves just by being bestsellers. “International Bestsellers” provides the most comprehensive data on twenty-first-century bestsellers. It contains bestseller lists in fiction for France, Germany, Italy, Spain, and the United States, and periodic lists from 40 other countries, from June 2013 through December 2022.
+categories: [dataset, bestsellers, publishing, translation, literature, draft]
+image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Book_stack_on_a_white_background_%28worldwide_bestsellers%29.jpg/1280px-Book_stack_on_a_white_background_%28worldwide_bestsellers%29.jpg"
+doi: "10.18737/IBDATA2025" # example DOI, replace with actual if available
+date: "2025-07-03"
+citation:
+  type: article-journal
+  container-title: "Post45 Data Collective"
+  doi: "10.18737/IBDATA2025" # example DOI, update if needed
+  editor:
+    - Alexander Manshel
+    - J.D. Porter
+    - Melanie Walsh
+# bibliography: references.bib
+title-block-style: default
+format-links: [ipynb, pdf, docx]
+code-tools: false
+format: 
+  html:
+    toc: true
+    toc-title: Table of Contents
+    toc-location: left
+    toc-depth: 3
+    toc-expand: 3
+page-layout: full
+google-scholar: true 
+header-includes:
+  - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
+aliases:
+  - /international-bestsellers
+---
+
+```{=html}
+<!-- EDITORIAL TEAM: Create a new directory in posts/ with appropriate title for data essay (which will become the URL slug, e.g. /nea-creative-writing-fellowships becomes https://post45-data-collective.github.io/website/posts/nea-creative-writing-fellowships/).
+
+Then, duplicate this template, rename it index.qmd, and place it inside the appropriate directory inside /posts.
+
+Then fill in the rest of the information above and below. -->
+```
+
+<!-- Include image for data essay -->
+
+![Source: [University of Illinois](https://www.library.illinois.edu/rbx/hgwells2016/category/the-time-machine/)](https://www.library.illinois.edu/rbx/hgwells2016/wp-content/uploads/2016/09/TimeMachine_Berkeley_1200.jpg){fig-align="center" width="50%"}
+
+<!-- Include brief introduction to/description of data essay  -->
+
+<!-- If there are multiple datasets, please provide a title for each dataset with its own description  -->
+
+# Explore Bestsellers by Country
+
+
+```{ojs}
+//|echo: false
+//|output: false
+
+import {viewof year,
+viewof month,
+viewof select,
+viewof title,
+monthLabel,
+table} from "772639d6da19355b"
+```
+
+
+```{ojs}
+//|echo: false
+viewof select
+html`<h3>Bestsellers in ${select}</h1>
+<h3>${monthLabel} ${year}<h2>`
+viewof year 
+viewof month
+html`<br>`
+table
+```
+
+# Data Table
+
+
+```{ojs}
+//|echo: false
+import {viewof dataSummaryView, Tabulator, viewof selectedColumns, viewof dataSet, tableContainer, fetchData, generateTabulatorTableFromCSV, progress, progressbar} from "8bb63a6cde9addff"
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+raw_data = fetchData("https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/international_bestsellers/international_bestsellers.csv")
+```
+
+
+```{ojs}
+//|echo: false
+//|output: false
+
+// International Bestsellers Table (with correct columns)
+generateTabulatorTableFromCSV(
+  "#table-container4",
+  "https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/international_bestsellers/international_bestsellers.csv",
+  {
+    displayedColumns: [
+      "date",                // Date of the bestseller list (month/year)
+      "country",             // Country where the list was published
+      "rank",                // Position on the list (1 = top)
+      "title",               // Title of the book
+      "author",              // Author's name
+      "nationality",         // Author's nationality
+      "gender",              // Author's gender
+      "entry_id",            // Unique ID for the entry
+      "publisher",           // Publisher of this edition
+      "publication_country"  // Publisher's country
+    ],
+
+    columnPopups: [
+      "Date of the bestseller list (month and year).",       // date
+      "Country where the bestseller list was published.",     // country
+      "Ranking on the bestseller list (1 = top seller).",     // rank
+      "Title of the book.",                                   // title
+      "Name of the book’s author.",                           // author
+      "Author’s nationality.",                                // nationality
+      "Author’s gender, if known.",                           // gender
+      "Unique identifier for this entry in the dataset.",     // entry_id
+      "Publisher of this edition.",                           // publisher
+      "Country where the publisher is based."                 // publication_country
+    ],
+
+    columnWidths: {
+      "date": "24px",
+      "country": "24px",
+      "rank": "12px",
+      "title": "40px",
+      "author": "35px",
+      "publisher": "30px",
+      // Adjust as desired
+    },
+
+    numericColumns: ["rank"],
+    categoryColumns: ["country", "gender", "nationality", "publication_country"],
+
+    // No linkColumns needed unless you add URLs
+    // linkColumns: [],
+
+    // Sort primarily by date, then by rank
+    sortColumns: ["date", "rank"],
+    sortOrders: ["desc", "asc"],
+
+    buttonContainerId: "#button-container1",
+    rawButtonId: "#download-raw1",
+    urlCopyButtonId: "#copy-url1",
+  }
+);
+```
+
+<div id="table-container4" style="height: 500px">
+</div>
+
+Download Full Data
+<div id='button-container'>
+  <button id="download-raw1"><i class="fas fa-download"></i></i> Download Full Data</button>
+  <button id="copy-url1"><i class="fas fa-copy"></i> Copy Full Data URL</button>
+</div>
+
+Download Table Data (including filtered options)
+
+<div id='button-container1'>
+  <button id="download-csv"><i class="fas fa-download"></i></i> Download CSV</button>
+  <button id="download-json"><i class="fas fa-download"></i></i> Download JSON</button>
+  <button id="download-xlsx"><i class="fas fa-download"></i></i> Download Excel</button>
+</div>
+
+<div id="progress-container" style="width: 100%; display: block;">
+  <progress id="progress-bar" style="width: 100%;" max="100" value="0"></progress>
+  <div id="progress-text" style="text-align: center; margin-top: 5px;"></div>
+</div>
+
+
+<link href="https://unpkg.com/tabulator-tables@6.3.0/dist/css/tabulator.min.css" rel="stylesheet">
+<script src="https://unpkg.com/tabulator-tables@6.3.0/dist/js/tabulator.min.js"></script>
+
+<!-- Excel script -->
+<script type="text/javascript" src="https://oss.sheetjs.com/sheetjs/xlsx.full.min.js"></script>
+
+
+::: {.callout-tip icon="false"}
+## Creative Commons License
+
+<p xmlns:cc="http://creativecommons.org/ns#">
+
+This work is licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" style="height:22px!important;margin-left:3px;vertical-align:text-bottom;"/></a>
+
+</p>
+:::
+
+
+
+
+# **Significance & Context**
+
+The “International Bestsellers” dataset draws attention to how globalization has affected the publishing industry in the first decades of the twenty-first century. Under multinational conglomerates, works of fiction have increasingly circulated across national borders; “bestsellers” serve the bottom line and work as advertisements for themselves just by being bestsellers. “International Bestsellers” provides the most comprehensive data on twenty-first-century bestsellers.
+
+“International Bestsellers” contains bestseller lists in fiction for France, Germany, Italy, Spain, and the United States, and periodic lists from 40 other countries, from June 2013 through December 2022\. In total, the dataset contains 7,909 entries, each with eight columns of information, totaling 63,272 data points.
+
+No other existing dataset covers twenty-first-century international bestsellers with information on author nationality, gender, publisher, and country of first publication. Thus, our dataset is relevant to post-1945 scholarship and will be especially useful for scholars in book history, publishing studies, sociology of literature, and twenty-first-century literary studies. 
+
+The dataset invites investigation into questions such as: 
+
+- Who are the bestselling authors of the early twenty-first century?  
+- What are the bestselling titles?  
+- Which publishers have the greatest success selling in international markets?  
+- How do the economics of multinational publishers affect the success of an international bestseller?  
+- What are the routes by which bestsellers travel from one national market to another?  
+- And in what ways do the gender and/or nationality of an author correspond with bestseller status? 
+
+We created this dataset to begin to answer some of these questions. Our first peer-reviewed essay based on insights gleaned from this data was published in December 2024\. We plan to use our data in subsequent studies to look further into how international publication networks, country of origin, and author nationality and gender relate to a novel’s success as an international bestseller.
+
+
+# Dataset Description
+
+- **date**  
+  The year and month the bestseller list was published by *Publishing Trends* or, for the U.S., the first week of the month in *NYT Hardcover Fiction Bestsellers*. Reflects aggregation date, not necessarily peak sales.  
+    
+- **country**  
+  The country where the bestseller list originates, as reported by *Publishing Trends* or NYT. France, Germany, Italy, Spain, and the U.S. have the most consistent coverage; other countries are included periodically.  
+    
+- **rank**  
+  The title’s position on the bestseller list for that month and country (1 \= highest selling, 10 \= lowest).  
+    
+- **title**  
+  The title of the work as listed in the source. Uses the English-language translation where available; otherwise, the most apt translation or reported title from *Publishing Trends*. Titles are standardized across all entries for the same work.  
+    
+- **author**  
+  The author(s) of the work as listed in the original source. Multiple authors are separated by a semicolon (;). Pseudonyms are recorded as given.  
+    
+- **nationality**  
+  The country or countries of legal citizenship for the author(s), based on self-attribution or reputable sources. Dual citizenship is separated by a comma (,); multiple authors by a semicolon (;).  
+    
+- **gender**  
+  The gender identity of the author(s), attributed by the author or reputable sources. Uses `m` for man, `w` for woman, and `n` for nonbinary. Multiple authors/genders separated by a semicolon (;).  
+    
+- **publisher**  
+  The name of the original publisher of the title, based on available research and sources. For self-published works, the corporate entity/platform is listed (e.g., Amazon KDP, Wattpad).  
+    
+- **publisherCountry**  
+  The country where the original publisher is headquartered. This may reflect the national HQ of a multinational publisher or the country of a self-publishing platform. Determined by mapping publishers to countries, with manual correction when necessary.
+
+---
+
+**Special values and conventions:**
+
+- `NaN`: Indicates missing or unavailable information in any field.  
+- **Multiple authors/values:** Distinct values (authors, nationalities, genders) are separated by a semicolon (;). Shared values (e.g., dual citizenship for one author) are separated by a comma (,).
+
+# Collection & Creation
+
+Our dataset contains entries for June 2013 through December 2022\. Each month includes a ranked list of the top ten international bestsellers for each country as reported by *Publishing Trends*. For data on France, Italy, Spain, and Germany, we acquired bestseller lists from *Publishing Trends* (*PT*), a monthly newsletter published by Market Partners International, a New York based consulting firm. In consultation with Nina Sabak of *PT*, who edited the column on international bestsellers during the time of our collection, we scraped the site with OCR techniques as well as by hand. Minor gaps in the data are because the online column skips a few months throughout 2013-2022, and thus data did not exist for these months. 
+
+From *Publishing Trends*, we gleaned what became columns for “Date,” “Country,” “Rank,” “Title,” and “Author.” We will walk through what these categories represent and how we determined entries for each. “Date” is the date—year and month—that the bestseller list was published by *Publishing Trends*. *PT* aggregates bestseller lists from multiple sources, reporting on bestsellers as given by each source at the time the report is generated. In most instances, booksellers update bestseller lists weekly, so the *PT* reports represent a snapshot of the month’s bestsellers. We describe our data as “monthly” in the sense that the lists have been aggregated by *PT* on a monthly basis. “Country” is the country where the bestseller list originates. The protocol at *PT* is to include Spain, France, Germany, and Italy each month, along with two other countries that are not consistent from month to month. Therefore, the number of entries for Italy, Spain, France, and Germany are roughly the same (1,140 entries each; 1,130 for France). However, the number of entries for the other 40 countries are not, with a range from 100 entries (Brazil) to 10 (Nigeria, Malta, and Iceland). “Rank” is the title’s rank on the bestseller list from 1 to 10\. “Author” is the title’s author as listed in the original data source. We sometimes adjusted “Title” from its listing in *PT*. *PT* reports titles in English. As a rule, the site gives the title as the English-language translation if one exists. If there is no English-language translation, the site offers its own. The site’s own translations can vary for the same book from month-to-month; sometimes a book that wasn’t translated is later translated and then listed under its published English-language title. We have made such variations uniform, selecting a single title for all instances. Where a published English-language title exists, we use that. Where not, we have chosen that which we judged most apt from the versions on *Publishing Trends*.
+
+We supplemented data from *Publishing Trends* with data on US bestsellers, which we drew from Jordan Pruett’s “*NYT* Hardcover Fiction Bestsellers” as published in the Post45 Data Collective. Because Pruett’s data is weekly, and to align US data with the monthly reporting schedule of *PT* described above, we used *NYT* data from the first week of each month. We use Pruett’s data for “Date,” “Country,” “Rank,” “Title,” and “Author” on all bestsellers in the United States.
+
+We supplemented *Publishing Trends* and “*NYT* Hardcover Fiction Bestsellers” with additional columns for “Nationality,” “Gender,” “publisherCountry,” and “Publisher.” “Nationality” contains the nationality of the author; this data was compiled by research assistant Stephen Altobelli. We determined author nationality by self-attribution or attribution by a reputable source, such as the author’s publisher or a reputable publication such as the *New York Times* or *Publishers Weekly*. If the author was born in one country but lives in another, we determined their country of legal citizenship; in cases of dual citizenship, we list both countries; if we could not identify an author’s citizenship, we list the country of residence at the time of compilation. Throughout the dataset, a semicolon (;) separates distinct values, such as when a title has more than one author, each of whom are linked to their own nationality and gender. Alternately, a comma (,) separates values shared by an entity (usually, authors with dual citizenship). This difference also highlights a significant number of pseudonyms in which multiple authors work under a single name and may contain multiple nationality or gender data points. For example, see Carmen Mola (Spain), Iny Lorentz (Germany), Christina Lauren (U.S.), Helena S. Paige (South Africa), and Sveva Casati Matignani (Italy).
+
+“Gender” contains the gender of the author; this data was also compiled by Stephen Altobelli. We use “m” for man, “w” for woman, and “n” for nonbinary. We determined author gender by self-attribution or attribution by a reputable source, such as the author’s publisher or a reputable publication such as the *New York Times* or *Publishers Weekly*. 
+
+“Publisher” contains the original publisher of the title and “publisherCountry” contains the original country of publication (based on primary national headquarters of publisher). *Publishing Trends* includes the publisher in the country where the title is a bestseller and the US publisher if the title has one. We found that when the author’s nationality matches the country where the title was a bestseller (e.g., Andrea Camilleri, Italy), the listed publisher was almost always the original publisher. We also found that when the author’s nationality is US and a US publisher is listed, the US publisher is almost always the original publisher. Given the limits on our time and our inability to hand annotate the complete dataset, we applied these as two rules. We then sampled 300 instances and checked by hand, finding greater than 90% accuracy. Where we found errors we fixed them. This means there is error in the dataset, but at a level we deemed acceptable. To determine “publisherCountry,” we created a dictionary mapping publishers to countries of publication and inferred the latter wherever we had the former. 
+
+The remaining titles—those for which author nationality did not match the country where the title was a bestseller or where the author was not from the US with a listed US publisher—we turned, first, to WorldCat’s data on year of publication for all formats and editions. In most cases, we were able to determine the original publisher/country of publication. If the earliest WorldCat entry appeared suspicious (e.g., listed a year far earlier than any other for the title) or if the title was published by more than one publisher in its initial year, we searched for corroborating evidence with literary agents, publishers, and booksellers. The results of this process present several areas that were consistently addressed within the dataset but require some explanation: 
+
+1\) In some cases, titles published simultaneously in multiple countries, especially in the English-speaking world, did not present an obvious original publisher. If additional research did not resolve the issue, we defaulted to the author’s native country.   
+2\) Occasionally, our research determined that an author published with a multinational publisher headquartered in one country, even though the publisher oversees an imprint or subsidiary in the author’s native country. For example, if an Argentinian author publishes with Planeta, the country of publication is Spain; likewise an Australian author who publishes with Pan Macmillan is listed as first published in the UK. This is especially common in countries that were previous territories of another country. Thus the legacy of colonialism is present in the data, due to so-called “commonwealth rights,” in which publishers automatically retain market rights in previous territories. However, if we found evidence that the author first contracted with the native subsidiary, we listed the publisher along with the name of the country (e.g., Pan Macmillan Australia). It’s worth noting that this is more common in the Anglosphere, such as with Australia and Canada, than with the Hispanosphere.   
+3\) At the same time, the ever-increasing centrality of the US disrupts these trends, as noted by the numerous UK authors who choose to publish select titles originally with a US publisher, including literary celebrities such as J.K. Rowling, Neil Gaiman, and Jojo Moyes. These instances required individual research, thus some degree of error may remain in this category, as we’ve corrected the most notable exceptions.  
+4\) Finally, for self-published titles we made the decision to attribute publisherCountry to the country of the corporate entity or platform used by the author. For example, in our dataset the country of publication for titles published through Wattpad is Canada; for Amazon’s Kindle Direct Publishing, the United States; for The Writers’ Coffee Shop, Australia; etc. This decision is consistent with our attention to the institutions of publication, rather than author nationality, in determining the country of publication. 
+
+Regarding genre, while the dataset is generally limited to adult fiction, titles representative of other industry categories such as nonfiction, children’s literature, anime, and young adult literature occasionally show up on international lists, due to the variances in how foreign booksellers market, label, and list bestsellers. In a single instance (Hong Kong 07-2013), we removed a list generated by *Publishing Trends* from our dataset because it was entirely composed of nonfiction titles, thus making it inconsistent with the rest of the corpus. 
+
+In rare instances, mostly due to self-published authors using online handles, we could not identify personal data. In these cases, “NaN” signifies no available data. In one instance, the data is missing from the original source (Spain 2016-09, rank 10). 
+
+# Ethical Considerations
+
+Author gender and nationality data could be considered sensitive, especially in the case where a particular author is using a pseudonym to mask one of these identifiers. However, all our data derives from publicly available information and is, therefore, not confidential.
+
+# Versioning
+
+We had intended to update the dataset annually using the same methodology described here. In 2023, Nina Sabak left *Publishing Trends*, and in September, the international bestseller section of the periodical was paused with no indication of being resumed. Without a consistent data source, expanding the dataset may be impossible, but we are working to identify possible solutions. 
