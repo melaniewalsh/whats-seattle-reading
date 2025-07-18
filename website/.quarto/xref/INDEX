@@ -89,5 +89,14 @@
   },
   "posts/international-bestsellers/index.qmd": {
     "index.html": "8f3fdd10"
+  },
+  "posts/norton-anthology-american/index.qmd": {
+    "index.html": "cfb6fd8e"
+  },
+  "publications.qmd": {
+    "publications.html": "52bccf57"
+  },
+  "explore.qmd": {
+    "explore.html": "85a30b02"
   }
 }

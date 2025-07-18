@@ -1,0 +1,74 @@
+---
+# EDITORIAL TEAM: add data essay details here
+title: "Which Canonical American Authors Are People Reading? "
+# author:
+#   - name: Grant Wythoff
+#     orcid: 0000-0002-6605-9596
+#     url: https://wythoff.net/
+#     email: gwythoff@princeton.edu
+#   - name: Theodore Leane
+#     orcid: 0009-0003-1652-3578
+#     url: https://english.cornell.edu/teddy-leane
+#     email: cl2734@cornell.edu
+abstract: "Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945-)."
+# # Add keywords/categories — should always include "dataset"
+categories: [american literature, norton anthology]
+# # Provide link to an image that will show up in "Our Datasets" aggregation
+image: "https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/9780393884432_300.jpg"
+# # Insert DOI for this data essay
+# doi: "10.18737/552626"
+# # date of publication
+# date: "2025-06-24"
+# # Citation details for this data essay
+# # not complete
+# citation:
+#   type: article-journal
+#   container-title: "Post45 Data Collective"
+#   doi: "10.18737/CNJV1733p4520221212"
+#   # url: https://example.com/summarizing-output
+#   editor:
+#   - Alexander Manshel
+#   - J.D. Porter
+#   - Melanie Walsh
+# # if author/editor is including a .bib bibliography (such as one created from Zotero) for cited sources, uncomment and provide the correct reference here
+# # bibliography: references.bib
+
+# # NO NEED TO EDIT BELOW THIS LINE
+# title-block-style: default
+# format-links: [ipynb, pdf, docx]
+# code-tools: false
+# format: 
+#   html:
+#     toc: true
+#     toc-title: Table of Contents
+#     toc-location: left
+#     toc-depth: 3
+#     toc-expand: 3
+# page-layout: full
+# google-scholar: true 
+# header-includes:
+#   - '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">'
+# aliases:
+#  - /time-horizons-of-futuristic-fiction
+---
+
+```{ojs}
+//|echo: false
+//|output: false
+
+import {viewof mode,
+viewof selection,
+plot,
+table
+} from "ef0c4e00d21504b8"
+
+```
+
+
+```{ojs}
+//|echo: false
+viewof mode
+viewof selection
+plot
+table
+```

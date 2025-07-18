@@ -7,40 +7,27 @@ sidebar: false
 search: false
 # title: "Post45 Data Collective"
 # title-block-banner: images/p45dc-logo.jpg
-listing:
-  id: datasets
-  contents: posts
-  exclude:
-    categories: ["news", "ignore", "draft"]
-  sort: "date desc"
-  type: default
-  categories: unnumbered 
-  sort-ui: false
-  filter-ui: true
-  image-height: 200px
+# listing:
+#   id: datasets
+#   contents: posts
+#   exclude:
+#     categories: ["news", "ignore", "draft"]
+#   sort: "date desc"
+#   type: default
+#   categories: unnumbered 
+#   sort-ui: false
+#   filter-ui: true
+#   image-height: 200px
 repo-actions: false
 description: | 
-  The Post45 Data Collective peer reviews and houses literary and cultural data from 1945 to the present.
+  The "What's Seattle Reading?" project explores contemporary reading trends with unique open data provided by the Seattle Public Library. 
 toc: false
 ---
 
-::: {#hero-banner .column-screen}
+# What's Seattle Reading?
 
+ The "What's Seattle Reading?" project explores contemporary reading trends with unique open data provided by the [Seattle Public Library](https://data.seattle.gov/Community-and-Culture/Checkouts-by-Title/tmmm-ytt6/about_data). 
 
+ ![](https://upload.wikimedia.org/wikipedia/commons/1/16/Seattle_4.jpg)
 
-<div class="hero-content">
-  <p style="font-size: 60px; font-weight: bold; text-align: center;"> POST45 DATA COLLECTIVE</p>
-  <p>The Post45 Data Collective peer reviews and houses literary and cultural data from 1945 to the present on an open-access website.</p>
-</div>
-
-<img class="hero-image" src="images/p45dc-logo.jpg" alt="post45 dc logo">
-
-:::
-
-
----
-
-# Datasets
-
-::: {#datasets}
-:::
+The project is directed by [Melanie Walsh](https://melaniewalsh.org/), Assistant Professor at the University of Washington Information School.

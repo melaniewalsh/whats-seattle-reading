@@ -3,28 +3,16 @@ title: "People"
 
 ---
 
-### The Editors
-
+# Team
 - [**Melanie Walsh**](https://melaniewalsh.org/), Assistant Professor, Information School at the University of Washington  
-- [**Alexander Manshel**](https://www.mcgill.ca/english/staff/alexander-manshel), Associate Professor, McGill University
-- [**J.D. Porter**](https://pricelab.sas.upenn.edu/fellows/porter-jd), DH Specialist, University of Pennsylvania
+- **Neel Gupta**, PhD Student, Information School, University of Washington 
 
-### The Editorial Board
-- **Katherine Bode**, Professor of Literary and Textual Studies, ANU  
-- **J.D. Connor**, Associate Professor of Cinematic Arts, USC  
-- **Jennifer Doty**, Research Data Librarian, Emory  
-- **Lauren F. Klein**, Associate Professor of English and Quantitative Theory and Methods, Emory  
-- **Laura B. McGrath**, Assistant Professor of English and Digital Humanities, Temple University  
-- **Thomas Padilla**, Bristle Cone Strategy 
-- **Kenton Rambsy**, Assistant Professor of African American Literature and Digital Humanities, UT-Arlington  
-- **Dan Sinykin**, Associate Professor of English, Emory University  
-- **Richard Jean So**, Assistant Professor of English, McGill  
-- **Lindsay Thomas**, Associate Professor of English, Cornell University  
+# Students
+Students who have worked on this project include:
 
-### The Project Team
-- **Matt Miller** (Data Analyst), Library of Congress  
-- **Neel Gupta** (Editorial Assistant), PhD Student, Information School, University of Washington  
-- **Em Nordling** (Editorial Assistant), PhD Student, English, Emory University  
-- **Bailey Betik** (Digital Publication Specialist), Emory Center for Digital Scholarship  
-- **Sara Palmer** (Digital Text Specialist), Emory Center for Digital Scholarship  
+- Hongyuan (Tony) Dong 
+- Em Backstrom  
+- Karalee Harris  
+- Daniella Maor  
+
 

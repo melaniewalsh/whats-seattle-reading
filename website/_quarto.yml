@@ -3,29 +3,26 @@ project:
   # output-dir: ../docs
   
 website:
-  favicon: images/p45dc-fav-icon.jpg
-  image: images/p45dc-fav-icon.jpg
+  favicon: images/fav-icon2.png
+  image: images/fav-icon2.png
+  
   twitter-card: true
   open-graph: true
   google-analytics: "G-H9Z8DC0X8Q"
-  title: "Post45 Data Collective"
-  site-url: https://data.post45.org
+  title: "What's Seattle Reading?"
+  # site-url: https://data.post45.org
   page-footer:
     background: "#455B64"
   # right: <p style="color:white">Copyright &copy; 2024</p>
-    center:   <p style="color:white">Supported by [![](https://www.neh.gov/sites/default/files/styles/background_hero_ultra_large_2600/public/2024-10/NEH%20Seal%20with%20Full%20Name%20-%20Inversed%20Color.png){fig-alt="National Endowment for the Humanities" width=75px}](https://www.neh.gov) [![](  https://www.jhrehab.org/wp-content/uploads/2023/10/Data-Center-ecds-logo.png?w=640){fig-alt="Emory Center for Digital Scholarship" width=75px}](https://digitalscholarship.emory.edu/) Built with [![](https://raw.githubusercontent.com/github/explore/80f119e965a9a3df7b74c3f7b63a502e3d0ded36/topics/quarto/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)</p>
-    #right: 
-     # <p style="color:white">Website made with [![](https://raw.githubusercontent.com/github/explore/80f119e965a9a3df7b74c3f7b63a502e3d0ded36/topics/quarto/quarto.png){fig-alt="Quarto" width=65px}](https://quarto.org/)</p>
-  
+
   navbar:
+    logo: images/fav-icon2.png
     right:
-      - our-data.qmd
-      - submissions.qmd
+      - explore.qmd
       - people.qmd
-      - about.qmd
-      - news.qmd
+      - publications.qmd
       - icon: github
-        href: https://github.com/Post45-Data-Collective/website
+        href: https://github.com/melaniewalsh/whats-seattle-reading
       # - icon: twitter
       #   href: https://twitter.com
 format:
@@ -35,7 +32,7 @@ format:
      - flatly
     #  - styles.css
     #  - custom.scss
-    linkcolor: "#dea202"
+    linkcolor: " #44afd9"
     css:
      - styles.css
 
