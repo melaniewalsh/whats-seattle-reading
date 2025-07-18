@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
+    "section": "",
+    "text": "Coming soon"
+  },
+  {
+    "objectID": "posts/table.html",
+    "href": "posts/table.html",
+    "title": "Tabular Data Viewer",
+    "section": "",
+    "text": "Use this Tabular Data Viewer 中 notebook 📓 to view sample datasets or preview any public Apache Arrow, CSV, or JSON array data with Summary Table and Tabulator. Just paste your data url to fetch it.\nAlso, try our Data Table 🈸 notebook 📓 cell ⌗ output renderer extension with VSCode Notebooks 📚.\ncode\ndataPath = \"https://raw.githubusercontent.com/Post45-Data-Collective/data/refs/heads/main/hathitrust_fiction/hathitrust_post45fiction_metadata.csv\"\n\ndata = fetchData(dataPath)\n\ndefaultDisplayedColumns = [\n    \"shorttitle\",\n    \"inferreddate\",\n    \"author\",\n    \"recordid\",\n    \"hathi_rights\",\n    \"genres\",\n    \"id\",\n    \"docid\",\n    \"juvenileprob\",\n    \"nonficprob\",\n    \"author_authorized_heading\",\n    \"author_lccn\",\n    \"author_viaf\",\n    \"author_wikidata_qid\"\n  ];\n\ncategoryColumns = [\"hathi_rights\",  \"genres\",\"geographics\"];\n\n// Reorder the available columns to match defaultDisplayedColumns, appending any extra columns at the end\norderedColumns = [\n  ...defaultDisplayedColumns,\n  ...Object.keys(data[0] || {}).filter(col =&gt; !defaultDisplayedColumns.includes(col))\n];"
+  },
+  {
+    "objectID": "posts/table.html#select-columns",
+    "href": "posts/table.html#select-columns",
+    "title": "Tabular Data Viewer",
+    "section": "Select Columns",
+    "text": "Select Columns\n\n\ncode\nviewof selectedColumns = Inputs.checkbox(orderedColumns, {\n  label: \"Select Columns\",\n  value: defaultDisplayedColumns, // Default selected columns\n});\n\n\n\n\n\n\n\n\n\ncode\nfunction generateTabulatorTableForObservable(\n  containerId,\n  data,\n  {\n    displayedColumns = null,\n    columnWidths = {},\n    currencyColumns = [],\n    categoryColumns = [],\n    numericColumns = [],\n    rangeValues = {},\n    sortColumns = [],\n    sortOrders = [],\n    columnPopups = [],\n    height = 645,\n    paginationSize = 1000,\n  } = {}\n) {\n  if (!data || data.length === 0) {\n    console.error(\"No data provided to generate the table.\");\n    return null;\n  }\n\n  if (!displayedColumns) {\n    displayedColumns = Object.keys(data[0]);\n  }\n\n  const tabulatorColumns = displayedColumns.map((column) =&gt; ({\n    title: column,\n    field: column,\n    maxInitialWidth: 150,\n    resizable: true,\n    headerFilter: numericColumns.includes(column)\n      ? \"input\"\n      : categoryColumns.includes(column)\n      ? \"list\"\n      : \"input\",\n    headerFilterParams: categoryColumns.includes(column)\n      ? { valuesLookup: true, clearable: true }\n      : {},\n    formatter: currencyColumns.includes(column) ? \"money\" : undefined,\n    formatterParams: currencyColumns.includes(column)\n      ? { symbol: \"$\", precision: 0 }\n      : undefined,\n  }));\n\n  const table = new Tabulator(containerId, {\n    height: height,\n    data: data,\n    columns: tabulatorColumns,\n     columnDefaults: {\n    headerMenu: columnHeaderMenu\n  },\n//    movableColumns: true,\n    layout: \"fitDataStretch\",\n    pagination: true,\n    paginationSize: paginationSize,\n    paginationSizeSelector: [10, 100, 1000, 10000],\n    paginationCounter: \"rows\",\n    persistenceMode: false,\n    initialSort: sortColumns.map((col, idx) =&gt; ({\n      column: col,\n      dir: sortOrders[idx] || \"asc\",\n    })),\n  });\n\n  return table;\n}\n\n\n\n\n\n\n\n\n```{ojs}\n// Add fullscreen event listener\n      document.addEventListener(\"fullscreenchange\", () =&gt; {\n        if (document.fullscreenElement) {\n          // Fullscreen mode: adjust table height\n          table.setHeight(window.innerHeight - 50); // Adjust for padding/margins\n        } else {\n          // Exit fullscreen: reset table height\n          table.setHeight(645);\n        }\n      });\n\n      // Add download buttons\n      document\n        .querySelectorAll(\"#button-container button\")\n        .forEach((button) =&gt; {\n          button.addEventListener(\"click\", () =&gt; {\n            const type = button.getAttribute(\"id\").replace(\"download-\", \"\");\n            const downloadFilename = `${filename}.${type}`;\n\n            if (type === \"xlsx\") {\n              table.download(\"xlsx\", downloadFilename, { sheetName: \"Sheet1\" });\n            } else if (type === \"pdf\") {\n              table.download(\"pdf\", downloadFilename, {\n                orientation: \"portrait\",\n                title: \"Table Data\"\n              });\n            } else if (type === \"html\") {\n              table.download(\"html\", downloadFilename, { style: true });\n            } else {\n              table.download(type, downloadFilename);\n            }\n          });\n        });\n\n      // Update raw data download button dynamically\n      // Raw data download using `download` function\n      const rawDownloadButton = document.getElementById(\"download-raw\");\n      rawDownloadButton.addEventListener(\"click\", () =&gt; {\n        download(dataPath, `${filename}.csv`);\n      });\n\n      // Copy URL button\n      document.getElementById(\"copy-url\").addEventListener(\"click\", () =&gt; {\n        const tempInput = document.createElement(\"input\");\n        tempInput.value = dataPath;\n        document.body.appendChild(tempInput);\n        tempInput.select();\n        document.execCommand(\"copy\");\n        document.body.removeChild(tempInput);\n        alert(\"URL copied to clipboard: \" + dataPath);\n      });\n```\n\n\n\n\n\n\n\nOJS Syntax Error (line 203, column 7)Unexpected token\n\n\n\n\n\n\n\n\n\n\ncode\nhtml`&lt;div id=\"table-container\" style=\"height: 600px\"&gt;&lt;/div&gt;`\n\n\n\n\n\n\n\n\n\ncode\ngenerateTabulatorTableForObservable(\"#table-container\", data, {\n  displayedColumns: selectedColumns,\n\n    columnPopups: [\n  \"Shortened title of the work\",  // shorttitle\n  \"Inferred date of the work\",    // inferreddate\n  \"Author of the work\",           // author\n  \"Unique record ID\",             // recordid\n  \"Rights code from HathiTrust\",  // hathi_rights\n  \"Genres associated with the work\",  // genres\n  \"Unique identifier for the title in the titles dataset (may contain duplicates for reprinted works)\", // id\n  \"Unique volume ID from HathiTrust\", // docid (htid)\n  \"Probability that the work is for a juvenile audience\", // juvenileprob\n  \"Probability that the work is nonfiction\", // nonficprob\n  \"Author’s authorized Name Authority Cooperative (NACO) heading\", // author_authorized_heading\n  \"Author’s LCCN from id.loc.gov\", // author_lccn\n  \"Author’s viaf.org cluster number\", // author_viaf\n  \"Author’s Wikidata Q number\"      // author_wikidata_qid\n],\n    // columnWidths: { \"gender\": \"50px\", \"role\": \"75px\", \"mfa_degree\": \"100px\", \"prize_name\": \"100px\" },\n    currencyColumns: [\"prize_amount\"],\n    categoryColumns: [\"hathi_rights\",  \"genres\",\"geographics\"],\n    // sortColumns: [\"prize_year\"],\n    // sortOrders: [\"desc\"]\n  paginationSize: 1000,\n});\n\n\n\n\n\n\n\n\n\n\n Download Full Data  Copy Full Data URL\n\n\n Download CSV  Download JSON  Download Excel"
+  },
+  {
+    "objectID": "posts/table.html#tabular-data-view",
+    "href": "posts/table.html#tabular-data-view",
+    "title": "Tabular Data Viewer",
+    "section": "Tabular Data View",
+    "text": "Tabular Data View\n\n\ncode\ncolumnHeaderMenu = [\n  {\n    label: 'Hide Column',\n    action: function (e, column) {\n      column.hide();\n    }\n  },\n  {\n    label: \"Freeze Column\",\n    action: function (e, column) {\n      column.updateDefinition({ frozen: true });\n    }\n  },\n  {\n    label: 'Delete Column',\n    action: function (e, column) {\n      column.delete();\n    }\n  }\n];\n\n\n\n\n\n\n\n\nTable UX Tips\n\nHold CTRL or Shift key when clicking on column headers to Sort table data by multiple columns.\nSee Clipboard options for the clipboard copy and paste data options.\nUse row context menu to Delete or Freeze a row."
+  },
+  {
+    "objectID": "posts/table.html#data",
+    "href": "posts/table.html#data",
+    "title": "Tabular Data Viewer",
+    "section": "Data",
+    "text": "Data\n\n\ncode\ndataUrlParam = new URLSearchParams(html`&lt;a href&gt;`.search).get('dataUrl')\n\n\nasync function fetchData(dataUrl) {\n  let data = [];\n  if (dataUrl.endsWith('.csv')) {\n    data = await d3.csvParse(await d3.text(dataUrl), d3.autoType);\n  }\n  else if (dataUrl.endsWith('.json')) {\n    data = await d3.json(dataUrl);\n  }\n  else if (dataUrl.endsWith('.arrow')) {\n    data = loadArrowData(dataUrl);\n  }\n  return data;\n}\n\nasync function loadArrowData(dataUrl){\n  const response = await fetch(dataUrl);\n  const arrayBuffer = await response.arrayBuffer();\n  const table = arrow.Table.from(new Uint8Array(arrayBuffer));\n  const rows = Array(table.length);\n  const fields = table.schema.fields.map(d =&gt; d.name);\n  for (let i=0, n=rows.length; i&lt;n; ++i) {\n    const proto = {};\n    fields.forEach((fieldName, index) =&gt; {\n      const column = table.getColumnAt(index);\n      proto[fieldName] = column.get(i);\n    });\n    rows[i] = proto;\n  }\n  return rows;\n}\n\nasync function download(dataurl, fileName) {\n  const response = await fetch(dataurl);\n  const blob = await response.blob();\n\n  const link = document.createElement(\"a\");\n  link.href = URL.createObjectURL(blob);\n  link.download = fileName;\n  link.click();\n  URL.revokeObjectURL(link.href); // Clean up\n}"
+  },
+  {
+    "objectID": "posts/table.html#table-styles",
+    "href": "posts/table.html#table-styles",
+    "title": "Tabular Data Viewer",
+    "section": "Table Styles",
+    "text": "Table Styles\n\n\ncode\ntableStyles = html `\n&lt;style&gt;\n/* add space for sort direction symbol */\nthead th span {\n  margin-left: 0 !important;\n  padding-right: 0.4rem;\n}\n\n.tabulator .tabulator-tableholder{\n  background-color: aliceblue;\n}\n&lt;/style&gt;`\n\nhtml`&lt;link href='https://unpkg.com/tabulator-tables@5.3.1/dist/css/tabulator.min.css' rel='stylesheet' /&gt;\ntabulator.min.css`"
+  },
+  {
+    "objectID": "posts/table.html#imports",
+    "href": "posts/table.html#imports",
+    "title": "Tabular Data Viewer",
+    "section": "Imports",
+    "text": "Imports\n\n\ncode\nimport { SummaryTable } from \"fcb971390dae8f6d\"\n\nTabulator = require('https://unpkg.com/tabulator-tables@5.3.1');\n\narrow = require('apache-arrow@6.0.1')"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html",
+    "href": "posts/norton-anthology-american/index.html",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "",
+    "text": "import {viewof mode,\nviewof selection,\nplot,\ntable\n} from \"ef0c4e00d21504b8\"\n\n\n\n\n\n\n\nviewof mode\n\n\n\n\n\n\n\nviewof selection\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\ntable"
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
+    "section": "",
+    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nStudents who have worked on this project include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor"
+  }
+]
