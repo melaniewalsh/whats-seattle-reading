@@ -1,5 +1,19 @@
 [
   {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
+    "section": "",
+    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nStudents who have worked on this project include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html",
+    "href": "posts/norton-anthology-american/index.html",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "",
+    "text": "Explore Checkout Trends from 2005-2025\n\nimport {viewof mode,\nviewof selection,\nplot,\nviewof num_titles,\nviewof num_authors,\ntable,\nauthor_plot,\ntitle_plot,\nheadingBlock,\nviewof selectionInput\n} from \"ef0c4e00d21504b8\"\n\n\n\n\n\n\n\nviewof mode\n\n\n\n\n\n\n\nheadingBlock\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\nviewof selectionInput\n\n\n\n\n\n\n\ntable\n\n\n\n\n\n\n\n\n\n\n\nExplore Top Authors and Titles\n\nviewof num_authors\n\n\n\n\n\n\n\nauthor_plot\n\n\n\n\n\n\n\nviewof num_titles\n\n\n\n\n\n\n\ntitle_plot"
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
@@ -47,19 +61,5 @@
     "title": "Tabular Data Viewer",
     "section": "Imports",
     "text": "Imports\n\n\ncode\nimport { SummaryTable } from \"fcb971390dae8f6d\"\n\nTabulator = require('https://unpkg.com/tabulator-tables@5.3.1');\n\narrow = require('apache-arrow@6.0.1')"
-  },
-  {
-    "objectID": "posts/norton-anthology-american/index.html",
-    "href": "posts/norton-anthology-american/index.html",
-    "title": "Which Canonical American Authors Are People Reading?",
-    "section": "",
-    "text": "import {viewof mode,\nviewof selection,\nplot,\ntable\n} from \"ef0c4e00d21504b8\"\n\n\n\n\n\n\n\nviewof mode\n\n\n\n\n\n\n\nviewof selection\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\ntable"
-  },
-  {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
-    "section": "",
-    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nStudents who have worked on this project include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor"
   }
 ]
