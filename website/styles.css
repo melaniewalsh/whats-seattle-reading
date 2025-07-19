@@ -19,6 +19,17 @@
   overflow: hidden;
 }
 
+/* Make sure Observable Combobox dropdown isn't clipped */
+.autocomplete-container {
+  position: relative;
+  z-index: 10 !important;
+}
+
+.autocomplete-dropdown {
+  z-index: 9999 !important;
+}
+
+
 
 .hero-image {
   position: absolute;

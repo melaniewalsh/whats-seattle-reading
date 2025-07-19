@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./images/p45dc-fav-icon.jpg" rel="icon" type="image/jpeg">
+<link href="./images/fav-icon2.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,11 +81,15 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Publications – What’s Seattle Reading?">
 <meta property="og:description" content="">
-<meta property="og:image" content="images/p45dc-fav-icon.jpg">
+<meta property="og:image" content="melaniewalsh.github.io/whats-seattle-reading/images/fav-icon2.png">
 <meta property="og:site_name" content="What's Seattle Reading?">
+<meta property="og:image:height" content="692">
+<meta property="og:image:width" content="600">
 <meta name="twitter:title" content="Publications – What’s Seattle Reading?">
 <meta name="twitter:description" content="">
-<meta name="twitter:image" content="images/p45dc-fav-icon.jpg">
+<meta name="twitter:image" content="melaniewalsh.github.io/whats-seattle-reading/images/fav-icon2.png">
+<meta name="twitter:image-height" content="692">
+<meta name="twitter:image-width" content="600">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -96,6 +100,9 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/fav-icon2.png" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">What’s Seattle Reading?</span>
     </a>
@@ -252,7 +259,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("melaniewalsh\.github\.io\/whats-seattle-reading");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

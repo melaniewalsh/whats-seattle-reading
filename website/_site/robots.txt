@@ -1,1 +1,1 @@
-Sitemap: https://data.post45.org/sitemap.xml
+Sitemap: melaniewalsh.github.io/whats-seattle-reading/sitemap.xml

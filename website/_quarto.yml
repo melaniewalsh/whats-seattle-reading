@@ -10,7 +10,7 @@ website:
   open-graph: true
   google-analytics: "G-H9Z8DC0X8Q"
   title: "What's Seattle Reading?"
-  # site-url: https://data.post45.org
+  site-url: melaniewalsh.github.io/whats-seattle-reading
   page-footer:
     background: "#455B64"
   # right: <p style="color:white">Copyright &copy; 2024</p>

@@ -1,14 +1,5 @@
 {
   "listingMap": {
-    "news.qmd": [
-      "news"
-    ],
-    "index.qmd": [
-      "posts"
-    ],
-    "our-data.qmd": [
-      "posts"
-    ],
     "explore.qmd": [
       "posts"
     ]

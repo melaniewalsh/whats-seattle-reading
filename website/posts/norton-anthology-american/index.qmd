@@ -11,6 +11,11 @@ title: "Which Canonical American Authors Are People Reading? "
 #     url: https://english.cornell.edu/teddy-leane
 #     email: cl2734@cornell.edu
 abstract: "Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945-)."
+page-layout: full
+format:
+  html:
+    css: styles.css
+
 # # Add keywords/categories — should always include "dataset"
 categories: [american literature, norton anthology]
 # # Provide link to an image that will show up in "Our Datasets" aggregation
@@ -52,6 +57,8 @@ image: "https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/978039388
 #  - /time-horizons-of-futuristic-fiction
 ---
 
+# Explore Checkout Trends from 2005-2025
+
 ```{ojs}
 //|echo: false
 //|output: false
@@ -59,7 +66,13 @@ image: "https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/978039388
 import {viewof mode,
 viewof selection,
 plot,
-table
+viewof num_titles,
+viewof num_authors,
+table,
+author_plot,
+title_plot,
+headingBlock,
+viewof selectionInput
 } from "ef0c4e00d21504b8"
 
 ```
@@ -68,7 +81,22 @@ table
 ```{ojs}
 //|echo: false
 viewof mode
-viewof selection
+headingBlock
 plot
+viewof selectionInput
 table
+```
+
+
+----
+
+# Explore Top Authors and Titles
+
+```{ojs}
+//|echo: false
+viewof num_authors
+author_plot
+
+viewof num_titles
+title_plot
 ```
