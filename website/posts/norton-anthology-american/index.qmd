@@ -57,6 +57,7 @@ image: "https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/978039388
 #  - /time-horizons-of-futuristic-fiction
 ---
 
+
 # Explore Checkout Trends from 2005-2025
 
 ```{ojs}
@@ -72,7 +73,8 @@ table,
 author_plot,
 title_plot,
 headingBlock,
-viewof selectionInput
+viewof selectionInput,
+viewof suggestedOptions
 } from "ef0c4e00d21504b8"
 
 ```
@@ -83,6 +85,7 @@ viewof selectionInput
 viewof mode
 headingBlock
 plot
+viewof suggestedOptions
 viewof selectionInput
 table
 ```

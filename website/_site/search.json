@@ -53,7 +53,7 @@
     "href": "posts/norton-anthology-american/index.html",
     "title": "Which Canonical American Authors Are People Reading?",
     "section": "",
-    "text": "Explore Checkout Trends from 2005-2025\n\nimport {viewof mode,\nviewof selection,\nplot,\nviewof num_titles,\nviewof num_authors,\ntable,\nauthor_plot,\ntitle_plot,\nheadingBlock,\nviewof selectionInput\n} from \"ef0c4e00d21504b8\"\n\n\n\n\n\n\n\nviewof mode\n\n\n\n\n\n\n\nheadingBlock\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\nviewof selectionInput\n\n\n\n\n\n\n\ntable\n\n\n\n\n\n\n\n\n\n\n\nExplore Top Authors and Titles\n\nviewof num_authors\n\n\n\n\n\n\n\nauthor_plot\n\n\n\n\n\n\n\nviewof num_titles\n\n\n\n\n\n\n\ntitle_plot"
+    "text": "Explore Checkout Trends from 2005-2025\n\nimport {viewof mode,\nviewof selection,\nplot,\nviewof num_titles,\nviewof num_authors,\ntable,\nauthor_plot,\ntitle_plot,\nheadingBlock,\nviewof selectionInput,\nviewof suggestedOptions\n} from \"ef0c4e00d21504b8\"\n\n\n\n\n\n\n\nviewof mode\n\n\n\n\n\n\n\nheadingBlock\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\nviewof suggestedOptions\n\n\n\n\n\n\n\nviewof selectionInput\n\n\n\n\n\n\n\ntable\n\n\n\n\n\n\n\n\n\n\n\nExplore Top Authors and Titles\n\nviewof num_authors\n\n\n\n\n\n\n\nauthor_plot\n\n\n\n\n\n\n\nviewof num_titles\n\n\n\n\n\n\n\ntitle_plot"
   },
   {
     "objectID": "people.html",
