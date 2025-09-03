@@ -11,7 +11,7 @@ title: "Which Canonical American Authors Are People Reading? "
 #     url: https://english.cornell.edu/teddy-leane
 #     email: cl2734@cornell.edu
 abstract: "Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945-)."
-page-layout: full
+page-layout: article
 format:
   html:
     css: styles.css
@@ -58,7 +58,21 @@ image: "https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/978039388
 ---
 
 
-# Explore Checkout Trends from 2005-2025
+# Introduction
+
+This interactive explorer invites you to dive into nearly two decades of Seattle Public Library checkout data for authors included in the *Norton Anthology of American Literature* (1945-). The checkout covers 2005–2025 and lets you see which authors and works have circulated most heavily in Seattle during this period. 
+
+![*The Norton Anthology of American Literature*.](https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/9780393884432_300.jpg)
+
+You can trace spikes of attention after major life events, like an author’s death, or explore how adaptations and cultural conversations bring older works back into circulation.  
+
+<!-- You can also filter the data to focus on authors with particular traits—those who have passed away, who have won major literary prizes, or who write genre fiction such as science fiction and fantasy. The tool makes it easy to compare their trajectories against peers, revealing how popularity is often shaped less by abstract notions of “literary value” and more by social events, media attention, and personal connections.   -->
+
+We encourage you to use the explorer to follow your own interests!
+<!-- Perhaps you’ll start with an author you have a personal connection to, then branch out to see how their work sits alongside others in the canon. Or you might investigate patterns across whole categories, like which speculative fiction authors dominate checkouts, or how prizewinning writers fare compared to less celebrated peers.  -->
+However you approach it, the explorer is designed to give you a hands-on way to engage with the living, changing canon of American literature.
+
+# Explore Reading Trends from 2005-2025
 
 
 ```{ojs}
@@ -76,7 +90,8 @@ title_plot,
 headingBlock,
 viewof selectionInput,
 viewof suggestedOptions,
-progressBar,
+progress,
+progressBar2,
 pageReady,
 // guard
 } from "ef0c4e00d21504b8"
@@ -87,8 +102,7 @@ pageReady,
 //|echo: false
 //| warning: false
 //| error: false
-
-progressBar
+progressBar2
 ```
 
 
@@ -97,31 +111,15 @@ progressBar
 //|echo: false
 //| warning: false
 //| error: false
-
+viewof mode
 headingBlock
-
-```
-
-```{ojs}
-//|echo: false
-//| warning: false
-//| error: false
-
-
 plot
-
-```
-
-```{ojs}
-//|echo: false
-//| warning: false
-//| error: false
-
-
 viewof suggestedOptions
 viewof selectionInput
 table
+
 ```
+
 
 ----
 
