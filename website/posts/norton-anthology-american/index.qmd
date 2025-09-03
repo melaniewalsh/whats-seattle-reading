@@ -60,6 +60,7 @@ image: "https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/978039388
 
 # Explore Checkout Trends from 2005-2025
 
+
 ```{ojs}
 //|echo: false
 //|output: false
@@ -74,22 +75,53 @@ author_plot,
 title_plot,
 headingBlock,
 viewof selectionInput,
-viewof suggestedOptions
+viewof suggestedOptions,
+progressBar,
+pageReady,
+// guard
 } from "ef0c4e00d21504b8"
 
 ```
 
+```{ojs}
+//|echo: false
+//| warning: false
+//| error: false
+
+progressBar
+```
+
+
 
 ```{ojs}
 //|echo: false
-viewof mode
+//| warning: false
+//| error: false
+
 headingBlock
+
+```
+
+```{ojs}
+//|echo: false
+//| warning: false
+//| error: false
+
+
 plot
+
+```
+
+```{ojs}
+//|echo: false
+//| warning: false
+//| error: false
+
+
 viewof suggestedOptions
 viewof selectionInput
 table
 ```
-
 
 ----
 
@@ -97,6 +129,9 @@ table
 
 ```{ojs}
 //|echo: false
+//| warning: false
+//| error: false
+
 viewof num_authors
 author_plot
 
