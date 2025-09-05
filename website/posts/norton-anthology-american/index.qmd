@@ -126,6 +126,7 @@ viewof mode
 headingBlock
 plot
 viewof suggestedOptions
+md`You can pick any author from *The Norton Anthology of American Literature* (1945-) or any of their works that have been checked out by patrons of the Seattle Public Library.`
 viewof selectionInput
 md`## Top Titles`
 viewof tableTopTitlesFiltered
