@@ -82,29 +82,40 @@ However you approach it, the explorer is designed to give you a hands-on way to 
 import {viewof mode,
 viewof selection,
 plot,
+viewof tableTopAuthors,
+viewof tableTopTitles,
 viewof num_titles,
 viewof num_authors,
 table,
 author_plot,
 title_plot,
 headingBlock,
+headingBlock2,
 viewof selectionInput,
 viewof suggestedOptions,
-progress,
-progressBar2,
-pageReady,
-// guard
-} from "ef0c4e00d21504b8"
+viewof mode2,
+viewof tableTopTitlesMode,
+viewof tableTopTitlesFiltered
+} from "2bced81a9de1ac10"
 
 ```
+
+## Top Titles and Authors
+
 
 ```{ojs}
 //|echo: false
 //| warning: false
 //| error: false
-progressBar2
+viewof mode2
+viewof tableTopTitlesMode
+
+
 ```
 
+
+
+# Explore Any Author or Title
 
 
 ```{ojs}
@@ -116,23 +127,10 @@ headingBlock
 plot
 viewof suggestedOptions
 viewof selectionInput
-table
+md`## Top Titles`
+viewof tableTopTitlesFiltered
+
 
 ```
 
 
-----
-
-# Explore Top Authors and Titles
-
-```{ojs}
-//|echo: false
-//| warning: false
-//| error: false
-
-viewof num_authors
-author_plot
-
-viewof num_titles
-title_plot
-```

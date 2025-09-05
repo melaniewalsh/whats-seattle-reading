@@ -53,7 +53,7 @@
     "href": "posts/norton-anthology-american/index.html",
     "title": "Which Canonical American Authors Are People Reading?",
     "section": "",
-    "text": "Introduction\nThis interactive explorer invites you to dive into nearly two decades of Seattle Public Library checkout data for authors included in the Norton Anthology of American Literature (1945-). The checkout covers 2005–2025 and lets you see which authors and works have circulated most heavily in Seattle during this period.\n\n\n\nWe focus on authors in the Norton Anthology, Volume E (1945 to the present).\n\n\nYou can trace spikes of attention after major life events, like an author’s death, or explore how adaptations and cultural conversations bring older works back into circulation.\n\nWe encourage you to use the explorer to follow your own interests!  However you approach it, the explorer is designed to give you a hands-on way to engage with the living, changing canon of American literature.\n\n\nExplore Reading Trends from 2005-2025\n\nimport {viewof mode,\nviewof selection,\nplot,\nviewof num_titles,\nviewof num_authors,\ntable,\nauthor_plot,\ntitle_plot,\nheadingBlock,\nviewof selectionInput,\nviewof suggestedOptions,\nprogress,\nprogressBar2,\npageReady,\n// guard\n} from \"ef0c4e00d21504b8\"\n\n\n\n\n\n\n\nprogressBar2\n\n\n\n\n\n\n\nviewof mode\n\n\n\n\n\n\n\nheadingBlock\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\nviewof suggestedOptions\n\n\n\n\n\n\n\nviewof selectionInput\n\n\n\n\n\n\n\ntable\n\n\n\n\n\n\n\n\n\n\n\nExplore Top Authors and Titles\n\nviewof num_authors\n\n\n\n\n\n\n\nauthor_plot\n\n\n\n\n\n\n\nviewof num_titles\n\n\n\n\n\n\n\ntitle_plot"
+    "text": "This interactive explorer invites you to dive into nearly two decades of Seattle Public Library checkout data for authors included in the Norton Anthology of American Literature (1945-). The checkout covers 2005–2025 and lets you see which authors and works have circulated most heavily in Seattle during this period.\n\n\n\nThe Norton Anthology of American Literature.\n\n\nYou can trace spikes of attention after major life events, like an author’s death, or explore how adaptations and cultural conversations bring older works back into circulation.\n\nWe encourage you to use the explorer to follow your own interests!  However you approach it, the explorer is designed to give you a hands-on way to engage with the living, changing canon of American literature."
   },
   {
     "objectID": "people.html",
@@ -61,5 +61,47 @@
     "title": "People",
     "section": "",
     "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nStudents who have worked on this project include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html#explore-top-authors-and-titles",
+    "href": "posts/norton-anthology-american/index.html#explore-top-authors-and-titles",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "Explore Top Authors and Titles",
+    "text": "Explore Top Authors and Titles\n\nviewof tableTopTitles\n\n\n\n\n\n\n\nviewof tableTopAuthors"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html#explore-any-author-or-title",
+    "href": "posts/norton-anthology-american/index.html#explore-any-author-or-title",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "Explore Any Author or Title",
+    "text": "Explore Any Author or Title\n\nviewof mode\n\n\n\n\n\n\n\nheadingBlock\n\n\n\n\n\n\n\nplot\n\n\n\n\n\n\n\nviewof suggestedOptions\n\n\n\n\n\n\n\nviewof selectionInput\n\n\n\n\n\n\n\nmd`## Top Titles`\n\n\n\n\n\n\n\nviewof tableTopTitlesFiltered"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html#explore-top-titles",
+    "href": "posts/norton-anthology-american/index.html#explore-top-titles",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "Explore Top Titles",
+    "text": "Explore Top Titles\n\nviewof tableTopTitles"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html#explore-top-authors",
+    "href": "posts/norton-anthology-american/index.html#explore-top-authors",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "Explore Top Authors",
+    "text": "Explore Top Authors\n\nviewof tableTopAuthors"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html#explore-top-titles-and-authors",
+    "href": "posts/norton-anthology-american/index.html#explore-top-titles-and-authors",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "Explore Top Titles and Authors",
+    "text": "Explore Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
+  },
+  {
+    "objectID": "posts/norton-anthology-american/index.html#top-titles-and-authors",
+    "href": "posts/norton-anthology-american/index.html#top-titles-and-authors",
+    "title": "Which Canonical American Authors Are People Reading?",
+    "section": "Top Titles and Authors",
+    "text": "Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
   }
 ]
