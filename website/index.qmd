@@ -30,4 +30,4 @@ toc: false
 
  ![](https://upload.wikimedia.org/wikipedia/commons/1/16/Seattle_4.jpg)
 
-The project is directed by [Melanie Walsh](https://melaniewalsh.org/), Assistant Professor at the University of Washington Information School.
+The project is directed by [Melanie Walsh](https://melaniewalsh.org/), Assistant Professor in the Information School and Adjunct Assistant Professor in the English Department at the University of Washington.

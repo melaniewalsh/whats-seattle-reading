@@ -4,7 +4,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Coming soon"
+    "text": "Neel Gupta, David Christensen, and Melanie Walsh. “Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?” Journal of Open Humanities Data 11, no. 1 (2025). https://doi.org/10.5334/johd.332.\n@article{guptaSeattlePublicLibrarys2025,\n  title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},\n  shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},\n  author = {Gupta, Neel and Christensen, David and Walsh, Melanie},\n  year = 2025,\n  month = aug,\n  journal = {Journal of Open Humanities Data},\n  volume = {11},\n  number = {1},\n  issn = {2059-481X},\n  doi = {10.5334/johd.332},\n  urldate = {2025-12-10},\n  url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}\n}"
   },
   {
     "objectID": "posts/table.html",
@@ -60,7 +60,7 @@
     "href": "people.html",
     "title": "People",
     "section": "",
-    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nStudents who have worked on this project include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor"
+    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nWe have been lucky to work with undergraduate students at the University of Washington on this project, primarily through the Humanities Data Science Summer Institute.\nThese students include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor\n\n\n\nAcknowledgments\nWe owe a huge debt of gratitude to David Christensen, who has spearheaded the SPL open data effort and has been a very helpful collaborator and guide."
   },
   {
     "objectID": "posts/norton-anthology-american/index.html#explore-top-authors-and-titles",
@@ -103,5 +103,40 @@
     "title": "Which Canonical American Authors Are People Reading?",
     "section": "Top Titles and Authors",
     "text": "Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
+  },
+  {
+    "objectID": "publications.html#seattle-public-librarys-open-checkout-data-what-can-it-tell-us-about-readers-and-book-popularity-more-broadly",
+    "href": "publications.html#seattle-public-librarys-open-checkout-data-what-can-it-tell-us-about-readers-and-book-popularity-more-broadly",
+    "title": "Publications",
+    "section": "“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”",
+    "text": "“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”\nNeel Gupta, David Christensen, and Melanie Walsh.\nJournal of Open Humanities Data 11, no. 1 (2025).\nDOI\nCopy Bibtex:\n@article{guptaSeattlePublicLibrarys2025,\n  title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},\n  shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},\n  author = {Gupta, Neel and Christensen, David and Walsh, Melanie},\n  year = 2025,\n  month = aug,\n  journal = {Journal of Open Humanities Data},\n  volume = {11},\n  number = {1},\n  issn = {2059-481X},\n  doi = {10.5334/johd.332},\n  urldate = {2025-12-10},\n  url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}\n}"
+  },
+  {
+    "objectID": "publications.html#section",
+    "href": "publications.html#section",
+    "title": "Publications",
+    "section": "2025",
+    "text": "2025"
+  },
+  {
+    "objectID": "publications.html#december",
+    "href": "publications.html#december",
+    "title": "Publications",
+    "section": "December",
+    "text": "December\n\n“The Canon in Circulation: Tracking the Reception of Norton Anthology Authors in Library Checkout Data.”\nNeel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and Melanie Walsh. Computational Humanities Research (2025): 1510–22. DOI.\n\nCopy BibTeX:\n\n@article{guptaCanonCirculationTracking2025,\n  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology}} {{Authors}} in {{Library Checkout Data}}},\n  shorttitle = {The {{Canon}} in {{Circulation}}},\n  author = {Gupta, Neel and Maor, Daniella and Harris, Karalee and Backstrom, Emily and Dong, Hongyuan and Walsh, Melanie},\n  editor = {Arnold, Taylor and Fantoli, Margherita and Ros, {and} Ruben},\n  year = 2025,\n  journal = {Anthology of Computers and the Humanities},\n  volume = {3},\n  pages = {1510--1522},\n  doi = {10.63744/P6qPH135jhY2},\n  urldate = {2025-12-10},\n  url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}\n}"
+  },
+  {
+    "objectID": "publications.html#august",
+    "href": "publications.html#august",
+    "title": "Publications",
+    "section": "August",
+    "text": "August\n\n“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”\nNeel Gupta, David Christensen, and Melanie Walsh.\nJournal of Open Humanities Data 11, no. 1 (2025).\nDOI\n\nCopy BibTeX:\n\n@article{guptaSeattlePublicLibrarys2025,\n  title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},\n  shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},\n  author = {Gupta, Neel and Christensen, David and Walsh, Melanie},\n  year = 2025,\n  month = aug,\n  journal = {Journal of Open Humanities Data},\n  volume = {11},\n  number = {1},\n  issn = {2059-481X},\n  doi = {10.5334/johd.332},\n  urldate = {2025-12-10},\n  url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}\n}"
+  },
+  {
+    "objectID": "publications.html#the-canon-in-circulation-tracking-the-reception-of-norton-anthology-authors-in-library-checkout-data.",
+    "href": "publications.html#the-canon-in-circulation-tracking-the-reception-of-norton-anthology-authors-in-library-checkout-data.",
+    "title": "Publications",
+    "section": "“The Canon in Circulation: Tracking the Reception of Norton Anthology Authors in Library Checkout Data.”",
+    "text": "“The Canon in Circulation: Tracking the Reception of Norton Anthology Authors in Library Checkout Data.”\nNeel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and Melanie Walsh. Computational Humanities Research (2025): 1510–22. DOI.\n\n\n@article{guptaCanonCirculationTracking2025,\n  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology}} {{Authors}} in {{Library Checkout Data}}},\n  shorttitle = {The {{Canon}} in {{Circulation}}},\n  author = {Gupta, Neel and Maor, Daniella and Harris, Karalee and Backstrom, Emily and Dong, Hongyuan and Walsh, Melanie},\n  editor = {Arnold, Taylor and Fantoli, Margherita and Ros, {and} Ruben},\n  year = 2025,\n  journal = {Anthology of Computers and the Humanities},\n  volume = {3},\n  pages = {1510--1522},\n  doi = {10.63744/P6qPH135jhY2},\n  urldate = {2025-12-10},\n  url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}\n}"
   }
 ]

@@ -8,11 +8,17 @@ title: "People"
 - **Neel Gupta**, PhD Student, Information School, University of Washington 
 
 # Students
-Students who have worked on this project include:
+We have been lucky to work with undergraduate students at the University of Washington, primarily through the Humanities Data Science Summer Institute. 
+
+These students include:
 
 - Hongyuan (Tony) Dong 
 - Em Backstrom  
 - Karalee Harris  
 - Daniella Maor  
+
+# Acknowledgments
+
+We owe a huge debt of gratitude to David Christensen, who has spearheaded the SPL open data effort and has been a very helpful collaborator and guide.
 
 
