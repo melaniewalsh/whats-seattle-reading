@@ -8,7 +8,7 @@ title: "People"
 - **Neel Gupta**, PhD Student, Information School, University of Washington 
 
 # Students
-We have been lucky to work with undergraduate students at the University of Washington, primarily through the Humanities Data Science Summer Institute. 
+We have been lucky to work with several undergraduate students at the University of Washington, primarily through the Humanities Data Science Summer Institute. 
 
 These students include:
 
