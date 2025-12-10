@@ -21,6 +21,7 @@ website:
       - explore.qmd
       - people.qmd
       - publications.qmd
+      - data.qmd
       - icon: github
         href: https://github.com/melaniewalsh/whats-seattle-reading
       # - icon: twitter

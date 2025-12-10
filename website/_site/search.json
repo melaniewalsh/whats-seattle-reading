@@ -4,7 +4,7 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "You can explore and download the Seattle Public Library’s open checkout datasets through the City of Seattle’s Open Data Portal.\nThere are two available datasets:\n1. Timestamped (rounded to the nearest minute) checkouts by title for all physical items in their collection (2005-present).\n2. Monthly aggregated checkouts by title for all physical and digital items in their collection, broken down by medium (2005-present).\nHere’s a snippet of what the aggregated monthly data looks like:\nBoth datasets are very large—about 10-20GB and ~50-120 million rows, respectively—but you can filter and export smaller versions based on your interests.\nFor example, if you’re interested in works by Dracula author Bram Stoker, you can use the filter options to export only records that have both “Bram” and “Stoker” in the “Creator” field.\nThis is a helpful way of getting around the problem that author names are sometimes spelled last, first (“Stoker, Bram”) and first, last (“Bram Stoker”) and lots of ways in between.\nWe also published a mirrored copy of the aggregated monthly checkout data from April 2005-February 2025 which you can download on Zenodo."
+    "text": "You can explore and download the Seattle Public Library’s open checkout datasets through the City of Seattle Open Data Portal. There are two available datasets: - Timestamped (rounded to the nearest minute) checkouts by title for all physical items in their collection. - Monthly aggregated checkouts by title for all physical and digital items in their collection, broken down by medium.\nYou can also find a mirrored version of the data from 2005-2025 on Zenodo."
   },
   {
     "objectID": "publications.html",
