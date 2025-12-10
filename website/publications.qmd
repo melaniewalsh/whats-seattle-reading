@@ -6,6 +6,7 @@ execute:
 format:
   html:
     toc: true
+    toc-depth: 2
     # toc-location: right-body   # or left-body
     toc-title: "Table of Contents"
 ---
@@ -14,18 +15,19 @@ Check out our publications related to library checkout data from the Seattle Pub
  
 ## 2025
 
-## December
+### December
 
-### [**“The Canon in Circulation: Tracking the Reception of <em>Norton Anthology</Em> Authors in Library Checkout Data.”**](https://doi.org/10.63744/P6qPH135jhY2)   
+[**“The Canon in Circulation: Tracking the Reception of <em>Norton Anthology</Em> Authors in Library Checkout Data.”**](https://doi.org/10.63744/P6qPH135jhY2)   
 Neel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and Melanie Walsh. 
 *Computational Humanities Research* (2025): 1510–22. 
-[DOI](https://doi.org/10.63744/P6qPH135jhY2).
+[DOI](https://doi.org/10.63744/P6qPH135jhY2).  
+[Data](https://seattle-library-checkout-data.s3.us-west-2.amazonaws.com/norton-anthology_spl-checkouts_2005-2025.csv)|[Code](https://github.com/melaniewalsh/Canon-in-Circulation)
 
 
-[![](images/Canon.png){width=60%}](https://doi.org/10.63744/P6qPH135jhY2)
+<!-- [![](images/Canon.png){width=60%}](https://doi.org/10.63744/P6qPH135jhY2) -->
 
 Copy BibTeX:
-```{r}
+```bibtex
 @inproceedings{guptaCanonCirculationTracking2025,
   title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology Authors}} in {{Library Checkout Data}}},
   shorttitle = {The {{Canon}} in {{Circulation}}},
@@ -41,17 +43,18 @@ Copy BibTeX:
 }
 ```
 
-## August
+### August
 
-### [**“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”**](https://doi.org/10.5334/johd.332)  
+[**“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”**](https://doi.org/10.5334/johd.332)  
 Neel Gupta, David Christensen, and Melanie Walsh.  
-*Journal of Open Humanities Data* 11, no. 1 (2025). [DOI](https://doi.org/10.5334/johd.332). 
+*Journal of Open Humanities Data* 11, no. 1 (2025). [DOI](https://doi.org/10.5334/johd.332).   
+[Data](https://zenodo.org/records/15792698)|[Code](https://github.com/neelgupta2112/Seattle-Public-Library-Library-Checkout-Data) 
 
-[![](images/JOHD.png){width=60%}](https://doi.org/10.5334/johd.332)
+<!-- [![](images/JOHD.png){width=60%}](https://doi.org/10.5334/johd.332) -->
 
 
 Copy BibTeX:
-```{r}
+```bibtex
 @article{guptaSeattlePublicLibrarys2025,
   title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},
   shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},
@@ -67,3 +70,9 @@ Copy BibTeX:
   url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}
 }
 ```
+
+## 2023
+
+[**"Where is all the book data?"**](https://www.publicbooks.org/where-is-all-the-book-data/)  
+Melanie Walsh.  
+*Public Books* 2025.

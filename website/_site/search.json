@@ -4,7 +4,7 @@
     "href": "data.html",
     "title": "Data",
     "section": "",
-    "text": "You can explore and download the Seattle Public Library’s open checkout datasets through the City of Seattle Open Data Portal. There are two available datasets: - Timestamped (rounded to the nearest minute) checkouts by title for all physical items in their collection. - Monthly aggregated checkouts by title for all physical and digital items in their collection, broken down by medium.\nYou can also find a mirrored version of the data from 2005-2025 on Zenodo."
+    "text": "You can explore and download the Seattle Public Library’s open checkout datasets through the City of Seattle’s Open Data Portal.\nThere are two available datasets:\n1. Timestamped (rounded to the nearest minute) checkouts by title for all physical items in their collection (2005-present).\n2. Monthly aggregated checkouts by title for all physical and digital items in their collection, broken down by medium (2005-present).\nHere’s a snippet of what the aggregated monthly data looks like:\nBoth datasets are very large—about 10-20GB and ~50-120 million rows, respectively—but you can filter and export smaller versions based on your interests.\nFor example, if you’re interested in works by Dracula author Bram Stoker, you can use the filter options to export only records that have both “Bram” and “Stoker” in the “Creator” field.\nThis is a helpful way of getting around the problem that author names are sometimes spelled differently—last name, first name (“Stoker, Bram”), first name, last name (“Bram Stoker”), and lots of ways in between.\nFinally, we published a mirrored copy of the aggregated monthly checkout data from April 2005-February 2025, which you can download on Zenodo."
   },
   {
     "objectID": "publications.html",
@@ -18,21 +18,21 @@
     "href": "publications.html#section",
     "title": "Publications",
     "section": "2025",
-    "text": "2025"
+    "text": "2025\n\nDecember\n“The Canon in Circulation: Tracking the Reception of Norton Anthology Authors in Library Checkout Data.”\nNeel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and Melanie Walsh. Computational Humanities Research (2025): 1510–22. DOI.\nData|Code\n\nCopy BibTeX:\n@inproceedings{guptaCanonCirculationTracking2025,\n  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology Authors}} in {{Library Checkout Data}}},\n  shorttitle = {The {{Canon}} in {{Circulation}}},\n  booktitle = {Computational {{Humanities Research}}},\n  author = {Gupta, Neel and Maor, Daniella and Harris, Karalee and Backstrom, Emily and Dong, Hongyuan and Walsh, Melanie},\n  editor = {Arnold, Taylor and Fantoli, Margherita and Ros, {and} Ruben},\n  year = 2025,\n  volume = {3},\n  pages = {1510--1522},\n  doi = {10.63744/P6qPH135jhY2},\n  urldate = {2025-12-10},\n   url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}\n}\n\n\nAugust\n“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”\nNeel Gupta, David Christensen, and Melanie Walsh.\nJournal of Open Humanities Data 11, no. 1 (2025). DOI.\nData|Code\n\nCopy BibTeX:\n@article{guptaSeattlePublicLibrarys2025,\n  title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},\n  shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},\n  author = {Gupta, Neel and Christensen, David and Walsh, Melanie},\n  year = 2025,\n  month = aug,\n  journal = {Journal of Open Humanities Data},\n  volume = {11},\n  number = {1},\n  issn = {2059-481X},\n  doi = {10.5334/johd.332},\n  urldate = {2025-12-10},\n  url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}\n}"
   },
   {
     "objectID": "publications.html#december",
     "href": "publications.html#december",
     "title": "Publications",
     "section": "December",
-    "text": "December\n\n“The Canon in Circulation: Tracking the Reception of Norton Anthology Authors in Library Checkout Data.”\nNeel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and Melanie Walsh. Computational Humanities Research (2025): 1510–22. DOI.\n\nCopy BibTeX:\n\n@inproceedings{guptaCanonCirculationTracking2025,\n  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology Authors}} in {{Library Checkout Data}}},\n  shorttitle = {The {{Canon}} in {{Circulation}}},\n  booktitle = {Computational {{Humanities Research}}},\n  author = {Gupta, Neel and Maor, Daniella and Harris, Karalee and Backstrom, Emily and Dong, Hongyuan and Walsh, Melanie},\n  editor = {Arnold, Taylor and Fantoli, Margherita and Ros, {and} Ruben},\n  year = 2025,\n  volume = {3},\n  pages = {1510--1522},\n  doi = {10.63744/P6qPH135jhY2},\n  urldate = {2025-12-10},\n   url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}\n}"
+    "text": "December\n“The Canon in Circulation: Tracking the Reception of Norton Anthology Authors in Library Checkout Data.”\nNeel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and Melanie Walsh. Computational Humanities Research (2025): 1510–22. DOI.\nData|Code\n\nCopy BibTeX:\n@inproceedings{guptaCanonCirculationTracking2025,\n  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology Authors}} in {{Library Checkout Data}}},\n  shorttitle = {The {{Canon}} in {{Circulation}}},\n  booktitle = {Computational {{Humanities Research}}},\n  author = {Gupta, Neel and Maor, Daniella and Harris, Karalee and Backstrom, Emily and Dong, Hongyuan and Walsh, Melanie},\n  editor = {Arnold, Taylor and Fantoli, Margherita and Ros, {and} Ruben},\n  year = 2025,\n  volume = {3},\n  pages = {1510--1522},\n  doi = {10.63744/P6qPH135jhY2},\n  urldate = {2025-12-10},\n   url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}\n}"
   },
   {
     "objectID": "publications.html#august",
     "href": "publications.html#august",
     "title": "Publications",
     "section": "August",
-    "text": "August\n\n“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”\nNeel Gupta, David Christensen, and Melanie Walsh.\nJournal of Open Humanities Data 11, no. 1 (2025). DOI.\n\nCopy BibTeX:\n\n@article{guptaSeattlePublicLibrarys2025,\n  title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},\n  shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},\n  author = {Gupta, Neel and Christensen, David and Walsh, Melanie},\n  year = 2025,\n  month = aug,\n  journal = {Journal of Open Humanities Data},\n  volume = {11},\n  number = {1},\n  issn = {2059-481X},\n  doi = {10.5334/johd.332},\n  urldate = {2025-12-10},\n  url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}\n}"
+    "text": "August\n“Seattle Public Library’s Open Checkout Data: What Can It Tell Us About Readers and Book Popularity More Broadly?”\nNeel Gupta, David Christensen, and Melanie Walsh.\nJournal of Open Humanities Data 11, no. 1 (2025). DOI.\nData|Code\n\nCopy BibTeX:\n@article{guptaSeattlePublicLibrarys2025,\n  title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},\n  shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},\n  author = {Gupta, Neel and Christensen, David and Walsh, Melanie},\n  year = 2025,\n  month = aug,\n  journal = {Journal of Open Humanities Data},\n  volume = {11},\n  number = {1},\n  issn = {2059-481X},\n  doi = {10.5334/johd.332},\n  urldate = {2025-12-10},\n  url = {https://openhumanitiesdata.metajnl.com/articles/10.5334/johd.332}\n}"
   },
   {
     "objectID": "posts/norton-anthology-american/index.html",
@@ -95,7 +95,7 @@
     "href": "people.html",
     "title": "People",
     "section": "",
-    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nWe have been lucky to work with several undergraduate students at the University of Washington, primarily through the Humanities Data Science Summer Institute.\nThese students include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor\n\n\n\nAcknowledgments\nWe owe a huge debt of gratitude to David Christensen, who has spearheaded the SPL open data effort and has been a very helpful collaborator and guide."
+    "text": "Team\n\nMelanie Walsh, Assistant Professor, Information School at the University of Washington\n\nNeel Gupta, PhD Student, Information School, University of Washington\n\n\n\nStudents\nWe’ve worked with several undergraduate students at the University of Washington, primarily through the Humanities Data Science Summer Institute.\nThese students include:\n\nHongyuan (Tony) Dong\nEm Backstrom\n\nKaralee Harris\n\nDaniella Maor\n\n\n\nAcknowledgments\nWe are thankful David Christensen, who spearheads the SPL’s open data effort and has been a very helpful collaborator and guide."
   },
   {
     "objectID": "data.html#norton-anthology-of-american-literature-1945-",
@@ -109,6 +109,20 @@
     "href": "data.html#canonical-american-authors-1945-present",
     "title": "Data",
     "section": "Canonical American Authors (1945-Present)",
-    "text": "Canonical American Authors (1945-Present)\nWe published a smaller dataset (click to download) for all works by all authors in Volume E (1945-) of the most recent Norton Anthology of American Literature.\nThese authors include Toni Morrison, Kurt Vonnegut, James Baldwin, Octavia Butler, Viet Thanh Nguyen, Louise Eridch, Jhumpa Lahiri, and more. You can explore trends for all these authors and literary works on our website."
+    "text": "Canonical American Authors (1945-Present)\nWe published a smaller dataset (click the link to download) for all works by all authors in Volume E (1945-) of the most recent Norton Anthology of American Literature.\nThese authors include Toni Morrison, Kurt Vonnegut, James Baldwin, Octavia Butler, Viet Thanh Nguyen, Louise Eridch, Jhumpa Lahiri, and more. You can explore trends for all these authors and literary works on our website."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "The Seattle Public Library (SPL) publishes anonymized, open-access checkout data for every item in its collection, dating from 2005 to the present. To our knowledge, it is the only U.S. library to release checkout data by title with this level of temporal detail.\nOne dataset records exact timestamps for print book checkouts, while another provides monthly aggregates across all formats (e.g., ebooks, audiobooks, print books). Because U.S. book sales data is largely inaccessible outside the publishing industry, SPL’s open checkout data offers a rare and valuable alternative.\nThis project explores what we can learn about readers, libraries, the city of Seattle, and the wider world through the books that people check out from their local library."
+  },
+  {
+    "objectID": "publications.html#section-1",
+    "href": "publications.html#section-1",
+    "title": "Publications",
+    "section": "2023",
+    "text": "2023\n“Where is all the book data?”\nMelanie Walsh.\nPublic Books 2025."
   }
 ]

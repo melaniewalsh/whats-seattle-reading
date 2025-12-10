@@ -17,15 +17,16 @@ Both datasets are very large—about 10-20GB and ~50-120 million rows, respectiv
 
 For example, if you're interested in works by *Dracula* author Bram Stoker, you can use the filter options to export only records that have both "Bram" and "Stoker" in the "Creator" field. 
 
-![Click "Actions" -> "Query data"](images/query.png)
-![Filter for specific titles or authors](images/stoker.png)
+![Frist, click "Actions" -> "Query data."](images/query.png){width=80% fig-align="left"}
 
-This is a helpful way of getting around the problem that author names are sometimes spelled last name, first name ("Stoker, Bram") and first name, last name ("Bram Stoker") and lots of ways in between.
+![Then, filter for specific titles or authors. Here the "Creator" field must contain "Stoker" AND "Bram."](images/stoker.png){width=80% fig-align="left"}
 
-Finally, we also published a mirrored copy of the aggregated monthly checkout data from April 2005-February 2025 which you can download on [Zenodo](https://zenodo.org/records/15792698).
+This is a helpful way of getting around the problem that author names are sometimes spelled differently—last name, first name ("Stoker, Bram"), first name, last name ("Bram Stoker"), and lots of ways in between.
+
+Finally, we published a mirrored copy of the aggregated monthly checkout data from April 2005-February 2025, which you can download on [Zenodo](https://zenodo.org/records/15792698).
 
 ## Canonical American Authors (1945-Present)
 
-We published [a smaller dataset](https://seattle-library-checkout-data.s3.us-west-2.amazonaws.com/norton-anthology_spl-checkouts_2005-2025.csv) (click to download) for all works by all authors in Volume E (1945-) of the most recent *Norton Anthology of American Literature*.
+We published [a smaller dataset](https://seattle-library-checkout-data.s3.us-west-2.amazonaws.com/norton-anthology_spl-checkouts_2005-2025.csv) (click the link to download) for all works by all authors in Volume E (1945-) of the most recent *Norton Anthology of American Literature*.
 
 These authors include Toni Morrison, Kurt Vonnegut, James Baldwin, Octavia Butler, Viet Thanh Nguyen, Louise Eridch, Jhumpa Lahiri, and more. You can explore trends for all these authors and literary works [on our website](https://melaniewalsh.github.io/whats-seattle-reading/posts/norton-anthology-american/).

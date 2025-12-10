@@ -8,7 +8,7 @@ title: "People"
 - **Neel Gupta**, PhD Student, Information School, University of Washington 
 
 # Students
-We have been lucky to work with several undergraduate students at the University of Washington, primarily through the Humanities Data Science Summer Institute. 
+We've worked with several undergraduate students at the University of Washington, primarily through the [Humanities Data Science Summer Institute](https://humanitiesdatalab.ds.lib.uw.edu/hdssi/). 
 
 These students include:
 
@@ -19,6 +19,6 @@ These students include:
 
 # Acknowledgments
 
-We owe a huge debt of gratitude to David Christensen, who has spearheaded the SPL open data effort and has been a very helpful collaborator and guide.
+We are thankful David Christensen, who spearheads the SPL's open data effort and has been a very helpful collaborator and guide.
 
 

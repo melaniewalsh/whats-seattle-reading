@@ -269,7 +269,7 @@ table.dataTable {
 
  /* Style for the active link inside the TOC navigation */
 #TOC .nav-link.active {
-    background-color: #455B64;  /* Set background color for active link */
+    background-color: #007eb0;  /* Set background color for active link */
     color: #fff !important;                /* Set text color to white */
     font-weight: bold;          /* Make the text bold */
     padding: 8px 12px;          /* Adjust padding for a button-like appearance */
