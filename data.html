@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="The “What’s Seattle Reading?” project explores contemporary reading trends with unique open data provided by the Seattle Public Library.">
 
-<title>Home – What's Seattle Reading?</title>
+<title>Data – What’s Seattle Reading?</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,17 +81,19 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 
 
 <link rel="stylesheet" href="styles.css">
-<meta property="og:title" content="Home">
-<meta property="og:description" content="The “What’s Seattle Reading?” project explores contemporary reading trends with unique open data provided by the Seattle Public Library.">
-<meta property="og:image" content="melaniewalsh.github.io/whats-seattle-reading/images/fav-icon2.png">
+<meta property="og:title" content="Data – What’s Seattle Reading?">
+<meta property="og:description" content="">
+<meta property="og:image" content="melaniewalsh.github.io/whats-seattle-reading/images/query.png">
 <meta property="og:site_name" content="What's Seattle Reading?">
-<meta property="og:image:height" content="288">
-<meta property="og:image:width" content="288">
-<meta name="twitter:title" content="Home">
-<meta name="twitter:description" content="The “What’s Seattle Reading?” project explores contemporary reading trends with unique open data provided by the Seattle Public Library.">
-<meta name="twitter:image" content="melaniewalsh.github.io/whats-seattle-reading/images/fav-icon2.png">
-<meta name="twitter:image-height" content="288">
-<meta name="twitter:image-width" content="288">
+<meta property="og:image:alt" content="Click “Actions” -> “Query data”">
+<meta property="og:image:height" content="842">
+<meta property="og:image:width" content="1434">
+<meta name="twitter:title" content="Data – What’s Seattle Reading?">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="melaniewalsh.github.io/whats-seattle-reading/images/query.png">
+<meta name="twitter:image:alt" content="Click “Actions” -> “Query data”">
+<meta name="twitter:image-height" content="842">
+<meta name="twitter:image-width" content="1434">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -147,16 +148,48 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Data</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<section id="whats-seattle-reading" class="level1">
-<h1>What’s Seattle Reading?</h1>
-<p>The “What’s Seattle Reading?” project explores contemporary reading trends with unique open data provided by the <a href="https://data.seattle.gov/Community-and-Culture/Checkouts-by-Title/tmmm-ytt6/about_data">Seattle Public Library</a>.</p>
-<p><img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Seattle_4.jpg" class="img-fluid"></p>
-<p>The project is directed by <a href="https://melaniewalsh.org/">Melanie Walsh</a>, Assistant Professor in the Information School and Adjunct Assistant Professor in the English Department at the University of Washington.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>You can explore and download the Seattle Public Library’s open checkout datasets through the City of Seattle’s <a href="https://data.seattle.gov/Community-and-Culture/Checkouts-by-Title/tmmm-ytt6/about_data">Open Data Portal</a>.</p>
+<p>There are two available datasets:<br>
+1. <a href="https://data.seattle.gov/Community-and-Culture/Checkouts-By-Title-Physical-Items-/5src-czff/about_data">Timestamped (rounded to the nearest minute) checkouts by title</a> for all physical items in their collection (2005-present).<br>
+2. <a href="https://data.seattle.gov/Community-and-Culture/Checkouts-by-Title/tmmm-ytt6/about_data">Monthly aggregated checkouts by title</a> for all physical and digital items in their collection, broken down by medium (2005-present).</p>
+<p>Here’s a snippet of what the aggregated monthly data looks like:</p>
+<div>
+<iframe title="Checkouts by Title" width="800" height="425" src="https://data.seattle.gov/w/tmmm-ytt6" frameborder="0" tabindex="0" scrolling="no">
+</iframe>
+<p>
+<a href="https://tylertech.com" target="_blank"></a>
+</p>
+</div>
+<p>Both datasets are very large—about 10-20GB and ~50-120 million rows, respectively—but you can filter and export smaller versions based on your interests.</p>
+<p>For example, if you’re interested in works by <em>Dracula</em> author Bram Stoker, you can use the filter options to export only records that have both “Bram” and “Stoker” in the “Creator” field.</p>
+<p><img src="images/query.png" class="img-fluid" alt="Click “Actions” -> “Query data”"> <img src="images/stoker.png" class="img-fluid" alt="Filter for specific titles or authors"></p>
+<p>This is a helpful way of getting around the problem that author names are sometimes spelled last name, first name (“Stoker, Bram”) and first name, last name (“Bram Stoker”) and lots of ways in between.</p>
+<p>Finally, we also published a mirrored copy of the aggregated monthly checkout data from April 2005-February 2025 which you can download on <a href="https://zenodo.org/records/15792698">Zenodo</a>.</p>
+<section id="canonical-american-authors-1945-present" class="level2">
+<h2 class="anchored" data-anchor-id="canonical-american-authors-1945-present">Canonical American Authors (1945-Present)</h2>
+<p>We published <a href="https://seattle-library-checkout-data.s3.us-west-2.amazonaws.com/norton-anthology_spl-checkouts_2005-2025.csv">a smaller dataset</a> (click to download) for all works by all authors in Volume E (1945-) of the most recent <em>Norton Anthology of American Literature</em>.</p>
+<p>These authors include Toni Morrison, Kurt Vonnegut, James Baldwin, Octavia Butler, Viet Thanh Nguyen, Louise Eridch, Jhumpa Lahiri, and more. You can explore trends for all these authors and literary works <a href="https://melaniewalsh.github.io/whats-seattle-reading/posts/norton-anthology-american/">on our website</a>.</p>
 
 
 </section>
