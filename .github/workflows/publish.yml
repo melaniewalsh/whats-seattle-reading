@@ -28,29 +28,29 @@ jobs:
 
       # This installs a fresh version of R
       # https://github.com/r-lib/actions/tree/v2/setup-r
-      # - name: Install R
-      #   uses: r-lib/actions/setup-r@v2
-      #   with:
-      #     r-version: '4.3.2'
+      - name: Install R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: '4.3.2'
 
       # - name: Cache R packages
-      #   uses: actions/cache@v4
-      #   with:
-      #     path: /home/runner/work/_temp/Library
-      #     key: ${{ runner.os }}-R-${{ hashFiles('**/renv.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-R-
+        uses: actions/cache@v4
+        with:
+          path: /home/runner/work/_temp/Library
+          key: ${{ runner.os }}-R-${{ hashFiles('**/renv.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-R-
 
       # This installs all needed R packages (dependencies) for the website
       # This is created with renv
       # You can read more here: https://rstudio.github.io/renv/articles/renv.html
       # You can basically take a snapshot of your current environment, and it puts it in renv/ and renv.lock
-      # - name: Install R Dependencies
-      #   uses: r-lib/actions/setup-renv@v2
-      #   with:
-      #     cache-version: 1
-      #     # Because of the way we've reorganized files, I'm specifying that renv/ lives in the website/ directory (as opposed to the current working directory or root)
-      #     working-directory: website
+      - name: Install R Dependencies
+        uses: r-lib/actions/setup-renv@v2
+        with:
+          cache-version: 1
+          # Because of the way we've reorganized files, I'm specifying that renv/ lives in the website/ directory (as opposed to the current working directory or root)
+          working-directory: website
 
       # Render and publish the website
       # If file paths are wrong, that will break the whole site, so really try to read through the errors

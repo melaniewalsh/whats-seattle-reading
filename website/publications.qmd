@@ -3,6 +3,11 @@ title: "Publications"
 execute:
   eval: false
   echo: true
+format:
+  html:
+    toc: true
+    # toc-location: right-body   # or left-body
+    toc-title: "Table of Contents"
 ---
 
 Check out our publications related to library checkout data from the Seattle Public Library.
@@ -20,19 +25,19 @@ Neel Gupta, Daniella Maor, Karalee Harris, Emily Backstrom, Hongyuan Dong, and M
 [![](images/Canon.png){width=60%}](https://doi.org/10.63744/P6qPH135jhY2)
 
 Copy BibTeX:
-```{python}
-@article{guptaCanonCirculationTracking2025,
-  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology}} {{Authors}} in {{Library Checkout Data}}},
+```{r}
+@inproceedings{guptaCanonCirculationTracking2025,
+  title = {The {{Canon}} in {{Circulation}}: {{Tracking}} the {{Reception}} of {{Norton Anthology Authors}} in {{Library Checkout Data}}},
   shorttitle = {The {{Canon}} in {{Circulation}}},
+  booktitle = {Computational {{Humanities Research}}},
   author = {Gupta, Neel and Maor, Daniella and Harris, Karalee and Backstrom, Emily and Dong, Hongyuan and Walsh, Melanie},
   editor = {Arnold, Taylor and Fantoli, Margherita and Ros, {and} Ruben},
   year = 2025,
-  journal = {Anthology of Computers and the Humanities},
   volume = {3},
   pages = {1510--1522},
   doi = {10.63744/P6qPH135jhY2},
   urldate = {2025-12-10},
-  url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}
+   url={https://anthology.ach.org/volumes/vol0003/the-canon-in-circulation-tracking-reception-of-in/}
 }
 ```
 
@@ -46,7 +51,7 @@ Neel Gupta, David Christensen, and Melanie Walsh.
 
 
 Copy BibTeX:
-```{python}
+```{r}
 @article{guptaSeattlePublicLibrarys2025,
   title = {Seattle {{Public Library}}'s {{Open Checkout Data}}: {{What Can It Tell Us About Readers}} and {{Book Popularity More Broadly}}?},
   shorttitle = {Seattle {{Public Library}}'s {{Open Checkout Data}}},
