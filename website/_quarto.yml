@@ -18,7 +18,7 @@ website:
   navbar:
     logo: images/fav-icon2.png
     right:
-      - about.md
+      - about.qmd
       - explore.qmd
       - people.qmd
       - publications.qmd
