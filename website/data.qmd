@@ -3,6 +3,8 @@ title: "Data"
 
 ---
 
+## Full Data
+
 You can explore and download the Seattle Public Library's open checkout datasets through the City of Seattle's [Open Data Portal](https://data.seattle.gov/Community-and-Culture/Checkouts-by-Title/tmmm-ytt6/about_data).
 
 There are two available datasets:  
@@ -27,6 +29,8 @@ Finally, we published a mirrored copy of the aggregated monthly checkout data fr
 
 ## Canonical American Authors (1945-Present)
 
-We published [a smaller dataset](https://seattle-library-checkout-data.s3.us-west-2.amazonaws.com/norton-anthology_spl-checkouts_2005-2025.csv) (click the link to download) for all works by all authors in Volume E (1945-) of the most recent *Norton Anthology of American Literature*.
+[Google Sheet](https://docs.google.com/spreadsheets/d/1a_ifxeHJ_5MlaBo-34sEWwqBMAqhZLLX47xaSDkpzc4/edit?usp=sharing) | [Direct Download](https://seattle-library-checkout-data.s3.us-west-2.amazonaws.com/norton-anthology_spl-checkouts_2005-2025.csv)  
+
+We published a smaller dataset for all works by all authors in Volume E (1945 to the Present) of the most recent 10th edition of the *Norton Anthology of American Literature*.
 
 These authors include Toni Morrison, Kurt Vonnegut, James Baldwin, Octavia Butler, Viet Thanh Nguyen, Louise Eridch, Jhumpa Lahiri, and more. You can explore trends for all these authors and literary works [on our website](https://melaniewalsh.github.io/whats-seattle-reading/posts/norton-anthology-american/).

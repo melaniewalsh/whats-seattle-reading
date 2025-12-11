@@ -19,6 +19,6 @@ These students include:
 
 # Acknowledgments
 
-We are thankful David Christensen, who spearheads the SPL's open data effort and has been a very helpful collaborator and guide.
+We are thankful to David Christensen, who spearheads the SPL's open data effort and has been a very helpful collaborator and guide.
 
 
