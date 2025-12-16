@@ -1,15 +1,5 @@
 ---
-# EDITORIAL TEAM: add data essay details here
 title: "Which Canonical American Authors Are People Reading? "
-# author:
-#   - name: Grant Wythoff
-#     orcid: 0000-0002-6605-9596
-#     url: https://wythoff.net/
-#     email: gwythoff@princeton.edu
-#   - name: Theodore Leane
-#     orcid: 0009-0003-1652-3578
-#     url: https://english.cornell.edu/teddy-leane
-#     email: cl2734@cornell.edu
 abstract: "Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945 to the Present)."
 page-layout: article
 format:
@@ -108,7 +98,6 @@ viewof tableTopTitlesFiltered
 //| error: false
 viewof mode2
 viewof tableTopTitlesMode
-
 
 ```
 

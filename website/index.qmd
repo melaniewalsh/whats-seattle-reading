@@ -1,5 +1,5 @@
 ---
-pagetitle: "Home"
+pagetitle: "What's Seattle Reading? "
 page-layout: article
 # section-divs: false
 editor: source

@@ -5,7 +5,6 @@ project:
 website:
   favicon: images/fav-icon2.png
   image: images/fav-icon2.png
-  
   twitter-card: true
   open-graph: true
   google-analytics: "G-H9Z8DC0X8Q"
