@@ -3,8 +3,8 @@ project:
   # output-dir: ../docs
   
 website:
-  favicon: images/fav-icon2.png
-  image: images/fav-icon2.png
+  favicon: favicon.ico
+  image: favicon.ico
   twitter-card: true
   open-graph: true
   google-analytics: "G-H9Z8DC0X8Q"
@@ -15,7 +15,7 @@ website:
   # right: <p style="color:white">Copyright &copy; 2024</p>
 
   navbar:
-    logo: images/fav-icon2.png
+    logo: favicon.ico
     right:
       - about.qmd
       - explore.qmd

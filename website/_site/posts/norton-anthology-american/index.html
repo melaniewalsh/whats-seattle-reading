@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../images/fav-icon2.png" rel="icon" type="image/png">
+<link href="../../fav-icon.ico" rel="icon">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -117,11 +117,11 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 <link rel="stylesheet" href="../../styles.css">
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Which Canonical American Authors Are People Reading? – What’s Seattle Reading?">
-<meta property="og:description" content="Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945-).">
+<meta property="og:description" content="Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945 to the Present).">
 <meta property="og:image" content="https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/9780393884432_300.jpg">
 <meta property="og:site_name" content="What's Seattle Reading?">
 <meta name="twitter:title" content="Which Canonical American Authors Are People Reading? – What’s Seattle Reading?">
-<meta name="twitter:description" content="Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945-).">
+<meta name="twitter:description" content="Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945 to the Present).">
 <meta name="twitter:image" content="https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/9780393884432_300.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
@@ -207,7 +207,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 <div>
   <div class="abstract">
     <div class="block-title">Abstract</div>
-    Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945-).
+    Explore library checkout trends for 90+ authors from The Norton Anthology of American Literature (1945 to the Present).
   </div>
 </div>
 
@@ -217,38 +217,38 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 
 <section id="introduction" class="level1">
 <h1>Introduction</h1>
-<p>This interactive explorer invites you to dive into nearly two decades of Seattle Public Library checkout data for authors included in the <em>Norton Anthology of American Literature</em> (1945-). The checkout covers 2005–2025 and lets you see which authors and works have circulated most heavily in Seattle during this period.</p>
+<p>This interactive explorer invites you to dive into nearly two decades of Seattle Public Library checkout data for authors included in Volume E of <a href="https://wwnorton.com/books/9780393884432"><em>The Norton Anthology of American Literature</em></a> (1945 to the Present). The checkout covers 2005–2025 and lets you see which authors and works have circulated most heavily in Seattle during this period.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="https://cdn2.wwnorton.com/wwnproducts/COLLEG/2/3/9780393884432/9780393884432_300.jpg" class="img-fluid figure-img"></p>
-<figcaption><em>The Norton Anthology of American Literature</em>.</figcaption>
+<figcaption><em>The Norton Anthology of American Literature</em>. 10th Edition. Volumes C, D, E.</figcaption>
 </figure>
 </div>
 <p>You can trace spikes of attention after major life events, like an author’s death, or explore how adaptations and cultural conversations bring older works back into circulation.</p>
 <!-- You can also filter the data to focus on authors with particular traits—those who have passed away, who have won major literary prizes, or who write genre fiction such as science fiction and fantasy. The tool makes it easy to compare their trajectories against peers, revealing how popularity is often shaped less by abstract notions of “literary value” and more by social events, media attention, and personal connections.   -->
-<p>We encourage you to use the explorer to follow your own interests! <!-- Perhaps you’ll start with an author you have a personal connection to, then branch out to see how their work sits alongside others in the canon. Or you might investigate patterns across whole categories, like which speculative fiction authors dominate checkouts, or how prizewinning writers fare compared to less celebrated peers.  --> However you approach it, the explorer is designed to give you a hands-on way to engage with the living, changing canon of American literature.</p>
+<p>We encourage you to use the explorer to follow your own interests! You can also download and explore the data directly as a <a href="https://docs.google.com/spreadsheets/d/1a_ifxeHJ_5MlaBo-34sEWwqBMAqhZLLX47xaSDkpzc4/edit?usp=sharing">Google Sheet</a>. <!-- Perhaps you’ll start with an author you have a personal connection to, then branch out to see how their work sits alongside others in the canon. Or you might investigate patterns across whole categories, like which speculative fiction authors dominate checkouts, or how prizewinning writers fare compared to less celebrated peers.  --></p>
 </section>
 <section id="explore-reading-trends-from-2005-2025" class="level1">
 <h1>Explore Reading Trends from 2005-2025</h1>
 <div class="cell hidden">
-<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="79" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 78;"><span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {viewof mode<span class="op">,</span></span>
-<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>viewof selection<span class="op">,</span></span>
-<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>plot<span class="op">,</span></span>
-<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>viewof tableTopAuthors<span class="op">,</span></span>
-<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitles<span class="op">,</span></span>
-<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>viewof num_titles<span class="op">,</span></span>
-<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>viewof num_authors<span class="op">,</span></span>
-<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>table<span class="op">,</span></span>
-<span id="cb1-87"><a href="#cb1-87" aria-hidden="true" tabindex="-1"></a>author_plot<span class="op">,</span></span>
-<span id="cb1-88"><a href="#cb1-88" aria-hidden="true" tabindex="-1"></a>title_plot<span class="op">,</span></span>
-<span id="cb1-89"><a href="#cb1-89" aria-hidden="true" tabindex="-1"></a>headingBlock<span class="op">,</span></span>
-<span id="cb1-90"><a href="#cb1-90" aria-hidden="true" tabindex="-1"></a>headingBlock2<span class="op">,</span></span>
-<span id="cb1-91"><a href="#cb1-91" aria-hidden="true" tabindex="-1"></a>viewof selectionInput<span class="op">,</span></span>
-<span id="cb1-92"><a href="#cb1-92" aria-hidden="true" tabindex="-1"></a>viewof suggestedOptions<span class="op">,</span></span>
-<span id="cb1-93"><a href="#cb1-93" aria-hidden="true" tabindex="-1"></a>viewof mode2<span class="op">,</span></span>
-<span id="cb1-94"><a href="#cb1-94" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesMode<span class="op">,</span></span>
-<span id="cb1-95"><a href="#cb1-95" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesFiltered</span>
-<span id="cb1-96"><a href="#cb1-96" aria-hidden="true" tabindex="-1"></a>} <span class="im">from</span> <span class="st">"2bced81a9de1ac10"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb1" data-startfrom="69" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 68;"><span id="cb1-69"><a href="#cb1-69" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {viewof mode<span class="op">,</span></span>
+<span id="cb1-70"><a href="#cb1-70" aria-hidden="true" tabindex="-1"></a>viewof selection<span class="op">,</span></span>
+<span id="cb1-71"><a href="#cb1-71" aria-hidden="true" tabindex="-1"></a>plot<span class="op">,</span></span>
+<span id="cb1-72"><a href="#cb1-72" aria-hidden="true" tabindex="-1"></a>viewof tableTopAuthors<span class="op">,</span></span>
+<span id="cb1-73"><a href="#cb1-73" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitles<span class="op">,</span></span>
+<span id="cb1-74"><a href="#cb1-74" aria-hidden="true" tabindex="-1"></a>viewof num_titles<span class="op">,</span></span>
+<span id="cb1-75"><a href="#cb1-75" aria-hidden="true" tabindex="-1"></a>viewof num_authors<span class="op">,</span></span>
+<span id="cb1-76"><a href="#cb1-76" aria-hidden="true" tabindex="-1"></a>table<span class="op">,</span></span>
+<span id="cb1-77"><a href="#cb1-77" aria-hidden="true" tabindex="-1"></a>author_plot<span class="op">,</span></span>
+<span id="cb1-78"><a href="#cb1-78" aria-hidden="true" tabindex="-1"></a>title_plot<span class="op">,</span></span>
+<span id="cb1-79"><a href="#cb1-79" aria-hidden="true" tabindex="-1"></a>headingBlock<span class="op">,</span></span>
+<span id="cb1-80"><a href="#cb1-80" aria-hidden="true" tabindex="-1"></a>headingBlock2<span class="op">,</span></span>
+<span id="cb1-81"><a href="#cb1-81" aria-hidden="true" tabindex="-1"></a>viewof selectionInput<span class="op">,</span></span>
+<span id="cb1-82"><a href="#cb1-82" aria-hidden="true" tabindex="-1"></a>viewof suggestedOptions<span class="op">,</span></span>
+<span id="cb1-83"><a href="#cb1-83" aria-hidden="true" tabindex="-1"></a>viewof mode2<span class="op">,</span></span>
+<span id="cb1-84"><a href="#cb1-84" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesMode<span class="op">,</span></span>
+<span id="cb1-85"><a href="#cb1-85" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesFiltered</span>
+<span id="cb1-86"><a href="#cb1-86" aria-hidden="true" tabindex="-1"></a>} <span class="im">from</span> <span class="st">"2bced81a9de1ac10"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display hidden">
 <div id="ojs-cell-1" data-nodetype="declaration">
 
@@ -258,7 +258,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 <section id="top-titles-and-authors" class="level2">
 <h2 class="anchored" data-anchor-id="top-titles-and-authors">Top Titles and Authors</h2>
 <div class="cell" data-warning="false" data-error="false">
-<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="109" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 108;"><span id="cb2-109"><a href="#cb2-109" aria-hidden="true" tabindex="-1"></a>viewof mode2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb2" data-startfrom="99" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 98;"><span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>viewof mode2</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-1" data-nodetype="expression">
@@ -266,7 +266,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="110" data-source-offset="-13"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 109;"><span id="cb3-110"><a href="#cb3-110" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesMode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb3" data-startfrom="100" data-source-offset="-13"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 99;"><span id="cb3-100"><a href="#cb3-100" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesMode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-2-2" data-nodetype="expression">
@@ -280,7 +280,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 <section id="explore-any-author-or-title" class="level1">
 <h1>Explore Any Author or Title</h1>
 <div class="cell" data-warning="false" data-error="false">
-<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="124" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 123;"><span id="cb4-124"><a href="#cb4-124" aria-hidden="true" tabindex="-1"></a>viewof mode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb4" data-startfrom="113" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 112;"><span id="cb4-113"><a href="#cb4-113" aria-hidden="true" tabindex="-1"></a>viewof mode</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-1" data-nodetype="expression">
@@ -288,7 +288,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="125" data-source-offset="-12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 124;"><span id="cb5-125"><a href="#cb5-125" aria-hidden="true" tabindex="-1"></a>headingBlock</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb5" data-startfrom="114" data-source-offset="-12"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 113;"><span id="cb5-114"><a href="#cb5-114" aria-hidden="true" tabindex="-1"></a>headingBlock</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-2" data-nodetype="expression">
@@ -296,7 +296,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="126" data-source-offset="-25"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 125;"><span id="cb6-126"><a href="#cb6-126" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb6" data-startfrom="115" data-source-offset="-25"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 114;"><span id="cb6-115"><a href="#cb6-115" aria-hidden="true" tabindex="-1"></a>plot</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-3" data-nodetype="expression">
@@ -304,7 +304,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="127" data-source-offset="-30"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 126;"><span id="cb7-127"><a href="#cb7-127" aria-hidden="true" tabindex="-1"></a>viewof suggestedOptions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb7" data-startfrom="116" data-source-offset="-30"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 115;"><span id="cb7-116"><a href="#cb7-116" aria-hidden="true" tabindex="-1"></a>viewof suggestedOptions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-4" data-nodetype="expression">
@@ -312,7 +312,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="128" data-source-offset="-54"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 127;"><span id="cb8-128"><a href="#cb8-128" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`You can pick any author from *The Norton Anthology of American Literature* (1945-) or any of their works that have been checked out by patrons of the Seattle Public Library.`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="117" data-source-offset="-54"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 116;"><span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`You can pick any author from *The Norton Anthology of American Literature* (1945-) or any of their works that have been checked out by patrons of the Seattle Public Library.`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-5" data-nodetype="expression">
@@ -320,7 +320,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="129" data-source-offset="-232"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 128;"><span id="cb9-129"><a href="#cb9-129" aria-hidden="true" tabindex="-1"></a>viewof selectionInput</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb9" data-startfrom="118" data-source-offset="-232"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 117;"><span id="cb9-118"><a href="#cb9-118" aria-hidden="true" tabindex="-1"></a>viewof selectionInput</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-6" data-nodetype="expression">
@@ -328,7 +328,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="130" data-source-offset="-254"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 129;"><span id="cb10-130"><a href="#cb10-130" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`## Top Titles`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb10" data-startfrom="119" data-source-offset="-254"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 118;"><span id="cb10-119"><a href="#cb10-119" aria-hidden="true" tabindex="-1"></a><span class="fu">md</span><span class="vs">`## Top Titles`</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-7" data-nodetype="expression">
@@ -336,7 +336,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 </div>
 </div>
 </div>
-<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="131" data-source-offset="-272"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 130;"><span id="cb11-131"><a href="#cb11-131" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesFiltered</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb11" data-startfrom="120" data-source-offset="-272"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 119;"><span id="cb11-120"><a href="#cb11-120" aria-hidden="true" tabindex="-1"></a>viewof tableTopTitlesFiltered</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-3-8" data-nodetype="expression">
@@ -351,7 +351,7 @@ gtag('config', 'G-H9Z8DC0X8Q', { 'anonymize_ip': true});
 
 </main> <!-- /main -->
 <script type="ojs-module-contents">
-eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuaW1wb3J0IHt2aWV3b2YgbW9kZSxcbnZpZXdvZiBzZWxlY3Rpb24sXG5wbG90LFxudmlld29mIHRhYmxlVG9wQXV0aG9ycyxcbnZpZXdvZiB0YWJsZVRvcFRpdGxlcyxcbnZpZXdvZiBudW1fdGl0bGVzLFxudmlld29mIG51bV9hdXRob3JzLFxudGFibGUsXG5hdXRob3JfcGxvdCxcbnRpdGxlX3Bsb3QsXG5oZWFkaW5nQmxvY2ssXG5oZWFkaW5nQmxvY2syLFxudmlld29mIHNlbGVjdGlvbklucHV0LFxudmlld29mIHN1Z2dlc3RlZE9wdGlvbnMsXG52aWV3b2YgbW9kZTIsXG52aWV3b2YgdGFibGVUb3BUaXRsZXNNb2RlLFxudmlld29mIHRhYmxlVG9wVGl0bGVzRmlsdGVyZWRcbn0gZnJvbSBcIjJiY2VkODFhOWRlMWFjMTBcIlxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgbW9kZTJcbnZpZXdvZiB0YWJsZVRvcFRpdGxlc01vZGVcblxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTMiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgbW9kZVxuaGVhZGluZ0Jsb2NrXG5wbG90XG52aWV3b2Ygc3VnZ2VzdGVkT3B0aW9uc1xubWRgWW91IGNhbiBwaWNrIGFueSBhdXRob3IgZnJvbSAqVGhlIE5vcnRvbiBBbnRob2xvZ3kgb2YgQW1lcmljYW4gTGl0ZXJhdHVyZSogKDE5NDUtKSBvciBhbnkgb2YgdGhlaXIgd29ya3MgdGhhdCBoYXZlIGJlZW4gY2hlY2tlZCBvdXQgYnkgcGF0cm9ucyBvZiB0aGUgU2VhdHRsZSBQdWJsaWMgTGlicmFyeS5gXG52aWV3b2Ygc2VsZWN0aW9uSW5wdXRcbm1kYCMjIFRvcCBUaXRsZXNgXG52aWV3b2YgdGFibGVUb3BUaXRsZXNGaWx0ZXJlZFxuXG5cbiJ9XX0=
+eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuaW1wb3J0IHt2aWV3b2YgbW9kZSxcbnZpZXdvZiBzZWxlY3Rpb24sXG5wbG90LFxudmlld29mIHRhYmxlVG9wQXV0aG9ycyxcbnZpZXdvZiB0YWJsZVRvcFRpdGxlcyxcbnZpZXdvZiBudW1fdGl0bGVzLFxudmlld29mIG51bV9hdXRob3JzLFxudGFibGUsXG5hdXRob3JfcGxvdCxcbnRpdGxlX3Bsb3QsXG5oZWFkaW5nQmxvY2ssXG5oZWFkaW5nQmxvY2syLFxudmlld29mIHNlbGVjdGlvbklucHV0LFxudmlld29mIHN1Z2dlc3RlZE9wdGlvbnMsXG52aWV3b2YgbW9kZTIsXG52aWV3b2YgdGFibGVUb3BUaXRsZXNNb2RlLFxudmlld29mIHRhYmxlVG9wVGl0bGVzRmlsdGVyZWRcbn0gZnJvbSBcIjJiY2VkODFhOWRlMWFjMTBcIlxuXG4ifSx7Im1ldGhvZE5hbWUiOiJpbnRlcnByZXQiLCJjZWxsTmFtZSI6Im9qcy1jZWxsLTIiLCJpbmxpbmUiOmZhbHNlLCJzb3VyY2UiOiJ2aWV3b2YgbW9kZTJcbnZpZXdvZiB0YWJsZVRvcFRpdGxlc01vZGVcblxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIG1vZGVcbmhlYWRpbmdCbG9ja1xucGxvdFxudmlld29mIHN1Z2dlc3RlZE9wdGlvbnNcbm1kYFlvdSBjYW4gcGljayBhbnkgYXV0aG9yIGZyb20gKlRoZSBOb3J0b24gQW50aG9sb2d5IG9mIEFtZXJpY2FuIExpdGVyYXR1cmUqICgxOTQ1LSkgb3IgYW55IG9mIHRoZWlyIHdvcmtzIHRoYXQgaGF2ZSBiZWVuIGNoZWNrZWQgb3V0IGJ5IHBhdHJvbnMgb2YgdGhlIFNlYXR0bGUgUHVibGljIExpYnJhcnkuYFxudmlld29mIHNlbGVjdGlvbklucHV0XG5tZGAjIyBUb3AgVGl0bGVzYFxudmlld29mIHRhYmxlVG9wVGl0bGVzRmlsdGVyZWRcblxuXG4ifV19
 </script>
 <script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
