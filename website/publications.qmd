@@ -71,8 +71,8 @@ Copy BibTeX:
 }
 ```
 
-## 2023
+## 2022
 
 [**"Where is all the book data?"**](https://www.publicbooks.org/where-is-all-the-book-data/)  
 Melanie Walsh.  
-*Public Books* 2025.
+*Public Books*.
