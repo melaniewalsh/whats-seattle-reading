@@ -104,7 +104,7 @@ viewof tableTopTitlesMode
 
 
 
-# Explore Any Author or Title
+# Search Any Author or Title
 You can search for any author from *The Norton Anthology of American Literature* (1945-) or any of their works that have been checked out by patrons of the Seattle Public Library. 
 
 You can hover over the line plot to see more detailed information for each month. 
