@@ -11,7 +11,7 @@ format:
     toc-title: "Table of Contents"
 ---
 
-Check out our publications related to library checkout data from the Seattle Public Library.
+Check out our publications related to checkout data from the Seattle Public Library.
  
 ## 2025
 

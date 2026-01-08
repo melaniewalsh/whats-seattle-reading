@@ -11,7 +11,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Check out our publications related to library checkout data from the Seattle Public Library."
+    "text": "Check out our publications related to checkout data from the Seattle Public Library."
   },
   {
     "objectID": "publications.html#section",
@@ -46,7 +46,7 @@
     "href": "posts/norton-anthology-american/index.html#top-titles-and-authors",
     "title": "Which Canonical American Authors Are People Reading?",
     "section": "Top Titles and Authors",
-    "text": "Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
+    "text": "Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nhtml`&lt;br/&gt;`\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
   },
   {
     "objectID": "posts/table.html",
@@ -122,8 +122,8 @@
     "objectID": "publications.html#section-1",
     "href": "publications.html#section-1",
     "title": "Publications",
-    "section": "2023",
-    "text": "2023\n“Where is all the book data?”\nMelanie Walsh.\nPublic Books 2025."
+    "section": "2022",
+    "text": "2022\n“Where is all the book data?”\nMelanie Walsh.\nPublic Books."
   },
   {
     "objectID": "data.html#full-data",

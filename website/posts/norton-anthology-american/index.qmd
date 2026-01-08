@@ -98,16 +98,17 @@ viewof tableTopTitlesFiltered
 //| warning: false
 //| error: false
 viewof mode2
+html`<br/>`
 viewof tableTopTitlesMode
 
 ```
 
 
 
-# Search Any Author or Title
-You can search for any author from *The Norton Anthology of American Literature* (1945-) or any of their works that have been checked out by patrons of the Seattle Public Library. 
+# Search for Any Author or Title
+You can explore checkout trends for any author from *The Norton Anthology of American Literature* (1945-) or any of their works (at least those that have been checked out by patrons of the Seattle Public Library). 
 
-You can hover over the line plot to see more detailed information for each month. 
+Hover over the line plot to see more detailed information for each month. 
 ```{ojs}
 //|echo: false
 //| warning: false
@@ -115,6 +116,7 @@ You can hover over the line plot to see more detailed information for each month
 headingBlock
 plot
 viewof mode
+html`<br/>`
 viewof suggestedOptions
 viewof selectionInput
 headingBlockTopTitles
@@ -122,5 +124,6 @@ viewof tableTopTitlesFiltered
 
 
 ```
+
 
 

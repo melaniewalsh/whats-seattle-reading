@@ -7,6 +7,16 @@
   text-align: center;
 }
 
+/* Hide Observable error blocks */
+.observablehq--error {
+  display: none !important;
+}
+
+pre.error, .cell-output .error {
+  display: none !important;
+}
+
+
 #hero-banner {
   position: relative;
   background-color: black;
