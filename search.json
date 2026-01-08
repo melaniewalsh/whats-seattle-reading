@@ -25,7 +25,7 @@
     "href": "posts/norton-anthology-american/index.html#top-titles-and-authors",
     "title": "Which Canonical American Authors Are People Reading?",
     "section": "Top Titles and Authors",
-    "text": "Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
+    "text": "Top Titles and Authors\n\nviewof mode2\n\n\n\n\n\n\n\nhtml`&lt;br/&gt;`\n\n\n\n\n\n\n\nviewof tableTopTitlesMode"
   },
   {
     "objectID": "data.html",
@@ -95,7 +95,7 @@
     "href": "publications.html",
     "title": "Publications",
     "section": "",
-    "text": "Check out our publications related to library checkout data from the Seattle Public Library."
+    "text": "Check out our publications related to checkout data from the Seattle Public Library."
   },
   {
     "objectID": "publications.html#section",
