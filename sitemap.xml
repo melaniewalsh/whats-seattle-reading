@@ -1,35 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>melaniewalsh.github.io/whats-seattle-reading/people.html</loc>
-    <lastmod>2026-01-08T09:08:39.546Z</lastmod>
-  </url>
-  <url>
     <loc>melaniewalsh.github.io/whats-seattle-reading/about.html</loc>
-    <lastmod>2026-01-08T09:08:39.539Z</lastmod>
-  </url>
-  <url>
-    <loc>melaniewalsh.github.io/whats-seattle-reading/posts/norton-anthology-american/index.html</loc>
-    <lastmod>2026-01-08T09:08:39.547Z</lastmod>
-  </url>
-  <url>
-    <loc>melaniewalsh.github.io/whats-seattle-reading/index.html</loc>
-    <lastmod>2026-01-08T09:08:39.546Z</lastmod>
-  </url>
-  <url>
-    <loc>melaniewalsh.github.io/whats-seattle-reading/data.html</loc>
-    <lastmod>2026-01-08T09:08:39.539Z</lastmod>
-  </url>
-  <url>
-    <loc>melaniewalsh.github.io/whats-seattle-reading/posts/table.html</loc>
-    <lastmod>2026-01-08T09:08:39.547Z</lastmod>
+    <lastmod>2026-03-24T16:27:42.009Z</lastmod>
   </url>
   <url>
     <loc>melaniewalsh.github.io/whats-seattle-reading/publications.html</loc>
-    <lastmod>2026-01-08T09:08:39.547Z</lastmod>
+    <lastmod>2026-03-24T16:27:42.017Z</lastmod>
+  </url>
+  <url>
+    <loc>melaniewalsh.github.io/whats-seattle-reading/posts/table.html</loc>
+    <lastmod>2026-03-24T16:27:42.017Z</lastmod>
+  </url>
+  <url>
+    <loc>melaniewalsh.github.io/whats-seattle-reading/posts/norton-anthology-american/index.html</loc>
+    <lastmod>2026-03-24T16:27:42.017Z</lastmod>
+  </url>
+  <url>
+    <loc>melaniewalsh.github.io/whats-seattle-reading/index.html</loc>
+    <lastmod>2026-03-24T16:27:42.015Z</lastmod>
   </url>
   <url>
     <loc>melaniewalsh.github.io/whats-seattle-reading/explore.html</loc>
-    <lastmod>2026-01-08T09:08:39.539Z</lastmod>
+    <lastmod>2026-03-24T16:27:42.009Z</lastmod>
+  </url>
+  <url>
+    <loc>melaniewalsh.github.io/whats-seattle-reading/posts/spl-500-novels/index.html</loc>
+    <lastmod>2026-03-24T16:27:42.017Z</lastmod>
+  </url>
+  <url>
+    <loc>melaniewalsh.github.io/whats-seattle-reading/data.html</loc>
+    <lastmod>2026-03-24T16:27:42.009Z</lastmod>
+  </url>
+  <url>
+    <loc>melaniewalsh.github.io/whats-seattle-reading/people.html</loc>
+    <lastmod>2026-03-24T16:27:42.015Z</lastmod>
   </url>
 </urlset>
